@@ -1,0 +1,41 @@
+Reference Class: 19,Basic Inorganic,Sodium Hydroxide
+
+Step 5 - Mermaid Diagram Generation:
+```mermaid
+flowchart LR
+    B[Brine Supply] --> |Raw Brine| OP1[Brine Preparation]
+    W[Water Supply] --> OP1
+    OP1 --> |Purified Brine| OP2[Electrolysis]
+    E[Electricity Supply] --> OP2
+    OP1 --> |Waste Brine| OP9[Waste Treatment]
+    
+    OP2 --> |Chlorine Gas| OP3[Chlorine Gas Handling]
+    OP2 --> |Hydrogen Gas| OP4[Hydrogen Gas Handling]
+    OP2 --> |Dilute NaOH| OP5[NaOH Concentration]
+    
+    OP3 --> |Compressed Cl2| C[Chlorine Storage]
+    
+    OP4 --> |Utilized H2| UH[Hydrogen Utilization]
+    OP4 --> |Vented H2| VH[Hydrogen Venting]
+    
+    OP5 --> |Concentrated NaOH| OP6[Caustic Soda Cooling]
+    OP5 --> |Water Vapor| W2[Water Recovery]
+    
+    OP6 --> |Cooled NaOH| OP7[Purification]
+    
+    OP7 --> |Purified NaOH| OP8[Product Storage]
+    OP7 --> |Impurities| OP9
+    
+    OP8 --> |Final NaOH Product| P[Product Distribution]
+    
+    OP9 --> |Treated Waste| WD[Waste Disposal]
+    
+    OP10[Utilities Management] --> OP1
+    OP10 --> OP2
+    OP10 --> OP3
+    OP10 --> OP4
+    OP10 --> OP5
+    OP10 --> OP6
+    OP10 --> OP7
+    OP10 --> OP9
+```

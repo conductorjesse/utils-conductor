@@ -1,0 +1,210 @@
+Prompt 1 ---
+
+You are a TEA / process flow description agent and an expert chemical / industrial engineer. 
+Your task is to generate a baseline process flow for techno-economic analysis based on a user's context.
+
+This is the user context:
+{{reference class information}}
+
+For a stereotypical industrial-scale described by the context, make your best guess about any missing details (for instance, typical production scale or common feedstocks) and fill them in. 
+Return a concise summary of the final user context in JSON form. 
+Use the following JSON structure:
+
+{
+  "product": "...",
+  "production_method": "...",
+  "production_scale": "...",
+  "product_specs": "...",
+  "feedstocks": [ ... ],
+  "additional_constraints": "..."
+}
+
+Prompt 2 ---
+
+Given the user context JSON, generate a high-level at-scale process flow description. 
+Outline all major unit operations (maximum 10 unit operations) in a logical industrial sequence, and identify the key streams connecting them. 
+
+
+Include:
+- Name for each unit operation.
+- A brief description of what happens in each unit operation.
+- Name of key streams (input feed streams, internal streams, and product streams).
+
+Return the result as an ordered list or structured text so we can easily see the flow of operations and streams.
+
+Prompt 3 ---
+
+For each unit operation, describe the approximate stoichiometric or mass-balance transformations. 
+What's happening in this unit operation, and what is its role in the energy and/or mass balance of the process? 
+
+Focus on:
+- Key transformations (reactions, separations, processes)
+- Approximate yield, conversions, or split fractions, and numerical estimates where possible
+- If the unit operation is especially energy intensive (e.g., major heating or cooling needs, major electricity demand)
+
+Output an ordered list of unit operations and their transformations, along with the respective components being transformed. 
+
+Prompt 4 ---
+
+Take all of this information and capture this information into a JSON, as a directed acyclic graph. 
+
+This guide will help you convert detailed text descriptions of industrial processes into a structured JSON format. The format captures key aspects of process flows in carbon-intensive industries including chemicals, energy, manufacturing, and transportation.
+
+#General Instructions
+
+Read the entire text summary first to understand the overall process
+Identify the main process, feedstocks, products, unit operations, and material streams
+Assign unique IDs to all elements (process, operations, streams, etc.)
+Extract relevant details for each section of the JSON structure
+Maintain links between related elements through ID references
+
+---
+
+#Reference Class Context
+ref_class_name: Create a 3-7 word name for the reference class
+ref_class_id: Assign a unique identifier (using some part or all of the reference class name in snake_case)
+ref_class_description: Summarize the main process in 1-3 sentences
+
+##Feedstocks
+Include all raw materials entering the process
+feed_name: Name of the feedstock
+feed_description: Brief description of the feedstock
+feed_composition: Express as a text description (e.g., "95% methane, 3% ethane, 2% other hydrocarbons")
+feed_specs: Include any specifications mentioned (e.g., "Pressure: 10 bar, Temperature: 25°C")
+
+##Products
+Include the target product, and other potential co-products
+product_name: Name of the product
+product_description: Brief description of the product
+product_composition: Express as a text description of composition
+product_specs: Include quality specifications or properties as text
+
+##Production Method & Scale
+production_method: Refer to the reference class description and overall process to summarize the approach or method of production 
+production_scale: Extract or estimate the scale of production capacity
+
+---
+
+#Unit Operations Section
+
+##For each distinct process step:
+op_id: Assign a unique identifier (e.g., "op_001")
+op_name: Use common engineering terms (less than 5 words)
+op_description: Briefly describe what happens in this operation
+op_type: Categorize (e.g., "separation", "reaction", "heat exchange", etc)
+
+## Equipment
+Describe the equipment needed for each operation
+Keep specifications as simple text descriptions
+
+## Transformations
+This is the most flexible section - capture what happens in the unit operation:
+For reactions: describe conversions, conditions, and key reactions
+For separations: describe what components are separated and how
+For physical changes: describe changes in state, temperature, etc.
+Use your judgment to structure the parameters object based on what's important, and include numerical parameters where relevant
+impacted_input_streams and impacted_output_streams: Use the stream IDs to maintain relationships
+
+## Input and Output Streams
+input_streams: reference the stream_ID(s) of the streams entering the unit operation from other unit operations
+output_streams: assign stream_ID(s) of the streams exiting the unit operation (snake_case of stream name)
+
+if any input streams don't yet originate from a unit operation, create a dummy unit operation as the source node
+if any output streams don't terminate into a unit operation, create a dummy unit operation as the sink node
+
+## Energy & Utilities
+energy_requirements: Brief text describing energy needs (e.g., "5 MW of electrical power")
+utilities: Brief text describing utilities (e.g., "Cooling water at 15°C, Steam at 150 psi")
+
+---
+
+# Streams Section
+Catalog all of the stream_IDs throughout all of the unit operations and capture them in this section
+
+## For each stream:
+stream_id: the unique identifier assigned by the unit operation
+stream_name: Use descriptive names (e.g., "crude feed", "product gas")
+stream_description: Brief description of the stream's purpose or properties
+components: List up to 5 main components only. If more exist, prioritize the most significant ones by concentration or importance
+
+---
+
+# Important Considerations
+Maintain connectivity between unit operations through stream references
+Ensure each unit operation has at least one input and one output stream
+Keep descriptions concise but informative
+Use standard terminology from chemical engineering where possible
+For the transformations section, focus on capturing the essence of what changes rather than forcing information into a rigid structure
+
+json format:
+{
+  "reference_class": {
+    "ref_class_id": "",
+    "ref_class_name": "",
+    "ref_class_description": "",
+    "feedstocks": [
+      {
+        "feed_name": "",
+        "feed_description": "",
+        "feed_composition": "",
+        "feed_specs": ""
+      }
+    ],
+    "products": [
+      {
+        "product_name": "",
+        "product_description": "",
+        "product_composition": "",
+        "product_specs": ""
+      }
+    ],
+    "production_method": "",
+    "production_scale": ""
+  },
+  "unit_operations": [
+    {
+      "op_id": "",
+      "op_name": "",
+      "op_description": "",
+      "op_type": "",
+      "equipment": [
+        {
+          "equipment_name": "",
+          "equipment_specs": ""
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "",
+          "parameters": {},
+          "impacted_input_streams": ["stream_id"],
+          "impacted_output_streams": ["stream_id"]
+        }
+      ],
+      "input_streams": ["stream_id"],
+      "output_streams": ["stream_id"],
+      "energy_requirements": "",
+      "utilities": ""
+    }
+  ],
+  "streams": [
+    {
+      "stream_id": "",
+      "stream_name": "",
+      "stream_description": "",
+      "components": ["comp_1", "comp_2", ...]
+    }
+  ]
+}
+
+Prompt 5 ---
+
+Produce a simple Mermaid diagram.
+
+Create a flowchart LR diagram that includes:
+Unit operations as nodes labeled with its names
+Streams as edges labled with its names
+Draw edges between nodes
+
+Only return a Mermaid output. 
+

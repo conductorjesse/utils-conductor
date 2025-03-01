@@ -1,0 +1,42 @@
+Reference Class: 17,Alcohol/Intermediate,Ethanol (Industrial)
+
+Step 2 - Process Flow Description:
+1. **Raw Material Storage**
+   - *Description:* Storage tanks for ethylene and water before processing.
+   - *Key Streams:* Ethylene feed stream, Water feed stream.
+
+2. **Feed Pre-treatment**
+   - *Description:* Purification and conditioning of ethylene and water to remove impurities.
+   - *Key Streams:* Purified ethylene, Purified water.
+
+3. **Feed Mixing**
+   - *Description:* Homogeneous mixture of purified ethylene and water prepared for reaction.
+   - *Key Streams:* Mixed feed stream.
+
+4. **Catalytic Hydration Reactor**
+   - *Description:* Reacts ethylene with water in the presence of a catalyst to form ethanol.
+   - *Key Streams:* Reactor effluent (ethanol, unreacted ethylene, by-products).
+
+5. **Quenching/Cooling**
+   - *Description:* Cools the reactor effluent to stabilize the reaction and prepare for separation.
+   - *Key Streams:* Cooled effluent stream.
+
+6. **Separation: Distillation Column**
+   - *Description:* Separates ethanol from unreacted ethylene and other light gases through distillation.
+   - *Key Streams:* Ethanol-rich distillate, Unreacted ethylene and light by-products in bottoms.
+
+7. **Unreacted Ethylene Recovery**
+   - *Description:* Recovers and recycles unreacted ethylene back to the reactor.
+   - *Key Streams:* Recovered ethylene stream.
+
+8. **Ethanol Purification**
+   - *Description:* Further purifies ethanol to an anhydrous form using molecular sieves or azeotropic distillation.
+   - *Key Streams:* Anhydrous ethanol (product), Purged water/by-products.
+
+9. **Product Storage**
+   - *Description:* Storage tanks for the final anhydrous ethanol product before dispatch.
+   - *Key Streams:* Anhydrous ethanol product stream.
+
+10. **Utilities and Waste Treatment**
+    - *Description:* Provides necessary utilities (e.g., heating, cooling, power) and handles waste streams in compliance with environmental regulations.
+    - *Key Streams:* Utility streams (steam, cooling water), Waste streams.

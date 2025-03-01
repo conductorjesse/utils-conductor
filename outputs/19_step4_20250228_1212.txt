@@ -1,0 +1,381 @@
+Reference Class: 19,Basic Inorganic,Sodium Hydroxide
+
+Step 4 - JSON Structure Generation:
+```json
+{
+  "reference_class": {
+    "ref_class_id": "sodium_hydroxide_chlor_alkali",
+    "ref_class_name": "Sodium Hydroxide Membrane Chlor-Alkali Process",
+    "ref_class_description": "Production of sodium hydroxide (caustic soda) via the chlor-alkali process using membrane cell technology, which electrolyzes brine to produce sodium hydroxide, chlorine gas, and hydrogen gas.",
+    "feedstocks": [
+      {
+        "feed_name": "Brine",
+        "feed_description": "Salt solution used as primary feedstock",
+        "feed_composition": "Sodium chloride (NaCl) solution with various impurities",
+        "feed_specs": "Concentration: Approximately 25-30% NaCl by weight"
+      },
+      {
+        "feed_name": "Water",
+        "feed_description": "Process water for various operations",
+        "feed_composition": "Demineralized water",
+        "feed_specs": "High purity, low mineral content"
+      },
+      {
+        "feed_name": "Electricity",
+        "feed_description": "Primary energy source for the electrolysis process",
+        "feed_composition": "Electric power",
+        "feed_specs": "Approximately 2.2 MWh/day per metric ton NaOH produced"
+      }
+    ],
+    "products": [
+      {
+        "product_name": "Sodium Hydroxide",
+        "product_description": "Technical grade caustic soda solution",
+        "product_composition": "50% NaOH by weight in water",
+        "product_specs": "Technical grade purity, 50% w/w concentration"
+      },
+      {
+        "product_name": "Chlorine Gas",
+        "product_description": "Chlorine gas produced as co-product",
+        "product_composition": "High-purity chlorine gas",
+        "product_specs": "Dry, compressed gas"
+      },
+      {
+        "product_name": "Hydrogen Gas",
+        "product_description": "Hydrogen gas produced as co-product",
+        "product_composition": "High-purity hydrogen gas",
+        "product_specs": "Dry, may be used as fuel or vented"
+      }
+    ],
+    "production_method": "Chlor-alkali process using membrane cell technology",
+    "production_scale": "1,000 metric tons of sodium hydroxide per day"
+  },
+  "unit_operations": [
+    {
+      "op_id": "op_001",
+      "op_name": "Brine Preparation",
+      "op_description": "Desalination and purification of raw brine to remove impurities",
+      "op_type": "purification",
+      "equipment": [
+        {
+          "equipment_name": "Ion Exchange Columns",
+          "equipment_specs": "Typically ion exchange resins for removal of calcium, magnesium ions"
+        },
+        {
+          "equipment_name": "Precipitation Tanks",
+          "equipment_specs": "Chemical precipitation of impurities with reagents"
+        },
+        {
+          "equipment_name": "Filtration Units",
+          "equipment_specs": "Filter for solid impurity removal"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Removal of impurities from raw brine",
+          "parameters": {
+            "impurity_removal_efficiency": "~95%",
+            "target_brine_purity": "High-purity NaCl solution",
+            "flow_rate": "~1,200 kg/h input, ~1,000 kg/h output"
+          },
+          "impacted_input_streams": ["stream_001"],
+          "impacted_output_streams": ["stream_002", "stream_003"]
+        }
+      ],
+      "input_streams": ["stream_001"],
+      "output_streams": ["stream_002", "stream_003"],
+      "energy_requirements": "Moderate electricity for pumping and mixing",
+      "utilities": "Process water, chemical reagents for precipitation"
+    },
+    {
+      "op_id": "op_002",
+      "op_name": "Electrolysis",
+      "op_description": "Electrochemical splitting of sodium chloride solution into chlorine gas, hydrogen gas, and sodium hydroxide",
+      "op_type": "reaction",
+      "equipment": [
+        {
+          "equipment_name": "Membrane Cells",
+          "equipment_specs": "Ion-selective membrane dividing anode and cathode compartments"
+        },
+        {
+          "equipment_name": "Electrodes",
+          "equipment_specs": "Dimensionally stable anodes (DSA) and cathodes"
+        },
+        {
+          "equipment_name": "Power Supply",
+          "equipment_specs": "Direct current power supply with voltage control"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Electrochemical conversion of NaCl to NaOH, Cl2, and H2",
+          "parameters": {
+            "reaction_equation": "2NaCl + 2H2O → Cl2 + H2 + 2NaOH",
+            "current_efficiency": "~95%",
+            "operating_temperature": "80-90°C",
+            "naoh_concentration_output": "30-40% w/w"
+          },
+          "impacted_input_streams": ["stream_002"],
+          "impacted_output_streams": ["stream_004", "stream_005", "stream_006"]
+        }
+      ],
+      "input_streams": ["stream_002"],
+      "output_streams": ["stream_004", "stream_005", "stream_006"],
+      "energy_requirements": "~2.2 MWh/ton NaOH produced (main energy consumption)",
+      "utilities": "Cooling water, process water"
+    },
+    {
+      "op_id": "op_003",
+      "op_name": "Chlorine Gas Handling",
+      "op_description": "Cooling, drying, and compression of chlorine gas for storage or further processing",
+      "op_type": "processing",
+      "equipment": [
+        {
+          "equipment_name": "Cooling System",
+          "equipment_specs": "Heat exchangers to cool chlorine gas"
+        },
+        {
+          "equipment_name": "Drying System",
+          "equipment_specs": "Sulfuric acid towers or similar drying equipment"
+        },
+        {
+          "equipment_name": "Compressors",
+          "equipment_specs": "Chlorine-resistant compressors for pressurization"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Cooling, drying and compression of Cl2 gas",
+          "parameters": {
+            "flow_rate": "~250 kg/h",
+            "temperature_reduction": "From ~90°C to ambient",
+            "moisture_reduction": "To <10 ppm water content",
+            "compression": "To storage pressure"
+          },
+          "impacted_input_streams": ["stream_004"],
+          "impacted_output_streams": ["stream_007"]
+        }
+      ],
+      "input_streams": ["stream_004"],
+      "output_streams": ["stream_007"],
+      "energy_requirements": "Moderate electricity for compressors",
+      "utilities": "Cooling water, drying agents"
+    },
+    {
+      "op_id": "op_004",
+      "op_name": "Hydrogen Gas Handling",
+      "op_description": "Cooling of hydrogen gas for utilization as fuel or safe venting",
+      "op_type": "processing",
+      "equipment": [
+        {
+          "equipment_name": "Cooling System",
+          "equipment_specs": "Heat exchangers for hydrogen cooling"
+        },
+        {
+          "equipment_name": "Hydrogen Distribution",
+          "equipment_specs": "Piping systems for hydrogen transport to utilization points"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Cooling and distribution of hydrogen gas",
+          "parameters": {
+            "flow_rate": "~220 kg/h",
+            "split_fraction": "~50% utilized as fuel, ~50% vented",
+            "temperature_reduction": "From ~90°C to ambient"
+          },
+          "impacted_input_streams": ["stream_005"],
+          "impacted_output_streams": ["stream_008", "stream_009"]
+        }
+      ],
+      "input_streams": ["stream_005"],
+      "output_streams": ["stream_008", "stream_009"],
+      "energy_requirements": "Low electricity for fans and pumps",
+      "utilities": "Cooling water"
+    },
+    {
+      "op_id": "op_005",
+      "op_name": "NaOH Concentration",
+      "op_description": "Concentration of dilute sodium hydroxide solution to achieve 50% w/w caustic soda",
+      "op_type": "separation",
+      "equipment": [
+        {
+          "equipment_name": "Evaporators",
+          "equipment_specs": "Multiple-effect evaporators or falling film evaporators"
+        },
+        {
+          "equipment_name": "Heat Exchangers",
+          "equipment_specs": "For heating dilute NaOH solution"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Concentration of NaOH solution through water removal",
+          "parameters": {
+            "input_concentration": "30-40% w/w NaOH",
+            "output_concentration": "50% w/w NaOH",
+            "water_removal": "~30 kg/h",
+            "flow_rate": "~530 kg/h input, ~500 kg/h output"
+          },
+          "impacted_input_streams": ["stream_006"],
+          "impacted_output_streams": ["stream_010", "stream_011"]
+        }
+      ],
+      "input_streams": ["stream_006"],
+      "output_streams": ["stream_010", "stream_011"],
+      "energy_requirements": "High thermal energy for evaporation (if using thermal method)",
+      "utilities": "Steam at 150 psi, cooling water"
+    },
+    {
+      "op_id": "op_006",
+      "op_name": "Caustic Soda Cooling",
+      "op_description": "Cooling concentrated NaOH solution to stabilize the product",
+      "op_type": "heat_exchange",
+      "equipment": [
+        {
+          "equipment_name": "Heat Exchangers",
+          "equipment_specs": "Corrosion-resistant heat exchangers for caustic cooling"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Cooling of concentrated NaOH solution",
+          "parameters": {
+            "input_temperature": "~90-100°C",
+            "output_temperature": "~40-50°C",
+            "flow_rate": "~500 kg/h"
+          },
+          "impacted_input_streams": ["stream_010"],
+          "impacted_output_streams": ["stream_012"]
+        }
+      ],
+      "input_streams": ["stream_010"],
+      "output_streams": ["stream_012"],
+      "energy_requirements": "Moderate energy for cooling systems",
+      "utilities": "Cooling water or air cooling system"
+    },
+    {
+      "op_id": "op_007",
+      "op_name": "Purification",
+      "op_description": "Filtration and ion exchange to achieve technical-grade purity",
+      "op_type": "purification",
+      "equipment": [
+        {
+          "equipment_name": "Filters",
+          "equipment_specs": "Fine filters for particulate removal"
+        },
+        {
+          "equipment_name": "Ion Exchange Units",
+          "equipment_specs": "Polishing ion exchange for trace impurity removal"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Removal of trace impurities from NaOH solution",
+          "parameters": {
+            "impurity_removal": "Targets trace metals and other contaminants",
+            "flow_rate": "~500 kg/h input, ~490 kg/h output",
+            "waste_generation": "~10 kg/h of impurities"
+          },
+          "impacted_input_streams": ["stream_012"],
+          "impacted_output_streams": ["stream_013", "stream_014"]
+        }
+      ],
+      "input_streams": ["stream_012"],
+      "output_streams": ["stream_013", "stream_014"],
+      "energy_requirements": "Low to moderate electricity for pumping",
+      "utilities": "Process water for backwashing filters"
+    },
+    {
+      "op_id": "op_008",
+      "op_name": "Product Storage",
+      "op_description": "Storage of purified sodium hydroxide in appropriate containers or tanks",
+      "op_type": "storage",
+      "equipment": [
+        {
+          "equipment_name": "Storage Tanks",
+          "equipment_specs": "Corrosion-resistant tanks for caustic soda storage"
+        },
+        {
+          "equipment_name": "Pumps",
+          "equipment_specs": "Transfer pumps for product handling"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Transfer and storage of final product",
+          "parameters": {
+            "flow_rate": "~490 kg/h",
+            "storage_temperature": "~40°C",
+            "storage_volume": "Based on production capacity and turnover"
+          },
+          "impacted_input_streams": ["stream_013"],
+          "impacted_output_streams": ["stream_015"]
+        }
+      ],
+      "input_streams": ["stream_013"],
+      "output_streams": ["stream_015"],
+      "energy_requirements": "Low electricity for pumping",
+      "utilities": "Minimal utilities required"
+    },
+    {
+      "op_id": "op_009",
+      "op_name": "Waste Treatment",
+      "op_description": "Treatment of waste streams to meet environmental discharge standards",
+      "op_type": "treatment",
+      "equipment": [
+        {
+          "equipment_name": "Neutralization Tanks",
+          "equipment_specs": "For pH adjustment of waste streams"
+        },
+        {
+          "equipment_name": "Scrubbers",
+          "equipment_specs": "For off-gas treatment"
+        },
+        {
+          "equipment_name": "Wastewater Treatment",
+          "equipment_specs": "System for treating spent brine and process wastewater"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Treatment of waste streams for safe disposal",
+          "parameters": {
+            "spent_brine_treatment": "Neutralization and precipitation",
+            "off_gas_scrubbing": "Removal of trace Cl2 and other gases",
+            "flow_rate": "~200 kg/h of spent brine/wastewater"
+          },
+          "impacted_input_streams": ["stream_003", "stream_014"],
+          "impacted_output_streams": ["stream_016"]
+        }
+      ],
+      "input_streams": ["stream_003", "stream_014"],
+      "output_streams": ["stream_016"],
+      "energy_requirements": "Moderate electricity for treatment systems",
+      "utilities": "Process water, neutralization chemicals"
+    },
+    {
+      "op_id": "op_010",
+      "op_name": "Utilities Management",
+      "op_description": "Management and distribution of utilities throughout the process",
+      "op_type": "utility",
+      "equipment": [
+        {
+          "equipment_name": "Cooling Water System",
+          "equipment_specs": "Cooling towers, pumps, and distribution network"
+        },
+        {
+          "equipment_name": "Steam Generation",
+          "equipment_specs": "Boilers for steam production"
+        },
+        {
+          "equipment_name": "Electrical Distribution",
+          "equipment_specs": "Transformers and electrical network"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Distribution of utilities to process units",
+          "parameters": {
+            "electricity_distribution": "~2.2 MWh/ton NaOH produced",
+            "cooling_water": "~500 kg/h circulating

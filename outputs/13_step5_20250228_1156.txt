@@ -1,0 +1,25 @@
+Reference Class: 13,Chemical,Methanol
+
+Step 5 - Mermaid Diagram Generation:
+```mermaid
+flowchart LR
+    op_001[Feed Preparation] -->|Conditioned Feedstock Mixture| op_002[Steam Methane Reforming]
+    op_002 -->|Syngas| op_003[Shift Conversion]
+    op_003 -->|Shifted Syngas| op_004[Gas Purification]
+    op_004 -->|Purified Syngas| op_005[Methanol Synthesis]
+    op_004 -->|Purged Impurities| op_010[Emission Control]
+    op_005 -->|Crude Methanol| op_007[Methanol Purification]
+    op_005 -->|Unreacted Syngas| op_006[Unreacted Syngas Recycling]
+    op_006 -->|Recycled Syngas| op_005
+    op_006 -->|Purge Gas| op_010
+    op_007 -->|Purified Methanol| op_008[Product Storage and Handling]
+    op_007 -->|Byproducts| op_010
+    op_008 -->|Methanol Product| op_011[Distribution]
+    op_009[Energy Recovery and Utilities] -->|Utilities| op_001
+    op_009 -->|Utilities| op_002
+    op_009 -->|Utilities| op_003
+    op_009 -->|Utilities| op_004
+    op_009 -->|Utilities| op_005
+    op_009 -->|Utilities| op_006
+    op_009 -->|Utilities| op_007
+```

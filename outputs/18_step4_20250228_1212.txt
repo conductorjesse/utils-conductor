@@ -1,0 +1,364 @@
+Reference Class: 18,Alcohol/Intermediate,Ethanol (Industrial)
+
+Step 4 - JSON Structure Generation:
+```json
+{
+  "reference_class": {
+    "ref_class_id": "corn_ethanol_production",
+    "ref_class_name": "Corn-Based Industrial Ethanol Production",
+    "ref_class_description": "Production of anhydrous industrial ethanol (≥99% purity) from corn via enzymatic hydrolysis, fermentation, distillation, and dehydration processes.",
+    "feedstocks": [
+      {
+        "feed_name": "Corn",
+        "feed_description": "Raw corn feedstock for industrial ethanol production",
+        "feed_composition": "~70% starch, 10% protein, 10% fiber, remainder moisture and other components",
+        "feed_specs": "Dried corn kernels suitable for industrial processing"
+      }
+    ],
+    "products": [
+      {
+        "product_name": "Industrial Ethanol",
+        "product_description": "Anhydrous ethanol for industrial applications",
+        "product_composition": "≥99% ethanol, <1% water",
+        "product_specs": "Anhydrous ethanol suitable for industrial applications, with purity ≥99%"
+      },
+      {
+        "product_name": "Dried Distillers Grains",
+        "product_description": "By-product from ethanol production used as animal feed",
+        "product_composition": "Protein, fiber, and residual nutrients from corn processing",
+        "product_specs": "Moisture content <12%, protein content ~27-30%"
+      },
+      {
+        "product_name": "Carbon Dioxide",
+        "product_description": "By-product from fermentation process",
+        "product_composition": ">99% CO₂",
+        "product_specs": "High-purity CO₂ suitable for food/beverage or other industrial uses"
+      }
+    ],
+    "production_method": "Fermentation of corn-derived starch followed by distillation and dehydration",
+    "production_scale": "100 million liters of ethanol per year"
+  },
+  "unit_operations": [
+    {
+      "op_id": "op_001",
+      "op_name": "Corn Reception and Storage",
+      "op_description": "Receiving and storing raw corn feedstock to ensure steady supply",
+      "op_type": "material handling",
+      "equipment": [
+        {
+          "equipment_name": "Corn silos",
+          "equipment_specs": "Large-capacity storage silos with temperature and humidity control"
+        },
+        {
+          "equipment_name": "Conveyor systems",
+          "equipment_specs": "Mechanical conveying equipment for corn transfer"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Physical storage of corn without chemical transformation",
+          "parameters": {
+            "mass_retention": "100% of raw corn is available for milling"
+          },
+          "impacted_input_streams": ["stream_001"],
+          "impacted_output_streams": ["stream_002"]
+        }
+      ],
+      "input_streams": ["stream_001"],
+      "output_streams": ["stream_002"],
+      "energy_requirements": "Minimal energy consumption for conveying equipment",
+      "utilities": "Electricity for conveying systems and silo monitoring"
+    },
+    {
+      "op_id": "op_002",
+      "op_name": "Milling",
+      "op_description": "Grinding corn into fine powder to increase enzymatic accessibility",
+      "op_type": "size reduction",
+      "equipment": [
+        {
+          "equipment_name": "Hammer mill",
+          "equipment_specs": "Industrial-scale hammer mill with dust collection system"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Physical grinding of corn into fine particles",
+          "parameters": {
+            "mass_retention": "98-99% of corn mass transferred to milled product",
+            "particle_size": "Reduced to <2mm particle size",
+            "mass_loss": "1-2% due to dust or fines"
+          },
+          "impacted_input_streams": ["stream_002"],
+          "impacted_output_streams": ["stream_003"]
+        }
+      ],
+      "input_streams": ["stream_002"],
+      "output_streams": ["stream_003"],
+      "energy_requirements": "0.5-1.5 kWh per metric ton of corn processed",
+      "utilities": "Electricity for milling operations"
+    },
+    {
+      "op_id": "op_003",
+      "op_name": "Liquefaction and Saccharification",
+      "op_description": "Converting corn starch into fermentable sugars through enzymatic hydrolysis",
+      "op_type": "reaction",
+      "equipment": [
+        {
+          "equipment_name": "Slurry tanks",
+          "equipment_specs": "Jacketed stirred tanks with temperature control"
+        },
+        {
+          "equipment_name": "Heat exchangers",
+          "equipment_specs": "For heating and cooling the slurry"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Enzymatic conversion of starch to glucose via liquefaction and saccharification",
+          "parameters": {
+            "reaction": "(C₆H₁₀O₅)_n + n H₂O → n C₆H₁₂O₆",
+            "temperature": "85-90°C for liquefaction, 60-65°C for saccharification",
+            "pH": "5.8-6.2 for liquefaction, 4.2-4.5 for saccharification",
+            "enzymes": "α-amylase for liquefaction, glucoamylase for saccharification",
+            "conversion": "90-95% of starch converted to glucose"
+          },
+          "impacted_input_streams": ["stream_003"],
+          "impacted_output_streams": ["stream_004"]
+        }
+      ],
+      "input_streams": ["stream_003"],
+      "output_streams": ["stream_004"],
+      "energy_requirements": "Moderate heating required to maintain optimal enzymatic activity",
+      "utilities": "Steam for heating, cooling water, electricity for agitation"
+    },
+    {
+      "op_id": "op_004",
+      "op_name": "Fermentation",
+      "op_description": "Conversion of sugars to ethanol and CO₂ using yeast in anaerobic conditions",
+      "op_type": "reaction",
+      "equipment": [
+        {
+          "equipment_name": "Fermentation tanks",
+          "equipment_specs": "Large-scale fermenters with cooling jackets and agitators"
+        },
+        {
+          "equipment_name": "CO₂ scrubbers",
+          "equipment_specs": "For collection and purification of CO₂ by-product"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Biological conversion of glucose to ethanol and carbon dioxide by yeast",
+          "parameters": {
+            "reaction": "C₆H₁₂O₆ → 2 C₂H₅OH + 2 CO₂",
+            "temperature": "30-32°C",
+            "pH": "4.0-5.0",
+            "time": "48-72 hours",
+            "conversion": "~90% of glucose converted to ethanol",
+            "yield": "~0.45 kg ethanol/kg glucose (90% of theoretical)"
+          },
+          "impacted_input_streams": ["stream_004"],
+          "impacted_output_streams": ["stream_005", "stream_006"]
+        }
+      ],
+      "input_streams": ["stream_004"],
+      "output_streams": ["stream_005", "stream_006"],
+      "energy_requirements": "Exothermic process requiring cooling to maintain optimal temperature",
+      "utilities": "Cooling water, electricity for agitation and monitoring systems"
+    },
+    {
+      "op_id": "op_005",
+      "op_name": "Distillation",
+      "op_description": "Separation of ethanol from fermented broth by differential boiling points",
+      "op_type": "separation",
+      "equipment": [
+        {
+          "equipment_name": "Distillation columns",
+          "equipment_specs": "Multi-stage distillation columns with trays or packing"
+        },
+        {
+          "equipment_name": "Condensers",
+          "equipment_specs": "Shell and tube heat exchangers for vapor condensation"
+        },
+        {
+          "equipment_name": "Reboilers",
+          "equipment_specs": "For providing heat to the distillation column"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Physical separation of ethanol from water and solids based on volatility differences",
+          "parameters": {
+            "ethanol_recovery": "~90% recovery of ethanol from fermented broth",
+            "ethanol_concentration": "~95% v/v in distillate",
+            "operating_temperature": "78-100°C",
+            "operating_pressure": "Near atmospheric"
+          },
+          "impacted_input_streams": ["stream_005"],
+          "impacted_output_streams": ["stream_007", "stream_008"]
+        }
+      ],
+      "input_streams": ["stream_005"],
+      "output_streams": ["stream_007", "stream_008"],
+      "energy_requirements": "High energy consumption, ~6,600 kJ/kg ethanol produced",
+      "utilities": "Steam for reboilers, cooling water for condensers"
+    },
+    {
+      "op_id": "op_006",
+      "op_name": "Molecular Sieve Dehydration",
+      "op_description": "Removal of residual water from ethanol using molecular sieves",
+      "op_type": "separation",
+      "equipment": [
+        {
+          "equipment_name": "Molecular sieve columns",
+          "equipment_specs": "Multiple columns with zeolite molecular sieves"
+        },
+        {
+          "equipment_name": "Regeneration system",
+          "equipment_specs": "For periodic regeneration of the molecular sieves"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Adsorption of water on molecular sieves to produce anhydrous ethanol",
+          "parameters": {
+            "initial_ethanol_concentration": "~95% v/v",
+            "final_ethanol_concentration": "≥99% v/v",
+            "water_removal": "Reduction from ~5% to <1% water content",
+            "cycle_time": "Alternating between adsorption and regeneration cycles"
+          },
+          "impacted_input_streams": ["stream_007"],
+          "impacted_output_streams": ["stream_009", "stream_010"]
+        }
+      ],
+      "input_streams": ["stream_007"],
+      "output_streams": ["stream_009", "stream_010"],
+      "energy_requirements": "500-800 kJ/kg ethanol for sieve regeneration",
+      "utilities": "Steam for regeneration and heating, electricity for process control"
+    },
+    {
+      "op_id": "op_007",
+      "op_name": "By-Product Handling",
+      "op_description": "Processing distillers stillage to produce dried distillers grains",
+      "op_type": "separation",
+      "equipment": [
+        {
+          "equipment_name": "Centrifuges",
+          "equipment_specs": "For initial solid-liquid separation of stillage"
+        },
+        {
+          "equipment_name": "Evaporators",
+          "equipment_specs": "Multiple-effect evaporators for concentrating thin stillage"
+        },
+        {
+          "equipment_name": "Dryers",
+          "equipment_specs": "Rotary dryers for producing dried distillers grains"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Dewatering and drying of distillers stillage to produce animal feed",
+          "parameters": {
+            "initial_moisture": "~90% water content in stillage",
+            "final_moisture": "<12% moisture in dried product",
+            "mass_yield": "80-90% of solid content recovered as DDG",
+            "drying_temperature": "100-150°C"
+          },
+          "impacted_input_streams": ["stream_008"],
+          "impacted_output_streams": ["stream_011", "stream_012"]
+        }
+      ],
+      "input_streams": ["stream_008"],
+      "output_streams": ["stream_011", "stream_012"],
+      "energy_requirements": "1-2 GJ per metric ton of DDG produced",
+      "utilities": "Steam for evaporation and drying, electricity for centrifuges and conveyors"
+    },
+    {
+      "op_id": "op_008",
+      "op_name": "Wastewater Treatment",
+      "op_description": "Treatment of process wastewater to meet environmental standards",
+      "op_type": "treatment",
+      "equipment": [
+        {
+          "equipment_name": "Anaerobic digesters",
+          "equipment_specs": "For primary organic matter reduction and biogas production"
+        },
+        {
+          "equipment_name": "Aerobic treatment tanks",
+          "equipment_specs": "For secondary treatment with activated sludge"
+        },
+        {
+          "equipment_name": "Clarifiers",
+          "equipment_specs": "For solid-liquid separation of treated water"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Biological and physical treatment of wastewater to remove contaminants",
+          "parameters": {
+            "BOD_removal": ">95% removal of biochemical oxygen demand",
+            "TSS_removal": ">95% removal of total suspended solids",
+            "biogas_production": "Potential for methane production from anaerobic digestion"
+          },
+          "impacted_input_streams": ["stream_012"],
+          "impacted_output_streams": ["stream_013", "stream_014"]
+        }
+      ],
+      "input_streams": ["stream_012"],
+      "output_streams": ["stream_013", "stream_014"],
+      "energy_requirements": "1-3 kWh/m³ treated water",
+      "utilities": "Electricity for aeration and pumping, chemicals for pH control and flocculation"
+    },
+    {
+      "op_id": "op_009",
+      "op_name": "Energy Recovery",
+      "op_description": "Recovering waste heat from process streams and generating utilities",
+      "op_type": "energy recovery",
+      "equipment": [
+        {
+          "equipment_name": "Heat exchangers",
+          "equipment_specs": "Network of heat exchangers for heat recovery"
+        },
+        {
+          "equipment_name": "Boilers",
+          "equipment_specs": "For steam generation from recovered heat"
+        },
+        {
+          "equipment_name": "Steam turbines",
+          "equipment_specs": "Optional for electricity generation from steam"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Recovery and utilization of waste heat from various process streams",
+          "parameters": {
+            "heat_recovery_efficiency": "60-70% of waste heat recovered",
+            "steam_generation": "100-200 tons/day from recovered heat",
+            "potential_electricity": "5-10 MW generation capacity"
+          },
+          "impacted_input_streams": ["stream_015"],
+          "impacted_output_streams": ["stream_016"]
+        }
+      ],
+      "input_streams": ["stream_015"],
+      "output_streams": ["stream_016"],
+      "energy_requirements": "Net energy producer",
+      "utilities": "Provides steam, hot water, and potentially electricity to other unit operations"
+    },
+    {
+      "op_id": "op_010",
+      "op_name": "Ethanol Storage and Dispatch",
+      "op_description": "Storing and dispatching final anhydrous ethanol product",
+      "op_type": "storage",
+      "equipment": [
+        {
+          "equipment_name": "Storage tanks",
+          "equipment_specs": "Large capacity tanks with nitrogen blanketing and temperature control"
+        },
+        {
+          "equipment_name": "Loading facilities",
+          "equipment_specs": "For truck or rail loading of final product"
+        }
+      ],
+      "transformations": [
+        {

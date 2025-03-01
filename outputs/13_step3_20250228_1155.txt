@@ -1,0 +1,191 @@
+Reference Class: 13,Chemical,Methanol
+
+Step 3 - Mass-Balance Analysis:
+### Detailed Stoichiometric and Mass-Balance Transformations for Methanol Production
+
+Below is an ordered list of the major unit operations involved in the industrial-scale production of methanol, along with their respective stoichiometric and mass-balance transformations. Each unit operation includes key reactions, approximate yields or conversions, numerical estimates based on a production scale of **1,000,000 metric tons per year**, and notes on energy requirements where applicable.
+
+---
+
+1. **Feed Preparation**
+   - **Transformations:**
+     - **Composition:** Combines natural gas (primarily methane, CH₄) and water (H₂O) to form a conditioned feedstock mixture.
+     - **Mass Balance:** 
+       - Natural Gas: Approximately 1,200,000 metric tons/year.
+       - Water: Approximately 1,800,000 metric tons/year.
+       - Conditioned Feedstock Mixture: ~3,000,000 metric tons/year.
+   - **Role in Energy/Mass Balance:**
+     - Ensures proper ratios of CH₄ to H₂O for optimal reforming efficiency.
+     - Minimal energy input, primarily pumping and heating to desired temperatures.
+
+2. **Steam Methane Reforming (SMR)**
+   - **Transformations:**
+     - **Chemical Reaction:**
+       \[
+       \text{CH}_4 + \text{H}_2\text{O} \rightarrow \text{CO} + 3\text{H}_2 \quad (\Delta H = +206 \text{ kJ/mol})
+       \]
+     - **Mass Balance:**
+       - Input: 
+         - CH₄: 1,200,000 metric tons/year.
+         - H₂O: 1,800,000 metric tons/year.
+       - Outputs:
+         - Syngas (H₂ + CO): ~2,700,000 metric tons/year.
+         - CO₂ Byproduct: ~400,000 metric tons/year (assumed 20% methane conversion).
+     - **Conversion Rates:** 
+       - Methane Conversion: ~70-80%.
+       - Hydrogen Yield: Approximately 2.5 times the converted CH₄.
+   - **Energy Requirements:**
+     - Highly energy-intensive due to endothermic reactions.
+     - Requires substantial heat input, typically from burning a portion of natural gas feedstock.
+
+3. **Shift Conversion (Water-Gas Shift Reaction)**
+   - **Transformations:**
+     - **Chemical Reaction:**
+       \[
+       \text{CO} + \text{H}_2\text{O} \rightarrow \text{CO}_2 + \text{H}_2 \quad (\Delta H = -41 \text{ kJ/mol})
+       \]
+     - **Mass Balance:**
+       - Input Syngas: 2,700,000 metric tons/year.
+       - Added Steam: 900,000 metric tons/year.
+       - Outputs:
+         - Shifted Syngas: ~3,300,000 metric tons/year (increased H₂).
+         - CO₂: ~600,000 metric tons/year.
+     - **Conversion Rates:**
+       - CO Conversion: ~50-60%.
+       - Hydrogen Increase: Approximately 1.2 times the CO converted.
+   - **Energy Requirements:**
+     - Exothermic reaction allows partial heat recovery.
+     - Requires temperature control to optimize shift equilibrium.
+
+4. **Gas Purification**
+   - **Transformations:**
+     - **Processes Involved:**
+       - Removal of CO₂ using solvents (e.g., amine scrubbing).
+       - Removal of sulfur compounds via adsorption or other methods.
+     - **Mass Balance:**
+       - Input Shifted Syngas: 3,300,000 metric tons/year.
+       - Purified Syngas: ~3,000,000 metric tons/year.
+       - Purged Impurities (CO₂, SOₓ): ~300,000 metric tons/year.
+     - **Conversion Rates:**
+       - CO₂ Removal Efficiency: ~90%.
+       - Sulfur Removal Efficiency: >99%.
+   - **Energy Requirements:**
+     - Moderate energy consumption for solvent regeneration and compression.
+     - Typically involves cooling and heating cycles.
+
+5. **Methanol Synthesis**
+   - **Transformations:**
+     - **Chemical Reaction:**
+       \[
+       \text{CO} + 2\text{H}_2 \leftrightarrow \text{CH}_3\text{OH} \quad (\Delta H = -90 \text{ kJ/mol})
+       \]
+     - **Mass Balance:**
+       - Input Purified Syngas: 3,000,000 metric tons/year.
+       - Output:
+         - Crude Methanol: 1,000,000 metric tons/year.
+         - Unreacted Syngas: 1,500,000 metric tons/year.
+         - Byproducts (e.g., H₂O from condensation): 500,000 metric tons/year.
+     - **Conversion Rates:**
+       - Methanol Yield: ~50-60% based on stoichiometry.
+       - CO Conversion per pass: ~50%.
+   - **Energy Requirements:**
+     - Exothermic reaction allows heat recovery.
+     - High-pressure conditions (50-100 bar) require significant compression energy.
+
+6. **Unreacted Syngas Recycling**
+   - **Transformations:**
+     - **Processes Involved:**
+       - Separation of unreacted H₂ and CO from methanol product.
+       - Compression and purification of recycled syngas.
+     - **Mass Balance:**
+       - Input Unreacted Syngas: 1,500,000 metric tons/year.
+       - Output Recycled Syngas: 1,200,000 metric tons/year.
+       - Vented or purged Syngas: 300,000 metric tons/year (minimal loss).
+     - **Conversion Rates:**
+       - Recycling Rate: ~80%.
+   - **Energy Requirements:**
+     - Energy-intensive due to gas compression.
+     - Utilizes recovered heat from previous unit operations when possible.
+
+7. **Methanol Purification**
+   - **Transformations:**
+     - **Processes Involved:**
+       - Distillation to remove water and light hydrocarbons.
+       - Purification to achieve 99.9% methanol quality.
+     - **Mass Balance:**
+       - Input Crude Methanol: 1,000,000 metric tons/year.
+       - Output Purified Methanol: 990,000 metric tons/year.
+       - Byproducts (e.g., water, light hydrocarbons): 10,000 metric tons/year.
+     - **Conversion Rates:**
+       - Purity: 99.9% methanol.
+       - Recovery Efficiency: >99%.
+   - **Energy Requirements:**
+     - Highly energy-intensive due to multiple distillation columns.
+     - Requires significant heat input for vaporization.
+
+8. **Product Storage and Handling**
+   - **Transformations:**
+     - **Processes Involved:**
+       - Storage of purified methanol in tanks.
+       - Handling systems for loading and distribution.
+     - **Mass Balance:**
+       - Input Purified Methanol: 990,000 metric tons/year.
+       - Stored Methanol: 990,000 metric tons/year.
+       - Minimal losses (<1%) due to handling.
+     - **Conversion Rates:**
+       - N/A (storage unit).
+   - **Energy Requirements:**
+     - Minimal energy, primarily for temperature control if needed.
+     - Energy used for pumping and transportation logistics.
+
+9. **Energy Recovery and Utilities**
+   - **Transformations:**
+     - **Processes Involved:**
+       - Heat integration from exothermic and endothermic reactions.
+       - Generation of steam and cooling water.
+       - Electricity supply for compressors, pumps, and other equipment.
+     - **Mass Balance:**
+       - Waste Heat Utilized: Approximately 500,000 metric tons/year.
+       - Utility Inputs: Steam (~800,000 metric tons/year), Cooling Water (~600,000 metric tons/year), Electricity (~200,000 MWh/year).
+       - Recovered Energy: ~400,000 metric tons/year equivalent.
+     - **Conversion Rates:**
+       - Heat Recovery Efficiency: ~50%.
+   - **Energy Requirements:**
+     - Central role in optimizing overall energy efficiency.
+     - Significant infrastructure for heat exchangers and utility systems.
+
+10. **Emission Control and Waste Treatment**
+    - **Transformations:**
+      - **Processes Involved:**
+        - Capture and sequestration or utilization of CO₂.
+        - Treatment of wastewater and solid wastes.
+        - Control of gaseous emissions (e.g., NOₓ, SOₓ).
+      - **Mass Balance:**
+        - Input Byproducts: ~700,000 metric tons/year (CO₂, impurities).
+        - Outputs: 
+          - Treated Emissions: ~650,000 metric tons/year (post-treatment).
+          - Recovered Byproducts: ~50,000 metric tons/year (utilized or sequestered).
+      - **Conversion Rates:**
+        - CO₂ Capture Efficiency: ~85-90%.
+        - Waste Treatment Efficiency: >95%.
+    - **Energy Requirements:**
+      - Energy required for carbonation, solvent regeneration, and waste processing.
+      - Incorporates energy penalties into overall plant energy balance.
+
+---
+
+### Summary of Key Transformations and Balances
+
+- **Total Methanol Production:** 1,000,000 metric tons/year (Purified Methanol: 990,000 metric tons/year after purification).
+- **Total Syngas Processed:** ~3,000,000 metric tons/year purified syngas.
+- **Total CO₂ Emissions:** ~600,000 metric tons/year from SMR and shift reactions, with ~600,000 metric tons/year captured.
+- **Energy Integration:** Significant heat integration between endothermic SMR and exothermic shift and synthesis reactions enhances overall energy efficiency.
+- **Recycling Loops:** Approximately 80% of unreacted syngas is recycled, reducing raw material consumption and improving conversion rates.
+
+### Notes on Energy and Mass Efficiency
+
+- **Energy Intensity:** Major energy demands arise from SMR (endothermic), methanol synthesis (pressure and temperature conditions), purification (distillation), and gas compression for recycling.
+- **Mass Efficiency:** Recycling of unreacted syngas and effective heat integration contribute to high mass and energy efficiencies, minimizing waste and reducing operational costs.
+- **Environmental Compliance:** Emission control and waste treatment ensure adherence to environmental standards, mitigating greenhouse gas emissions and promoting sustainability.
+
+This detailed breakdown provides a comprehensive understanding of the mass and energy flows within each unit operation of the methanol production process, facilitating a robust techno-economic analysis.

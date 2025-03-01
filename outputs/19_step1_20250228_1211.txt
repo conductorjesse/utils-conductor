@@ -1,0 +1,17 @@
+Reference Class: 19,Basic Inorganic,Sodium Hydroxide
+
+Step 1 - Context Elaboration:
+```json
+{
+  "product": "Sodium Hydroxide (Caustic Soda)",
+  "production_method": "Chlor-alkali process using membrane cell technology",
+  "production_scale": "Approximately 1,000 metric tons per day",
+  "product_specs": "Technical grade, 50% w/w concentration",
+  "feedstocks": [
+    "Brine (sodium chloride solution)",
+    "Water",
+    "Electricity"
+  ],
+  "additional_constraints": "Compliance with environmental regulations and energy efficiency standards"
+}
+```

@@ -1,0 +1,6 @@
+ref_ID,Category,Product/System,Production/Process Method,Brief Description
+15,Alcohol,Methanol,Natural Gas Reforming + Synthesis,"Syngas is generated from methane, then catalytically converted to methanol."
+16,Alcohol,Methanol,Coal Gasification + Synthesis,Coal is gasified into syngas; methanol is then synthesized over a catalyst.
+17,Alcohol/Intermediate,Ethanol (Industrial),Hydration of Ethylene,Ethylene is reacted with steam over an acid catalyst to produce ethanol.
+18,Alcohol/Intermediate,Ethanol (Industrial),Fermentation (Bioethanol),Sugars or starch are fermented by yeast to produce ethanol; then distilled.
+19,Basic Inorganic,Sodium Hydroxide,Membrane Cell (Chlor-alkali),Uses a selective membrane to separate catholyte and anolyte compartments for caustic soda production.

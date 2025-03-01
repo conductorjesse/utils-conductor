@@ -1,0 +1,24 @@
+Reference Class: 18,Alcohol/Intermediate,Ethanol (Industrial)
+
+Step 5 - Mermaid Diagram Generation:
+```mermaid
+flowchart LR
+    op_001[Corn Reception and Storage] --> |Stored Corn| op_002[Milling]
+    op_002 --> |Milled Corn| op_003[Liquefaction and Saccharification]
+    op_003 --> |Sugar-rich Mash| op_004[Fermentation]
+    op_004 --> |Fermented Broth| op_005[Distillation]
+    op_004 --> |CO2| external1[CO2 Collection]
+    op_005 --> |Ethanol Distillate| op_006[Molecular Sieve Dehydration]
+    op_005 --> |Distillers Stillage| op_007[By-Product Handling]
+    op_006 --> |Anhydrous Ethanol| op_010[Ethanol Storage and Dispatch]
+    op_006 --> |Recovered Water| op_008[Wastewater Treatment]
+    op_007 --> |Dried Distillers Grains| external2[Animal Feed Dispatch]
+    op_007 --> |Process Wastewater| op_008
+    op_008 --> |Treated Water| external3[Discharge/Reuse]
+    op_008 --> |Recovered Solids| external4[Solid Waste Handling]
+    op_009[Energy Recovery] --> |Process Utilities| op_003
+    op_009 --> |Process Utilities| op_004
+    op_009 --> |Process Utilities| op_005
+    op_009 --> |Process Utilities| op_006
+    op_009 --> |Process Utilities| op_007
+```

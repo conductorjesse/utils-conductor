@@ -1,0 +1,374 @@
+Reference Class: 17,Alcohol/Intermediate,Ethanol (Industrial)
+
+Step 4 - JSON Structure Generation:
+```json
+{
+  "reference_class": {
+    "ref_class_id": "industrial_ethanol_production",
+    "ref_class_name": "Industrial Ethanol via Ethylene Hydration",
+    "ref_class_description": "Production of industrial-grade ethanol through catalytic hydration of ethylene. This process converts ethylene and water into high-purity ethanol for industrial applications.",
+    "feedstocks": [
+      {
+        "feed_name": "Ethylene",
+        "feed_description": "Purified ethylene gas used as primary reactant",
+        "feed_composition": ">98% pure ethylene",
+        "feed_specs": "Stored under moderate pressure, free from sulfur compounds and moisture"
+      },
+      {
+        "feed_name": "Water",
+        "feed_description": "Purified water used as reactant for hydration",
+        "feed_composition": ">99.5% purified water",
+        "feed_specs": "Deionized water free from minerals and contaminants"
+      }
+    ],
+    "products": [
+      {
+        "product_name": "Industrial Ethanol",
+        "product_description": "Anhydrous ethanol for industrial applications",
+        "product_composition": "≥99.5% ethanol",
+        "product_specs": "Anhydrous, meets industrial specifications for purity and water content"
+      }
+    ],
+    "production_method": "Catalytic hydration of ethylene using phosphoric acid catalyst",
+    "production_scale": "1 million metric tons per year (~2,740 metric tons per day)"
+  },
+  "unit_operations": [
+    {
+      "op_id": "op_001",
+      "op_name": "Raw Material Storage",
+      "op_description": "Storage of ethylene and water feedstocks before processing",
+      "op_type": "storage",
+      "equipment": [
+        {
+          "equipment_name": "Ethylene storage tanks",
+          "equipment_specs": "Pressure vessels for storing ethylene gas"
+        },
+        {
+          "equipment_name": "Water storage tanks",
+          "equipment_specs": "Atmospheric tanks for storing purified water"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Storage without chemical transformation",
+          "parameters": {
+            "ethylene_quantity": "~1,500 metric tons/day",
+            "water_quantity": "~10,000 metric tons/day"
+          },
+          "impacted_input_streams": ["stream_001", "stream_002"],
+          "impacted_output_streams": ["stream_003", "stream_004"]
+        }
+      ],
+      "input_streams": ["stream_001", "stream_002"],
+      "output_streams": ["stream_003", "stream_004"],
+      "energy_requirements": "Minimal; primarily for maintaining storage pressure for ethylene",
+      "utilities": "Electric power for pumps and compression"
+    },
+    {
+      "op_id": "op_002",
+      "op_name": "Feed Pre-treatment",
+      "op_description": "Purification and conditioning of ethylene and water to remove impurities",
+      "op_type": "purification",
+      "equipment": [
+        {
+          "equipment_name": "Ethylene purification unit",
+          "equipment_specs": "Desulfurization beds and drying columns"
+        },
+        {
+          "equipment_name": "Water treatment system",
+          "equipment_specs": "Deionization and filtration equipment"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Removal of impurities from ethylene and water",
+          "parameters": {
+            "ethylene_purity": "Improved to ~98%",
+            "water_purity": "Improved to ~99.5%",
+            "impurity_removal_rate": "~2% of ethylene feed removed as impurities"
+          },
+          "impacted_input_streams": ["stream_003", "stream_004"],
+          "impacted_output_streams": ["stream_005", "stream_006", "stream_007"]
+        }
+      ],
+      "input_streams": ["stream_003", "stream_004"],
+      "output_streams": ["stream_005", "stream_006", "stream_007"],
+      "energy_requirements": "Moderate; heating for desulfurization",
+      "utilities": "Steam, electric power for pumps, cooling water"
+    },
+    {
+      "op_id": "op_003",
+      "op_name": "Feed Mixing",
+      "op_description": "Homogeneous mixture of purified ethylene and water prepared for reaction",
+      "op_type": "mixing",
+      "equipment": [
+        {
+          "equipment_name": "Mixing vessel",
+          "equipment_specs": "Pressure-rated mixing equipment with appropriate internals"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Combining ethylene and water in stoichiometric ratio",
+          "parameters": {
+            "stoichiometry": "1 mole C₂H₄ + 1 mole H₂O → 1 mole C₂H₅OH",
+            "ethylene_input": "~1.02 million metric tons/year",
+            "water_input": "~1.02 million metric tons/year",
+            "target_conversion": "~90% of ethylene"
+          },
+          "impacted_input_streams": ["stream_005", "stream_006"],
+          "impacted_output_streams": ["stream_008"]
+        }
+      ],
+      "input_streams": ["stream_005", "stream_006"],
+      "output_streams": ["stream_008"],
+      "energy_requirements": "Low; primarily mechanical energy for mixers",
+      "utilities": "Electric power for mixing equipment"
+    },
+    {
+      "op_id": "op_004",
+      "op_name": "Catalytic Hydration Reactor",
+      "op_description": "Reacts ethylene with water in the presence of a catalyst to form ethanol",
+      "op_type": "reaction",
+      "equipment": [
+        {
+          "equipment_name": "Fixed-bed reactor",
+          "equipment_specs": "Pressure vessel with phosphoric acid catalyst on solid support"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Conversion of ethylene and water to ethanol",
+          "parameters": {
+            "reaction": "C₂H₄ + H₂O → C₂H₅OH",
+            "catalyst": "Phosphoric acid on solid support",
+            "conversion": "~90% ethylene converted",
+            "selectivity": "~95% to ethanol",
+            "yield": "~85% based on ethylene fed",
+            "by_products": "<5% other compounds"
+          },
+          "impacted_input_streams": ["stream_008"],
+          "impacted_output_streams": ["stream_009"]
+        }
+      ],
+      "input_streams": ["stream_008"],
+      "output_streams": ["stream_009"],
+      "energy_requirements": "Moderate; endothermic reaction requires heat input",
+      "utilities": "Steam for heating, pressure control systems"
+    },
+    {
+      "op_id": "op_005",
+      "op_name": "Quenching/Cooling",
+      "op_description": "Cools the reactor effluent to stabilize the reaction and prepare for separation",
+      "op_type": "heat_exchange",
+      "equipment": [
+        {
+          "equipment_name": "Heat exchangers",
+          "equipment_specs": "Shell and tube heat exchangers with cooling water"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Temperature reduction of reactor effluent",
+          "parameters": {
+            "temperature_reduction": "Significant cooling to stabilize product",
+            "stream_composition": "Ethanol, unreacted ethylene, water, and by-products"
+          },
+          "impacted_input_streams": ["stream_009"],
+          "impacted_output_streams": ["stream_010"]
+        }
+      ],
+      "input_streams": ["stream_009"],
+      "output_streams": ["stream_010"],
+      "energy_requirements": "Significant cooling required",
+      "utilities": "Cooling water, potentially refrigeration systems"
+    },
+    {
+      "op_id": "op_006",
+      "op_name": "Distillation Column",
+      "op_description": "Separates ethanol from unreacted ethylene and other light gases through distillation",
+      "op_type": "separation",
+      "equipment": [
+        {
+          "equipment_name": "Distillation column",
+          "equipment_specs": "Multi-tray or packed column with reboiler and condenser"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Separation of ethanol from other components",
+          "parameters": {
+            "distillate_purity": "~85% ethanol",
+            "bottoms_composition": "Unreacted ethylene (~10%), water, and by-products (~5%)",
+            "reflux_ratio": "Typically ~1:1"
+          },
+          "impacted_input_streams": ["stream_010"],
+          "impacted_output_streams": ["stream_011", "stream_012"]
+        }
+      ],
+      "input_streams": ["stream_010"],
+      "output_streams": ["stream_011", "stream_012"],
+      "energy_requirements": "Highly energy-intensive; major heating for vaporization and cooling for condensation",
+      "utilities": "Steam for reboiler, cooling water for condenser"
+    },
+    {
+      "op_id": "op_007",
+      "op_name": "Unreacted Ethylene Recovery",
+      "op_description": "Recovers and recycles unreacted ethylene back to the reactor",
+      "op_type": "separation",
+      "equipment": [
+        {
+          "equipment_name": "Compressors",
+          "equipment_specs": "Multi-stage compressors for ethylene recovery"
+        },
+        {
+          "equipment_name": "Purification unit",
+          "equipment_specs": "Equipment to remove impurities from recycled ethylene"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Recovery of unreacted ethylene for recycling",
+          "parameters": {
+            "recovery_rate": "~95% of unreacted ethylene",
+            "makeup_requirement": "~5% fresh ethylene to account for losses"
+          },
+          "impacted_input_streams": ["stream_012"],
+          "impacted_output_streams": ["stream_013", "stream_014"]
+        }
+      ],
+      "input_streams": ["stream_012"],
+      "output_streams": ["stream_013", "stream_014"],
+      "energy_requirements": "High; significant electricity for compressors",
+      "utilities": "Electric power, cooling water"
+    },
+    {
+      "op_id": "op_008",
+      "op_name": "Ethanol Purification",
+      "op_description": "Further purifies ethanol to an anhydrous form using molecular sieves or azeotropic distillation",
+      "op_type": "purification",
+      "equipment": [
+        {
+          "equipment_name": "Molecular sieves",
+          "equipment_specs": "Adsorption units for water removal"
+        },
+        {
+          "equipment_name": "Azeotropic distillation column",
+          "equipment_specs": "Alternative method using entrainer for water removal"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Removal of water to produce anhydrous ethanol",
+          "parameters": {
+            "product_purity": "≥99.5% anhydrous ethanol",
+            "impurities": "Purged water and minor impurities (<0.5%)",
+            "yield": "~98% ethanol recovery from distillate"
+          },
+          "impacted_input_streams": ["stream_011"],
+          "impacted_output_streams": ["stream_015", "stream_016"]
+        }
+      ],
+      "input_streams": ["stream_011"],
+      "output_streams": ["stream_015", "stream_016"],
+      "energy_requirements": "Energy-intensive due to additional distillation steps or adsorbent regeneration",
+      "utilities": "Steam, electric power, cooling water"
+    },
+    {
+      "op_id": "op_009",
+      "op_name": "Product Storage",
+      "op_description": "Storage tanks for the final anhydrous ethanol product before dispatch",
+      "op_type": "storage",
+      "equipment": [
+        {
+          "equipment_name": "Storage tanks",
+          "equipment_specs": "Tanks suitable for storing anhydrous ethanol"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Storage of final product",
+          "parameters": {
+            "storage_capacity": "Sized for ~2,740 metric tons/day"
+          },
+          "impacted_input_streams": ["stream_015"],
+          "impacted_output_streams": ["stream_017"]
+        }
+      ],
+      "input_streams": ["stream_015"],
+      "output_streams": ["stream_017"],
+      "energy_requirements": "Minimal; primarily temperature control if necessary",
+      "utilities": "Electric power for pumps and instrumentation"
+    },
+    {
+      "op_id": "op_010",
+      "op_name": "Utilities and Waste Treatment",
+      "op_description": "Provides necessary utilities and handles waste streams in compliance with regulations",
+      "op_type": "utility",
+      "equipment": [
+        {
+          "equipment_name": "Boilers",
+          "equipment_specs": "Steam generation equipment"
+        },
+        {
+          "equipment_name": "Cooling towers",
+          "equipment_specs": "Water cooling systems"
+        },
+        {
+          "equipment_name": "Waste treatment units",
+          "equipment_specs": "Equipment for treating liquid and gaseous wastes"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Utility generation and waste handling",
+          "parameters": {
+            "steam_generation": "~10-15% of total energy input",
+            "cooling_water": "Significant flow for quenching and condenser operations",
+            "waste_treatment": "Processing of minor emissions and effluents"
+          },
+          "impacted_input_streams": ["stream_007", "stream_014", "stream_016"],
+          "impacted_output_streams": ["stream_018"]
+        }
+      ],
+      "input_streams": ["stream_007", "stream_014", "stream_016"],
+      "output_streams": ["stream_018"],
+      "energy_requirements": "High overall utility demand, particularly for steam and electricity",
+      "utilities": "Fuel for boilers, water treatment chemicals, electric power"
+    }
+  ],
+  "streams": [
+    {
+      "stream_id": "stream_001",
+      "stream_name": "Raw Ethylene Feed",
+      "stream_description": "Raw ethylene delivered to facility",
+      "components": ["Ethylene", "Trace impurities"]
+    },
+    {
+      "stream_id": "stream_002",
+      "stream_name": "Raw Water Feed",
+      "stream_description": "Raw water delivered to facility",
+      "components": ["Water", "Minerals", "Trace impurities"]
+    },
+    {
+      "stream_id": "stream_003",
+      "stream_name": "Stored Ethylene",
+      "stream_description": "Ethylene from storage tanks to pretreatment",
+      "components": ["Ethylene", "Trace impurities"]
+    },
+    {
+      "stream_id": "stream_004",
+      "stream_name": "Stored Water",
+      "stream_description": "Water from storage tanks to pretreatment",
+      "components": ["Water", "Minerals", "Trace impurities"]
+    },
+    {
+      "stream_id": "stream_005",
+      "stream_name": "Purified Ethylene",
+      "stream_description": "Pretreated ethylene ready for reaction",
+      "components": ["Ethylene (98% purity)"]
+    },
+    {
+      "stream_id": "stream_006",
+      "stream_name": "Purified Water",
+      "

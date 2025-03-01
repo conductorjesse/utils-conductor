@@ -1,0 +1,21 @@
+Reference Class: 16,Alcohol,Methanol
+
+Step 5 - Mermaid Diagram Generation:
+```mermaid
+flowchart LR
+    op_001[Feed Preparation] --> |Purified Natural Gas| op_003
+    op_001 --> |Treated Water| op_002
+    op_002[Steam Generation] --> |High-Pressure Steam| op_003
+    op_003[Steam Methane Reforming] --> |Raw Syngas| op_004
+    op_004[Shift Conversion] --> |Shifted Syngas| op_005
+    op_005[Gas Cooling and Quenching] --> |Cooled Syngas| op_006
+    op_006[Acid Gas Removal] --> |Purified Syngas| op_007
+    op_006 --> |CO2 Stream| external((CO2 Export))
+    op_007[Methanol Synthesis] --> |Crude Methanol| op_008
+    op_008[Methanol Separation] --> |Purified Methanol| op_009
+    op_008 --> |Unreacted Gases| op_010
+    op_009[Product Storage] --> |Final Product| distribution((Distribution))
+    op_010[Recycle Gas Handling] --> |Recycled Syngas| op_007
+    feedstock1((Natural Gas)) --> |Raw Natural Gas| op_001
+    feedstock2((Water)) --> |Raw Water| op_001
+```

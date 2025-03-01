@@ -1,0 +1,22 @@
+Reference Class: 15,Alcohol,Methanol
+
+Step 5 - Mermaid Diagram Generation:
+```mermaid
+flowchart LR
+    op_001[Natural Gas Storage] --> |conditioned_ng| op_003[Steam Methane Reforming]
+    op_002[Steam Generation] --> |process_steam| op_003
+    op_002 --> |process_steam| op_004[Water-Gas Shift]
+    op_003 --> |raw_syngas| op_004
+    op_004 --> |shifted_gas| op_005[CO₂ Removal]
+    op_005 --> |hydrogen_rich_gas| op_006[Methanol Synthesis]
+    op_005 --> |separated_co2| outside[External Process]
+    op_006 --> |crude_methanol_vapor| op_007[Methanol Condensation]
+    op_007 --> |liquid_methanol| op_008[Methanol Distillation]
+    op_007 --> |unreacted_gases| op_010[Gas Recycle]
+    op_008 --> |pure_methanol| op_009[Product Storage]
+    op_008 --> |distillation_byproducts| outside
+    op_009 --> |product_methanol| customers[Customers]
+    op_010 --> |recycled_gases| op_006
+    raw_ng[Raw Natural Gas] --> |raw_ng| op_001
+    water[Process Water] --> |process_water| op_002
+```

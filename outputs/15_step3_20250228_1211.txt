@@ -1,0 +1,187 @@
+Reference Class: 15,Alcohol,Methanol
+
+Step 3 - Mass-Balance Analysis:
+### Detailed Stoichiometric and Mass-Balance Transformations for Methanol Production
+
+Below is an ordered list of the major unit operations involved in the industrial-scale production of methanol. Each unit operation includes key transformations, approximate yields or conversions, and energy considerations.
+
+---
+
+1. **Natural Gas Storage and Handling**
+   - **Transformations:**
+     - **Mass Balance:** Receive and store natural gas, primarily composed of methane (CH₄) with minor impurities (e.g., ethane, propane, nitrogen).
+     - **Components:** CH₄, C₂H₆, C₃H₈, N₂, etc.
+   - **Role in Process:**
+     - Ensures a steady supply of feedstock with consistent composition for downstream processes.
+   - **Energy Considerations:**
+     - Minimal energy consumption; mainly involves compression and pressurization for storage.
+
+---
+
+2. **Steam Generation**
+   - **Transformations:**
+     - **Process:** Heating water (H₂O) to produce steam.
+     - **Mass Balance:** 
+       - Input: 1 kg H₂O
+       - Output: ~1.05 kg steam (accounting for water vaporization)
+   - **Role in Process:**
+     - Provides the necessary steam for the Steam Methane Reforming (SMR) reaction.
+   - **Energy Considerations:**
+     - **Energy Intensive:** Requires approximately 2-3 GJ per ton of steam produced, operating at temperatures around 800°C.
+
+---
+
+3. **Steam Methane Reforming (SMR)**
+   - **Transformations:**
+     - **Chemical Reaction:**
+       \[
+       \text{CH}_4 + \text{H}_2\text{O} \rightarrow \text{CO} + 3\text{H}_2 \quad (\Delta H = +206 \text{ kJ/mol})
+       \]
+     - **Mass Balance:** 
+       - ~75% conversion of CH₄.
+       - For every mole of CH₄, produces 1 mole of CO and 3 moles of H₂.
+   - **Components:**
+     - Input: CH₄, H₂O
+     - Output: CO, H₂, unreacted CH₄, excess H₂O
+   - **Role in Process:**
+     - Generates synthesis gas (syngas), a mixture of hydrogen and carbon monoxide, essential for methanol synthesis.
+   - **Energy Considerations:**
+     - **Highly Energy Intensive:** Requires high temperatures (~800-900°C) maintained via furnaces or heat exchangers; significant fuel consumption.
+
+---
+
+4. **Water-Gas Shift (WGS) Conversion**
+   - **Transformations:**
+     - **Chemical Reaction:**
+       \[
+       \text{CO} + \text{H}_2\text{O} \rightarrow \text{CO}_2 + \text{H}_2 \quad (\Delta H = -41 \text{ kJ/mol})
+       \]
+     - **Mass Balance:** 
+       - Targets ~95% conversion of CO to CO₂ and additional H₂.
+   - **Components:**
+     - Input: CO, H₂O, H₂
+     - Output: CO₂, H₂
+   - **Role in Process:**
+     - Increases hydrogen yield for methanol synthesis and reduces CO content.
+   - **Energy Considerations:**
+     - **Moderately Energy Intensive:** Typically exothermic, requiring heat management through cooling systems.
+
+---
+
+5. **Carbon Dioxide (CO₂) Removal**
+   - **Transformations:**
+     - **Process:** Absorption using amine-based solvents (e.g., MEA - Monoethanolamine).
+     - **Mass Balance:**
+       - Captures ~90-95% of CO₂ from shifted gas.
+       - Remaining CO₂ content reduced to <1% in hydrogen-rich gas.
+   - **Components:**
+     - Input: CO₂-rich gas mixture
+     - Output: Purified H₂-rich gas, Separated CO₂
+   - **Role in Process:**
+     - Purifies hydrogen for methanol synthesis and captures CO₂ for potential utilization or sequestration.
+   - **Energy Considerations:**
+     - **Energy Intensive:** Regeneration of amine solvents requires significant heat (approx. 0.2-0.3 GJ per ton of CO₂ captured).
+
+---
+
+6. **Methanol Synthesis**
+   - **Transformations:**
+     - **Chemical Reactions:**
+       \[
+       \text{CO} + 2\text{H}_2 \rightarrow \text{CH}_3\text{OH} \quad (\Delta H = -90 \text{ kJ/mol})
+       \]
+       \[
+       \text{CO}_2 + 3\text{H}_2 \rightarrow \text{CH}_3\text{OH} + \text{H}_2\text{O} \quad (\Delta H = -49 \text{ kJ/mol})
+       \]
+     - **Mass Balance:** 
+       - Approximately 70-80% conversion per pass.
+       - Utilizes high-pressure (50-100 bar) and moderate temperatures (200-300°C).
+   - **Components:**
+     - Input: H₂, CO, CO₂ (if utilized)
+     - Output: Crude methanol vapor, H₂O (if CO₂ is converted
+   - **Role in Process:**
+     - Main production step where syngas is converted into methanol.
+   - **Energy Considerations:**
+     - **Moderately Energy Intensive:** Requires compression of gases to high pressures and heat removal due to exothermic reactions.
+
+---
+
+7. **Methanol Condensation and Separation**
+   - **Transformations:**
+     - **Process:** Cooling crude methanol vapor to condense methanol and separate from unreacted gases.
+     - **Mass Balance:** 
+       - ~90% of produced methanol is condensed.
+       - ~10% remains as unreacted gases for recycle.
+   - **Components:**
+     - Input: Crude methanol vapor, unreacted H₂, CO, CO₂
+     - Output: Liquid methanol, Unreacted gas mixture
+   - **Role in Process:**
+     - Separates methanol from the gas phase, enabling purification and recycling of unreacted components.
+   - **Energy Considerations:**
+     - **Energy Moderate:** Requires cooling, typically using heat exchangers; energy recovered from vapor condensation can be utilized elsewhere.
+
+---
+
+8. **Methanol Distillation and Purification**
+   - **Transformations:**
+     - **Process:** Distillation columns to purify methanol to ≥99.9% purity.
+     - **Mass Balance:** 
+       - Achieves high-purity product by removing water and trace impurities.
+       - Recoveries: ~98-99% pure methanol; water and impurities are separated as byproducts.
+   - **Components:**
+     - Input: Liquid methanol from condensation
+     - Output: Pure methanol, Distillation byproducts (water, unreacted gases)
+   - **Role in Process:**
+     - Ensures the final product meets purity specifications for commercial applications.
+   - **Energy Considerations:**
+     - **Highly Energy Intensive:** Requires significant heat input for vaporization and cooling for condensation; often utilizes multiple stages and heat integration for energy efficiency.
+
+---
+
+9. **Product Storage and Handling**
+   - **Transformations:**
+     - **Mass Balance:** Transfer pure methanol to storage tanks.
+     - **Components:** Purified methanol (≥99.9%)
+   - **Role in Process:**
+     - Safely stores the final methanol product for distribution.
+   - **Energy Considerations:**
+     - Minimal energy required; involves pumping and temperature control to maintain liquid state.
+
+---
+
+10. **Utilities and Recycle Streams**
+    - **Transformations:**
+      - **Mass Balance:** 
+        - Unreacted gases (H₂, CO, CO₂) are compressed and recycled back to SMR or Methanol Synthesis units.
+        - Utilizes cooling water, electricity, and other utilities throughout the process.
+    - **Components:**
+      - Input: Unreacted gas streams, utility inputs (cooling water, electricity)
+      - Output: Recycled gases, utilized utilities
+    - **Role in Process:**
+      - Enhances overall process efficiency by recycling unreacted materials and managing utility demands.
+    - **Energy Considerations:**
+      - **Energy Demand:** Compressors for gas recycle consume significant electricity; cooling systems require continuous energy input.
+
+---
+
+### Summary of Key Transformations and Balances
+
+- **Feedstock Composition:**
+  - **Natural Gas:** Primarily CH₄ (~90%), with C₂-C₅ hydrocarbons and inert gases.
+  - **Water:** Used for steam generation and WGS reaction.
+
+- **Syngas Generation (SMR + WGS):**
+  - **CH₄ Conversion:** ~75% converted to CO and H₂ in SMR.
+  - **WGS Conversion:** ~95% of CO converted to CO₂ and additional H₂.
+  - **Resulting Syngas:** Increased H₂ content from both SMR and WGS.
+
+- **Methanol Synthesis:**
+  - **H₂/CO Ratio:** Adjusted to ~2:1 for optimal methanol production.
+  - **Conversion Rates:** 70-80% per pass in synthesis reactors.
+  - **Overall Yield:** Approximately 75% overall yield considering multiple conversions.
+
+- **Energy Integration:**
+  - **Heat Recovery:** Heat from exothermic reactions and condensation steps is often integrated to supply heating needs for endothermic reactions and steam generation.
+  - **Electricity Usage:** Predominantly for compressors, pumps, and auxiliary systems.
+
+This detailed overview provides a comprehensive understanding of the mass and energy transformations at each stage of the methanol production process, facilitating accurate techno-economic analysis.

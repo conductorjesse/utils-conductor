@@ -1,0 +1,78 @@
+Reference Class: 18,Alcohol/Intermediate,Ethanol (Industrial)
+
+Step 2 - Process Flow Description:
+### High-Level Industrial-Scale Process Flow for Ethanol Production
+
+1. **Corn Reception and Storage**
+   - **Description:** Receiving and storing raw corn feedstock in silos or storage facilities to ensure a steady supply for processing.
+   - **Key Streams:**
+     - *Input Feed Stream:* Raw corn → Corn storage
+
+2. **Milling**
+   - **Description:** Grinding the stored corn into a fine powder to increase the surface area, enhancing enzymatic accessibility during subsequent steps.
+   - **Key Streams:**
+     - *Input Stream:* Corn storage → Milled corn
+     - *Output Stream:* Milled corn → Liquefaction unit
+
+3. **Liquefaction and Saccharification**
+   - **Description:** Converting the milled corn starch into fermentable sugars through enzymatic hydrolysis under controlled temperature and pH conditions.
+   - **Key Streams:**
+     - *Input Stream:* Milled corn → Sugar-rich mash
+     - *Output Stream:* Sugar-rich mash → Fermentation unit
+
+4. **Fermentation**
+   - **Description:** Utilizing yeast to ferment the sugars in the mash, producing ethanol and carbon dioxide in an anaerobic environment.
+   - **Key Streams:**
+     - *Input Stream:* Sugar-rich mash → Fermented broth
+     - *Output Stream:* Fermented broth → Distillation unit
+
+5. **Distillation**
+   - **Description:** Separating ethanol from the fermented broth by heating, causing ethanol to vaporize and then condense into a concentrated form.
+   - **Key Streams:**
+     - *Input Stream:* Fermented broth → Ethanol vapor
+     - *Output Streams:* Ethanol-enriched distillate + Distillers stillage
+
+6. **Molecular Sieve Dehydration**
+   - **Description:** Removing remaining water from the ethanol-enriched distillate using molecular sieves or another dehydration technique to achieve anhydrous ethanol.
+   - **Key Streams:**
+     - *Input Stream:* Ethanol-enriched distillate → Dehydrated ethanol
+     - *Output Stream:* Anhydrous ethanol → Storage
+
+7. **By-Product Handling (Distillers Grains)**
+   - **Description:** Processing the distillers stillage to produce dried distillers grains, a valuable animal feed by-product.
+   - **Key Streams:**
+     - *Input Stream:* Distillers stillage → Dried distillers grains
+     - *Output Stream:* Dried distillers grains → Animal feed dispatch
+
+8. **Wastewater Treatment**
+   - **Description:** Treating process wastewater to remove contaminants, ensuring compliance with environmental regulations before discharge or reuse.
+   - **Key Streams:**
+     - *Input Stream:* Process wastewater → Treatment plant
+     - *Output Streams:* Treated water discharge + Recovered solids
+
+9. **Energy Recovery and Utilities Supply**
+   - **Description:** Recovering energy from process streams (e.g., using waste heat) and supplying necessary utilities such as steam, electricity, and cooling water to various unit operations.
+   - **Key Streams:**
+     - *Input Stream:* Waste heat → Energy recovery systems
+     - *Output Streams:* Steam, electricity, cooling water → Various units
+
+10. **Ethanol Storage and Dispatch**
+    - **Description:** Storing the final anhydrous ethanol product in large storage tanks before it is transported to customers or further processing facilities.
+    - **Key Streams:**
+      - *Input Stream:* Anhydrous ethanol → Storage tanks
+      - *Output Stream:* Stored ethanol → Product dispatch
+
+---
+
+### Summary of Key Stream Connectivity
+
+- **Raw Corn** → *Corn Reception and Storage* → *Milling* → *Liquefaction and Saccharification* → *Fermentation* → *Distillation* → *Molecular Sieve Dehydration* → *Ethanol Storage and Dispatch*
+
+- **By-Products:**
+  - *Distillers Stillage* → *By-Product Handling*
+  - *Process Wastewater* → *Wastewater Treatment*
+
+- **Utilities:**
+  - *Energy Recovery Systems* ↔ *Various Unit Operations*
+
+This structured process flow ensures efficient production of anhydrous ethanol while managing by-products and complying with environmental standards.

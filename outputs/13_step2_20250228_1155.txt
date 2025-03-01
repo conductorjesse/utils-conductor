@@ -1,0 +1,100 @@
+Reference Class: 13,Chemical,Methanol
+
+Step 2 - Process Flow Description:
+### High-Level At-Scale Process Flow for Methanol Production
+
+1. **Feed Preparation**
+   - **Description:** Preparation and conditioning of raw feedstocks before entering the process.
+   - **Key Streams:**
+     - **Input Feed Streams:** Natural Gas, Water
+     - **Output Stream:** Conditioned Feedstock Mixture
+
+2. **Steam Methane Reforming (SMR)**
+   - **Description:** Conversion of natural gas (methane) with steam over a catalyst to produce synthesis gas (syngas) primarily composed of hydrogen (H₂) and carbon monoxide (CO).
+   - **Key Streams:**
+     - **Input Streams:** Conditioned Feedstock Mixture, Steam
+     - **Output Streams:** Syngas (H₂ + CO), Carbon Dioxide (CO₂) byproduct
+
+3. **Shift Conversion (Water-Gas Shift Reaction)**
+   - **Description:** Reaction of carbon monoxide with steam to produce additional hydrogen and carbon dioxide, enhancing hydrogen yield for methanol synthesis.
+   - **Key Streams:**
+     - **Input Streams:** Syngas, Steam
+     - **Output Streams:** Shifted Syngas (Increased H₂), CO₂
+
+4. **Gas Purification**
+   - **Description:** Removal of impurities such as carbon dioxide, sulfur compounds, and other contaminants from the shifted syngas to meet purity requirements for methanol synthesis.
+   - **Key Streams:**
+     - **Input Streams:** Shifted Syngas
+     - **Output Streams:** Purified Syngas, Purged Impurities
+
+5. **Methanol Synthesis**
+   - **Description:** Catalytic reaction of purified syngas under high pressure and temperature to form methanol.
+   - **Key Streams:**
+     - **Input Streams:** Purified Syngas
+     - **Output Streams:** Crude Methanol, Unreacted Syngas
+
+6. **Unreacted Syngas Recycling**
+   - **Description:** Separation and recycling of unreacted syngas back to the methanol synthesis unit to improve overall conversion efficiency.
+   - **Key Streams:**
+     - **Input Streams:** Unreacted Syngas
+     - **Output Streams:** Recycled Syngas
+
+7. **Methanol Purification**
+   - **Description:** Distillation and purification of crude methanol to achieve the desired product specification of 99.9% purity.
+   - **Key Streams:**
+     - **Input Streams:** Crude Methanol
+     - **Output Streams:** Purified Methanol, Byproduct Streams (e.g., water, light hydrocarbons)
+
+8. **Product Storage and Handling**
+   - **Description:** Storage of purified methanol in appropriate storage facilities and preparation for distribution.
+   - **Key Streams:**
+     - **Input Streams:** Purified Methanol
+     - **Output Streams:** Stored Methanol, Loading Streams for Distribution
+
+9. **Energy Recovery and Utilities**
+   - **Description:** Recovery of heat and energy from exothermic processes and provision of necessary utilities (steam, cooling water, electricity) to support the production process.
+   - **Key Streams:**
+     - **Input Streams:** Waste Heat Streams, Utility Inputs
+     - **Output Streams:** Recovered Energy, Utility Outputs
+
+10. **Emission Control and Waste Treatment**
+    - **Description:** Treatment of gaseous and liquid wastes to comply with environmental regulations, ensuring minimal greenhouse gas emissions and safe disposal of byproducts.
+    - **Key Streams:**
+      - **Input Streams:** Byproduct Streams (e.g., CO₂, impurities)
+      - **Output Streams:** Treated Emissions, Recovered Byproducts
+
+---
+
+### Process Flow Summary
+
+1. **Feed Preparation**
+   - Natural Gas + Water → Conditioned Feedstock Mixture
+
+2. **Steam Methane Reforming (SMR)**
+   - Conditioned Feedstock Mixture + Steam → Syngas (H₂ + CO) + CO₂
+
+3. **Shift Conversion**
+   - Syngas + Steam → Shifted Syngas (Increased H₂) + CO₂
+
+4. **Gas Purification**
+   - Shifted Syngas → Purified Syngas + Purged Impurities
+
+5. **Methanol Synthesis**
+   - Purified Syngas → Crude Methanol + Unreacted Syngas
+
+6. **Unreacted Syngas Recycling**
+   - Unreacted Syngas → Recycled Syngas
+
+7. **Methanol Purification**
+   - Crude Methanol → Purified Methanol + Byproducts
+
+8. **Product Storage and Handling**
+   - Purified Methanol → Stored Methanol + Distribution Streams
+
+9. **Energy Recovery and Utilities**
+   - Waste Heat → Recovered Energy + Utility Supplies
+
+10. **Emission Control and Waste Treatment**
+    - Byproducts → Treated Emissions + Recovered Byproducts
+
+This structured process flow outlines the major unit operations involved in the industrial-scale production of methanol, detailing the sequence of operations and the key streams that interconnect each unit. This framework serves as a foundational overview for conducting a techno-economic analysis of the methanol production process.

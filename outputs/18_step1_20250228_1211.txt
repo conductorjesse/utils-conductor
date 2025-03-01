@@ -1,0 +1,13 @@
+Reference Class: 18,Alcohol/Intermediate,Ethanol (Industrial)
+
+Step 1 - Context Elaboration:
+```json
+{
+  "product": "Ethanol (Industrial)",
+  "production_method": "Fermentation of corn-derived starch followed by distillation and dehydration",
+  "production_scale": "100 million liters per year",
+  "product_specs": "Anhydrous ethanol with purity ≥ 99%",
+  "feedstocks": ["Corn (Zea mays)"],
+  "additional_constraints": "Compliance with environmental regulations, energy-efficient processes, waste minimization"
+}
+```

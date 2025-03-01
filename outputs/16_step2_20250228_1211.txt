@@ -1,0 +1,92 @@
+Reference Class: 16,Alcohol,Methanol
+
+Step 2 - Process Flow Description:
+### High-Level Methanol Production Process Flow
+
+Below is a structured description of the major unit operations involved in an industrial-scale methanol production process using Steam Methane Reforming (SMR). Each unit operation includes a brief description and the key streams connected to it.
+
+---
+
+1. **Feed Preparation**
+   - **Description:** Preparation of raw feedstocks by purifying natural gas and pre-treatment of water.
+   - **Key Streams:**
+     - *Natural Gas Feed Stream*: Supply of methane-rich natural gas.
+     - *Water Feed Stream*: High-purity water for steam generation.
+     - *Purified Feed Streams*: Cleaned natural gas and treated water sent to the reformer.
+
+2. **Steam Generation**
+   - **Description:** Generation of steam by heating water using extracted heat from process streams or dedicated boilers.
+   - **Key Streams:**
+     - *Treated Water Stream*: Input for steam generation.
+     - *Steam Output Stream*: High-pressure steam sent to the Steam Reforming Reactor.
+
+3. **Steam Methane Reforming (SMR) Reactor**
+   - **Description:** Reaction of natural gas with steam to produce synthesis gas (syngas) containing hydrogen (H₂), carbon monoxide (CO), and carbon dioxide (CO₂).
+   - **Key Streams:**
+     - *Natural Gas Feed Stream*
+     - *Steam Output Stream*
+     - *Syngas Stream*: Raw synthesis gas containing H₂, CO, and CO₂.
+
+4. **Shift Conversion Reactor**
+   - **Description:** Conversion of CO and H₂O in the syngas to additional H₂ and CO₂ through the water-gas shift reaction.
+   - **Key Streams:**
+     - *Raw Syngas Stream*
+     - *Shifted Syngas Stream*: Increased hydrogen content and additional CO₂.
+
+5. **Gas Cooling and Quenching**
+   - **Description:** Cooling the shifted syngas to remove excess heat and prepare for gas purification.
+   - **Key Streams:**
+     - *Shifted Syngas Stream*
+     - *Cooled Syngas Stream*: Lower temperature syngas ready for purification.
+
+6. **Acid Gas Removal (CO₂ Capture)**
+   - **Description:** Removal of CO₂ from the syngas using physical or chemical absorption methods to purify the hydrogen and carbon monoxide.
+   - **Key Streams:**
+     - *Cooled Syngas Stream*
+     - *Purified Syngas Stream*: Syngas with reduced CO₂ levels.
+     - *Extracted CO₂ Stream*: Separated carbon dioxide for sequestration or utilization.
+
+7. **Methanol Synthesis**
+   - **Description:** Catalytic reaction of purified syngas to produce methanol.
+   - **Key Streams:**
+     - *Purified Syngas Stream*
+     - *Methanol Synthesis Reactor Products*: Raw methanol vapor and unreacted gases.
+
+8. **Methanol Separation and Purification**
+   - **Description:** Separation of methanol from unreacted gases and impurities, followed by purification to achieve desired product specifications.
+   - **Key Streams:**
+     - *Raw Methanol Vapor Stream*
+     - *Purified Methanol Product Stream*: High-purity methanol ready for storage.
+     - *Recycled Gas Stream*: Unreacted syngas recycled back to the Methanol Synthesis unit.
+
+9. **Product Storage and Handling**
+   - **Description:** Storage of purified methanol in storage tanks with appropriate temperature and pressure conditions, followed by handling for distribution.
+   - **Key Streams:**
+     - *Purified Methanol Product Stream*
+     - *Storage Tank Stream*: Methanol stored under controlled conditions.
+     - *Distribution Stream*: Methanol sent to downstream users or export facilities.
+
+10. **Utility Systems and Heat Integration**
+    - **Description:** Management of utilities such as power supply, cooling water, and heat recovery systems to enhance energy efficiency and support process operations.
+    - **Key Streams:**
+      - *Heat Integration Streams*: Recoverable heat from various unit operations for use in steam generation or other processes.
+      - *Utility Supply Streams*: Electricity, cooling water, and other necessary utilities distributed to respective unit operations.
+
+---
+
+### Key Process Streams Summary
+
+- **Natural Gas Feed Stream:** Raw methane supplied to the process.
+- **Water Feed Stream:** High-purity water used for steam generation.
+- **Steam Output Stream:** High-pressure steam for reforming.
+- **Syngas Streams (Raw & Shifted):** Mixture of H₂, CO, and CO₂ before and after shift conversion.
+- **Cooled Syngas Stream:** Syngas cooled for purification.
+- **Purified Syngas Stream:** Syngas with reduced CO₂ for methanol synthesis.
+- **Extracted CO₂ Stream:** Separated carbon dioxide for sequestration or utilization.
+- **Raw Methanol Vapor Stream:** Initial methanol output from synthesis reactor.
+- **Purified Methanol Product Stream:** Final high-purity methanol ready for storage.
+- **Recycled Gas Stream:** Unreacted syngas returned to synthesis reactor.
+- **Storage Tank Stream:** Stored methanol in controlled conditions.
+- **Distribution Stream:** Final product distributed to end-users or export.
+
+This high-level process flow provides an overview of the essential unit operations and their interconnections in industrial-scale methanol production via Steam Methane Reforming. Each unit operation plays a crucial role in ensuring efficient and compliant production of high-purity methanol.

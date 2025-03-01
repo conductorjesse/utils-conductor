@@ -1,0 +1,457 @@
+﻿ref_ID,Category,Product/System,Production/Process Method,Brief Description
+1,Agriculture,Vertical Farming,Hydroponics,Growing plants in nutrient-rich water without soil
+2,Agriculture,Vertical Farming,Aeroponics,Growing plants with roots suspended in air mist
+3,Agriculture,Vertical Farming,Aquaponics,Integrated system with fish and plant production
+4,Agriculture,Alternative Proteins,Precision Fermentation,Using microorganisms to produce specific proteins
+5,Agriculture,Alternative Proteins,Cultured Meat,Growing animal cells in bioreactors
+6,Agriculture,Alternative Proteins,Plant-Based Proteins,Processing plants to mimic animal products
+7,Agriculture,Controlled Environment Agriculture,Greenhouse Systems,Temperature and climate-controlled growing
+8,Agriculture,Controlled Environment Agriculture,Indoor Growing Facilities,Fully artificial environment for crops
+9,Agriculture,Synthetic Fertilizer,Ammonia-Based (Haber-Bosch),Traditional nitrogen fertilizer production
+10,Agriculture,Synthetic Fertilizer,Green Ammonia-Based,Using renewable hydrogen for ammonia production
+11,Agriculture,Synthetic Fertilizer,Organic Fertilizer Processing,Converting biological materials to fertilizers
+12,Agriculture,Precision Agriculture,Drone-Based Systems,Aerial monitoring and targeted application
+13,Agriculture,Precision Agriculture,Sensor Networks,Distributed monitoring systems for farm data
+14,Agriculture,Precision Agriculture,Robotic Systems,"Automated planting, maintenance, and harvesting"
+15,Alcohol,Methanol,Natural Gas Reforming + Synthesis,"Syngas is generated from methane, then catalytically converted to methanol."
+16,Alcohol,Methanol,Coal Gasification + Synthesis,Coal is gasified into syngas; methanol is then synthesized over a catalyst.
+17,Alcohol/Intermediate,Ethanol (Industrial),Hydration of Ethylene,Ethylene is reacted with steam over an acid catalyst to produce ethanol.
+18,Alcohol/Intermediate,Ethanol (Industrial),Fermentation (Bioethanol),Sugars or starch are fermented by yeast to produce ethanol; then distilled.
+19,Basic Inorganic,Sodium Hydroxide,Membrane Cell (Chlor-alkali),Uses a selective membrane to separate catholyte and anolyte compartments for caustic soda production.
+20,Basic Inorganic,Sulfuric Acid,Burning Elemental Sulfur + Contact Process,"Sulfur is burned to form SO₂, which is catalytically converted to SO₃ and absorbed in water to produce H₂SO₄."
+21,Basic Inorganic,Sulfuric Acid,"Smelter Off-Gas (e.g., Pyrite Roasting) + Contact Process","SO₂-containing off-gases from metal smelting are treated similarly, forming sulfuric acid via the contact process."
+22,Basic Inorganic,Hydrochloric Acid,Hydrogen + Chlorine Direct Synthesis,"Direct reaction of H₂ and Cl₂ in a burner to produce HCl gas, which is then absorbed in water."
+23,Basic Inorganic,Hydrochloric Acid,"Byproduct from Chlorination (e.g., PVC production)","HCl is generated as a co-product in many organochlorine syntheses (e.g., vinyl chloride)."
+24,Basic Inorganic,Ammonia,Steam Methane Reforming + Haber-Bosch,"Natural gas is reformed to produce H₂, then combined with N₂ under high pressure/temperature to form NH₃ (Haber-Bosch)."
+25,Basic Inorganic,Ammonia,Partial Oxidation (Coal/Heavy Oil) + Haber-Bosch,"Coal or oil is partially oxidized for syngas, then used in the Haber-Bosch process to form ammonia."
+26,Basic Inorganic,Chlorine,Diaphragm Cell (Chlor-alkali),"Brine electrolysis in a diaphragm cell yields chlorine, hydrogen, and sodium hydroxide."
+27,Basic Inorganic,Chlorine,Membrane Cell (Chlor-alkali),"Similar to the diaphragm process but uses an ion-exchange membrane, providing higher purity and efficiency."
+28,Basic Inorganic,Sodium Hydroxide,Diaphragm Cell (Chlor-alkali),Produced alongside chlorine and hydrogen; brine passes through a porous diaphragm.
+29,Biofuel,Bioethanol,"Sugar/Starch Fermentation (Corn, Sugarcane)",Carbohydrates are fermented by yeast; ethanol is distilled and dehydrated for fuel.
+30,Biofuel,Bioethanol,Cellulosic Biomass (Enzymatic Hydrolysis),"Lignocellulosic feedstock is pretreated, enzymatically hydrolyzed, fermented, and distilled."
+31,Biofuel,Biodiesel,Transesterification of Vegetable Oils/Animal Fats,Triglycerides are reacted with an alcohol (methanol) in presence of a catalyst to form fatty acid methyl esters.
+32,Biofuel,Biodiesel,Waste Cooking Oil Transesterification,"Same chemistry, but feedstock is used cooking oil."
+33,Biofuel,Renewable Diesel,Hydrotreating Vegetable Oils/Fats (HVO),"In a refinery-like process, oils/fats are treated with hydrogen to produce drop-in diesel."
+34,Biofuel,Renewable Diesel,Standalone Hydroprocessing Unit for Biobased Feedstocks,Dedicated units that convert renewable lipids to diesel-range hydrocarbons.
+35,Biofuel,Biogas,Anaerobic Digestion (Municipal/Ag Waste),"Organic waste is digested by microbes in the absence of oxygen, generating methane-rich biogas."
+36,Biofuel,Biogas,Landfill Gas Recovery,Capturing and cleaning naturally produced landfill gas.
+37,Biofuel,Biojet Fuel,HEFA (Hydroprocessed Esters & Fatty Acids),"Similar to HVO, but tailored to produce jet-range hydrocarbons."
+38,Biofuel,Biojet Fuel,Fischer-Tropsch Synthesis (Biomass-derived Syngas),"Biomass is gasified, converted to liquid hydrocarbons via FT synthesis, then refined into jet fuel."
+39,Biological,Industrial Enzymes,Submerged Fermentation,Production in liquid culture
+40,Biological,Industrial Enzymes,Solid State Fermentation,Production on solid substrates
+41,Biological,Industrial Enzymes,Recombinant Protein Expression,Genetic engineering for enzyme production
+42,Biological,Bioremediation,In-Situ Bioremediation,Treating contaminants in place with microbes
+43,Biological,Bioremediation,Ex-Situ Bioremediation,Removing and treating contaminated material
+44,Biological,Bioremediation,Phytoremediation,Using plants to extract or stabilize contaminants
+45,Biological,Biorefineries,Lignocellulosic Processing,Breaking down plant biomass to valuable products
+46,Biological,Biorefineries,Algal Biorefinery,"Processing algae for fuels, chemicals, and materials"
+47,Biological,Biorefineries,Waste-to-Value Platforms,Converting waste streams to valuable products
+48,Biological,Fermentation,Batch Fermentation,Closed system with complete cycle
+49,Biological,Fermentation,Continuous Fermentation,Open system with ongoing input/output
+50,Biological,Fermentation,Fed-Batch Fermentation,Hybrid approach with feeding during process
+51,CCUS,Post-Combustion Capture,Amine Scrubbing,Absorption of CO₂ using amine solutions
+52,CCUS,Post-Combustion Capture,Membrane Separation,Selective membranes for CO₂ separation
+53,CCUS,Post-Combustion Capture,Calcium Looping,Using calcium oxide to capture CO₂
+54,CCUS,Pre-Combustion Capture,Integrated Gasification Combined Cycle,Capturing CO₂ from syngas before combustion
+55,CCUS,Pre-Combustion Capture,Sorption-Enhanced Water-Gas Shift,Combining CO₂ capture with water-gas shift
+56,CCUS,Oxy-Fuel Combustion,Cryogenic Air Separation,Producing oxygen for more concentrated CO₂ streams
+57,CCUS,Oxy-Fuel Combustion,Chemical Looping Combustion,Using metal oxides as oxygen carriers
+58,CCUS,Direct Air Capture,Solid Sorbent Systems,Using solid materials to extract CO₂ from air
+59,CCUS,Direct Air Capture,Liquid Solvent Systems,Using liquid solutions to extract CO₂ from air
+60,CCUS,Carbon Utilization,CO₂ to Fuels,"Catalytic conversion to methanol, syngas, etc."
+61,CCUS,Carbon Utilization,CO₂ to Chemicals,"Production of carbonates, polymers, etc."
+62,CCUS,Carbon Utilization,CO₂ to Building Materials,Mineral carbonation for construction products
+63,CCUS,Carbon Storage,Saline Aquifer Storage,Injection into deep saline formations
+64,CCUS,Carbon Storage,Depleted Oil/Gas Reservoir Storage,Injection into former hydrocarbon reservoirs
+65,CCUS,Carbon Storage,Enhanced Oil Recovery,Using CO₂ for increased oil production while storing CO₂
+66,CCUS,Carbon Storage,Mineral Carbonation,Reaction with minerals to form stable carbonates
+67,Chemical Intermediate,Propylene Oxide,Chlorohydrin Process (Older),"Propylene is converted to chlorohydrin, then dehydrochlorinated to yield PO."
+68,Chemical Intermediate,Propylene Oxide,PO/SM or PO/TA Co-production,Propylene oxide produced alongside styrene monomer or tert-butanol for better economics.
+69,Chemical Intermediate,Styrene,Dehydrogenation of Ethylbenzene,Ethylbenzene is catalytically dehydrogenated to styrene + hydrogen.
+70,Chemical Intermediate,Styrene,Ethylbenzene Hydroperoxidation (Rare),"Oxidation of ethylbenzene to hydroperoxide, then cleaved to styrene + phenol."
+71,Chemical Intermediate,Phenol,Cumene Process (Cumene Oxidation),"Isopropylbenzene (cumene) is oxidized to cumene hydroperoxide, then cleaved to phenol + acetone."
+72,Chemical Intermediate,Phenol,Raschig–Hooker Process (Older),Benzene sulfonation and fusion steps; largely replaced by cumene route.
+73,Chemical Intermediate,Ethylene Oxide,Direct Oxidation of Ethylene (Silver Catalyst),Ethylene reacts with oxygen over a silver catalyst to form ethylene oxide.
+74,Chemical Intermediate,Ethylene Oxide,Chlorohydrin Process (Largely Phased Out),"Older route via ethylene chlorohydrin intermediate, then alkaline dehydrochlorination."
+75,Chemical Intermediate,Aniline,Nitration of Benzene to Nitrobenzene + Hydrogenation,Nitrobenzene is catalytically hydrogenated to aniline.
+76,Chemical Intermediate,Aniline,Phenol Ammonolysis (Less Common),Phenol reacts with ammonia in vapor phase over catalysts; lower yield.
+77,Chemical/Material,Carbon Black,Furnace Black Process,Incomplete combustion of heavy hydrocarbons in a furnace to form carbon black.
+78,Chemical/Material,Carbon Black,Channel Black Process,Historic method using small gas flames; less common now.
+79,Chemicals,Ammonia,Haber-Bosch Process,Catalytic reaction of hydrogen and nitrogen at high pressure and temperature
+80,Chemicals,Propylene,Steam Cracking,Thermal cracking of hydrocarbons with steam
+81,Chemicals,Propylene,Propane Dehydrogenation (PDH),Catalytic dehydrogenation of propane
+82,Chemicals,Propylene,Fluid Catalytic Cracking (FCC),Conversion of heavy petroleum fractions to lighter products
+83,Chemicals,Methanol,Syngas Conversion,Catalytic conversion of synthesis gas (CO + H₂)
+84,Chemicals,Methanol,Direct Methane Oxidation,Partial oxidation of methane
+85,Chemicals,Methanol,Biomass Gasification,Gasification of biomass followed by methanol synthesis
+86,Chemicals,Chlorine,Chlor-Alkali Process (Mercury),Electrolysis using mercury cells (being phased out)
+87,Chemicals,Sodium Hydroxide,Chlor-Alkali Process,Co-product of chlorine production
+88,Chemicals,Ammonia,Green Ammonia (Electrolysis-Based),Using renewable electricity to produce hydrogen for ammonia synthesis
+89,Chemicals,Sodium Hydroxide,Lime-Soda Process,Reaction of soda ash with lime
+90,Chemicals,Sodium Hydroxide,Membrane Cell Process,Modern electrolytic process with ion-exchange membranes
+91,Chemicals,Polyethylene,High-Pressure Process,Free radical polymerization at high pressure
+92,Chemicals,Polyethylene,Ziegler-Natta Process,Catalytic polymerization using transition metal catalysts
+93,Chemicals,Polyethylene,Metallocene Process,Polymerization using metallocene catalysts for more uniform polymers
+94,Chemicals,Polypropylene,Ziegler-Natta Process,Catalytic polymerization of propylene
+95,Chemicals,Polypropylene,Metallocene Process,Using metallocene catalysts for stereospecific polymerization
+96,Chemicals,Polypropylene,Gas-Phase Process,Polymerization in gas phase reactors
+97,Chemicals,Urea,Synthesis from Ammonia and CO₂,Direct synthesis from ammonia and carbon dioxide
+98,Chemicals,Urea,Hydrolysis of Cyanamide,Chemical conversion of cyanamide
+99,Chemicals,Ammonia,Natural Gas Partial Oxidation,"Partial oxidation of natural gas to produce syngas, which is used for ammonia synthesis"
+100,Chemicals,Urea,IDR (Isobaric Double Recycle) Process,Modern process with improved energy efficiency
+101,Chemicals,Formaldehyde,Direct Oxidation of Methane,Partial oxidation of methane
+102,Chemicals,Acetic Acid,Fermentation,Biological production using bacteria
+103,Chemicals,Vinyl Chloride,Ethylene Dichloride (EDC) Route,Chlorination of ethylene followed by dehydrochlorination
+104,Chemicals,Vinyl Chloride,Acetylene Hydrochlorination,Direct addition of HCl to acetylene
+105,Chemicals,Vinyl Chloride,Oxychlorination Process,Reaction of ethylene with HCl and oxygen
+106,Chemicals,Sulfuric Acid,Contact Process,"Oxidation of sulfur dioxide to sulfur trioxide, followed by absorption in water"
+107,Chemicals,Styrene,Styrene Monomer Propylene Oxide (SMPO),Co-production with propylene oxide
+108,Chemicals,Styrene,Pyrolysis Gasoline Extraction,Recovery from pyrolysis gasoline
+109,Chemicals,Benzene,Toluene Hydrodealkylation,Conversion of toluene to benzene
+110,Chemicals,Titanium Dioxide,Sulfate Process,Digestion of titanium minerals with sulfuric acid
+111,Chemicals,Titanium Dioxide,Chloride Process,Chlorination of titanium minerals followed by oxidation
+112,Chemicals,Phosphoric Acid,Wet Process,Reaction of phosphate rock with sulfuric acid
+113,Chemicals,Phosphoric Acid,Thermal Process,High-temperature reduction of phosphate rock
+114,Chemicals,Sulfuric Acid,Wet Sulfuric Acid Process,Recovery from metal smelting operations
+115,Chemicals,Phosphoric Acid,Hemihydrate Process,Modified wet process with improved efficiency
+116,Chemicals,Sodium Carbonate,Solvay Process,Reaction of sodium chloride with ammonia and CO₂
+117,Chemicals,Sodium Carbonate,Trona Processing,Mining and processing of natural trona
+118,Chemicals,Sodium Carbonate,Hou Process,Modified Solvay process used in China
+119,Chemicals,Potassium Hydroxide,Electrolysis of KCl,Similar to chlor-alkali process but with KCl
+120,Chemicals,Potassium Hydroxide,Reaction with Sodium Hydroxide,Double decomposition with sodium hydroxide
+121,Chemicals,Potassium Hydroxide,Barium Hydroxide Method,Reaction with barium hydroxide and potassium sulfate
+122,Chemicals,Nitric Acid,Ostwald Process,Oxidation of ammonia
+123,Chemicals,Nitric Acid,Arc Process,Direct oxidation of nitrogen
+124,Chemicals,Nitric Acid,Hybrid Pressure Process,Modified Ostwald process at medium pressure
+125,Chemicals,Sulfuric Acid,Lead Chamber Process,Historical method using lead-lined chambers
+126,Chemicals,Hydrochloric Acid,Direct Synthesis,Direct combination of hydrogen and chlorine
+127,Chemicals,Hydrochloric Acid,By-Product,From chlorination processes
+128,Chemicals,Hydrochloric Acid,Salt Decomposition,Reaction of salt with sulfuric acid
+129,Chemicals,Ethylene,Steam Cracking,Thermal cracking of hydrocarbons with steam
+130,Chemicals,Ethylene,Catalytic Dehydration,Dehydration of ethanol over catalysts
+131,Chemicals,Ethylene,Oxidative Coupling of Methane,Direct conversion of methane to ethylene
+132,Construction,Portland Cement,Dry Process Rotary Kiln,"Finely ground raw meal (limestone+clay) is preheated, then fed to a dry rotary kiln for clinker formation."
+133,Construction,Clinker,Dry Kiln Pyroprocessing,Limestone + clay are calcined at high temperature to form clinker nodules (precursor to cement).
+134,Construction,Clinker,Wet Kiln Pyroprocessing,"Older method using slurry feed, higher energy consumption."
+135,Construction,Concrete,Ready-mix Batching,"Cement, aggregates, and water are batched at a plant and transported to site."
+136,Construction,Concrete,Precast Production,"Concrete is cast and cured in molds at a factory, then transported as finished elements."
+137,Construction,Lime,Shaft Kiln (Limestone Calcination),Limestone is calcined in vertical shaft kilns to produce quicklime.
+138,Construction,Lime,Rotary Kiln (Limestone Calcination),A rotating kiln for continuous calcination of limestone.
+139,Construction,Gypsum,Natural Gypsum Mining + Milling,"Gypsum rock is quarried, crushed, and ground into a fine powder."
+140,Construction,Gypsum,Flue-Gas Desulfurization (FGD) Byproduct,"Power plant scrubbers produce synthetic gypsum, which is milled into usable form."
+141,Energy,Solar Power,Photovoltaic (PV) Plants,Direct conversion of sunlight to electricity using semiconductor materials
+142,Energy,Solar Power,Concentrated Solar Power (CSP),Using mirrors to concentrate sunlight to drive thermal power plants
+143,Energy,Solar Power,Floating Solar,PV systems mounted on water bodies
+144,Energy,Wind Power,Onshore Wind Farms,Land-based wind turbine installations
+145,Energy,Wind Power,Offshore Wind Farms,Sea-based wind turbine installations (fixed or floating)
+146,Energy,Wind Power,Small-Scale/Distributed Wind,Smaller turbines for local generation
+147,Energy,Hydropower,Run-of-River,Generating electricity from flowing water without large reservoirs
+148,Energy,Hydropower,Reservoir/Dam Systems,Large water storage with controlled release
+149,Energy,Hydropower,Pumped Storage,Energy storage through water elevation differences
+150,Energy,Nuclear Power,Light Water Reactors (PWR/BWR),Using enriched uranium with water cooling/moderation
+151,Energy,Nuclear Power,Small Modular Reactors (SMR),Factory-built reactors under 300 MWe
+152,Energy,Nuclear Power,Advanced Reactor Designs,"Gen IV designs (molten salt, fast neutron, etc.)"
+153,Energy,Geothermal,Conventional Hydrothermal,Using naturally occurring hot water/steam
+154,Energy,Geothermal,Enhanced Geothermal Systems (EGS),Creating artificial reservoirs in hot dry rock
+155,Energy,Geothermal,Direct Use Systems,Using geothermal heat without electricity generation
+156,Energy,Biomass Power,Direct Combustion,Burning biomass for heat and power
+157,Energy,Biomass Power,Gasification,Converting biomass to syngas for power generation
+158,Energy,Biomass Power,Anaerobic Digestion,Producing biogas for electricity generation
+159,Energy,Natural Gas,Combined Cycle Gas Turbine,High-efficiency gas + steam turbine system
+160,Energy,Natural Gas,Simple Cycle Gas Turbine,Quick-start peaker plants
+161,Energy,Natural Gas,Reciprocating Engines,Internal combustion engines for distributed generation
+162,Energy,Coal Power,Pulverized Coal,Traditional coal combustion technology
+163,Energy,Coal Power,Fluidized Bed Combustion,More efficient combustion with lower emissions
+164,Energy,Coal Power,Integrated Gasification Combined Cycle,Converting coal to syngas before combustion
+165,Fertilizer,Urea,Ammonia + CO₂ Synthesis,"Ammonia and carbon dioxide react to form ammonium carbamate, which dehydrates to urea."
+166,Fertilizer,Urea,Byproduct Route (from Ammonium Carbamate Processes),"Certain ammonia-based processes yield urea as a byproduct, though less common."
+167,Fertilizer,Diammonium Phosphate (DAP),Reacting Phosphoric Acid with Ammonia,"Neutralization of phosphoric acid with ammonia under controlled conditions, followed by granulation."
+168,Fertilizer,Diammonium Phosphate (DAP),Partial Ammoniation + Granulation,Another route with different stoichiometry and stepwise addition of ammonia.
+169,Fertilizer,Monoammonium Phosphate (MAP),Reacting Phosphoric Acid with Ammonia (Different Ratios),Similar to DAP production but with different acid:ammonia ratio to form MAP.
+170,Fertilizer,Ammonium Nitrate,Neutralizing Nitric Acid with Aqueous Ammonia,"Produces ammonium nitrate solution, then prilled or granulated into a solid fertilizer."
+171,Fertilizer,Potassium Chloride (MOP),Mining Sylvinite + Flotation/Crystallization,"Sylvinite ore is crushed, floated, and crystallized to recover KCl."
+172,Fertilizer,Potassium Chloride (MOP),Solution Mining + Evaporation,"Hot water is injected to dissolve potash, then brine is evaporated to crystallize KCl."
+173,Fertilizer,Phosphoric Acid,Wet Process,"Phosphate rock is digested with sulfuric acid, yielding phosphoric acid and gypsum."
+174,Fertilizer,Phosphoric Acid,Thermal Process,"Elemental phosphorus is burned, then hydrated to form phosphoric acid (used for high-purity acid)."
+175,Fertilizer,Superphosphate (Single),React Phosphate Rock with Sulfuric Acid,Produces single superphosphate (SSP): a mix of gypsum and monocalcium phosphate.
+176,Fertilizer,Superphosphate (Triple),React Phosphate Rock with Phosphoric Acid,Produces triple superphosphate (TSP) with higher phosphate content.
+177,Fiber,Carbon Fibers,PAN Precursor Stabilization + Carbonization,"Polyacrylonitrile fibers are stabilized, then carbonized at high temperatures."
+178,Fiber,Carbon Fibers,Pitch-based Spinning + Carbonization,Specialty route using petroleum or coal tar pitch.
+179,Food Product,Refined Sugar,Sugarcane: Milling + Clarification + Crystallization,"Cane is crushed to extract juice, clarified, evaporated, crystallized."
+180,Food Product,Refined Sugar,Sugar Beet: Diffusion + Purification + Crystallization,"Beets are sliced, sugars are extracted with hot water, purified, and crystallized."
+181,Food Product,"Starch (e.g., Corn)",Wet Milling,"Corn is steeped, ground, and separated into starch, protein, fiber, etc."
+182,Food Product,"Starch (e.g., Corn)",Dry Milling,"Milled corn primarily for ethanol; starch can be recovered, though less pure than wet milling routes."
+183,Food Product,Vegetable Oils,Mechanical Pressing + Solvent Extraction,"Oilseeds are pressed, then the press cake is solvent-extracted for maximum oil recovery."
+184,Food Product,Vegetable Oils,Cold Pressing,Specialty oils pressed without high heat or solvents; lower yield but higher quality.
+185,Food Product,Animal Feed,Solvent Extraction (Soybean Meal),Oil is removed from beans; the defatted meal is processed into animal feed.
+186,Food Product,Animal Feed,Dry Extrusion/Pressing,Smaller scale or specialty feed processes.
+187,Food Product,Flour (Wheat),Roller Milling (Modern),"Wheat is cleaned, conditioned, then milled between roller mills into flour."
+188,Food Product,Flour (Wheat),Stone Milling (Traditional),Older or artisan method using large stones to grind grain.
+189,Fuels,Gasoline,Petroleum Refining,Distillation and upgrading of crude oil
+190,Fuels,Gasoline,Fischer-Tropsch Process,Catalytic conversion of syngas
+191,Fuels,Gasoline,Methanol-to-Gasoline (MTG),Conversion of methanol
+192,Fuels,Diesel,Petroleum Refining,Distillation and hydrotreatment
+193,Fuels,Diesel,Fischer-Tropsch Process,Synthetic production from syngas
+194,Fuels,Diesel,Hydroprocessed Esters and Fatty Acids (HEFA),Processing of vegetable oils
+195,Fuels,Hydrogen,Steam Methane Reforming (SMR),Reforming natural gas with steam
+196,Fuels,Hydrogen,Electrolysis,Splitting water using electricity
+197,Fuels,Hydrogen,Coal Gasification,Gasification of coal to produce syngas
+198,Fuels,Synthetic Natural Gas,Coal Gasification,Converting coal to methane
+199,Fuels,Synthetic Natural Gas,Methanation of Syngas,Catalytic conversion of CO and H₂
+200,Fuels,Synthetic Natural Gas,Power-to-Gas,Converting renewable electricity to methane
+201,Fuels,Carbon Black,Thermal Process,Thermal decomposition of natural gas
+202,Fuels,Ethanol,Synthetic Production,Hydration of ethylene
+203,Fuels,Ethanol,Catalytic Conversion of Syngas,Chemical synthesis from CO and H₂
+204,Fuels,Biodiesel,Hydroprocessing,Catalytic hydrogenation of oils
+205,Fuels,Biodiesel,Supercritical Process,Non-catalytic process using supercritical methanol
+206,Glass & Ceramics,Flat Glass,Float Glass Process,"Molten glass is floated on a molten tin bath to produce a flat, uniform thickness sheet."
+207,Glass & Ceramics,Flat Glass,Plate Glass Rolling (Older),"Historic method where glass is rolled and polished, less common today."
+208,Glass & Ceramics,Container Glass,Continuous Tank Furnace (Soda-Lime Glass),"Raw materials melted in a large furnace; molten glass is shaped into bottles, jars, etc."
+209,Glass & Ceramics,Container Glass,Semi-batch Pot Furnace,Smaller-scale or specialty glass production.
+210,Glass & Ceramics,Ceramic Tiles,Dry Pressing + Tunnel Kiln Firing,"Clay body is pressed into tiles, dried, then fired in a continuous tunnel kiln."
+211,Glass & Ceramics,Ceramic Tiles,Wet Milling + Spray Drying + Roller Kiln,"Modern approach for porcelain/ceramic tiles, with slip preparation and spray-dried granules."
+212,Glass & Ceramics,Whiteware,Slip Casting + High-Temperature Kiln,"Porcelain or china is cast from liquid slip in molds, then fired."
+213,Glass & Ceramics,Whiteware,Pressing + Glazing + High-Temperature Kiln,"Formed by pressing or jiggering, then glazed and fired."
+214,Glass & Ceramics,Refractory Bricks,Pressing/Extrusion + High-Temp Firing,Raw refractory materials are formed and fired at very high temperatures.
+215,Glass & Ceramics,Refractory Bricks,Iso-static Pressing (Specialty),Used for high-performance shapes requiring uniform density.
+216,Industrial Gas,Hydrogen,Steam Methane Reforming,"Methane is reformed to H₂ + CO, followed by water-gas shift and PSA purification."
+217,Industrial Gas,Hydrogen,"Electrolysis of Water (Alkaline, PEM)",Splitting water into hydrogen and oxygen using electricity.
+218,Industrial Gases,"O₂, N₂, Ar (Air Gases)",Cryogenic Air Separation,"Air is cooled and distilled into its main components (N₂, O₂, Ar)."
+219,Industrial Gases,"O₂, N₂, Ar (Air Gases)",Vacuum Swing Adsorption (VSA/PSA),Adsorptive separation at different pressures; yields lower purity but simpler equipment.
+220,Industrial Gases,Helium,Cryogenic Separation from Natural Gas,Natural gas with helium is liquefied/expanded to separate helium.
+221,Industrial Gases,Helium,Pressure Swing Adsorption (PSA),Adsorptive process to capture helium from gas streams.
+222,Infrastructure,Green Hydrogen,Electrolysis-Based,Production via water electrolysis with renewables
+223,Infrastructure,Green Hydrogen,Biomass Gasification,Producing hydrogen from biomass
+224,Infrastructure,Green Hydrogen,Methane Pyrolysis,Producing hydrogen with solid carbon co-product
+225,Infrastructure,Transmission Lines,HVAC Transmission,Conventional alternating current power lines
+226,Infrastructure,Transmission Lines,HVDC Transmission,High-voltage direct current for long distances
+227,Infrastructure,Transmission Lines,Superconducting Lines,Low-loss transmission using superconductors
+228,Infrastructure,CO₂ Pipeline Networks,Dense Phase Transport,Pipelines for compressed CO₂ transport
+229,Infrastructure,CO₂ Pipeline Networks,Ship/Rail/Truck Transport,Non-pipeline CO₂ transport options
+230,Infrastructure,Smart Grid Systems,Advanced Metering Infrastructure,Smart meters and data management
+231,Infrastructure,Smart Grid Systems,Distribution Automation,Self-healing grid technologies
+232,Infrastructure,Smart Grid Systems,Distributed Energy Resource Management,Integrating dispersed generation sources
+233,Infrastructure,Microgrids,Campus/Industrial Microgrids,Self-contained power systems for facilities
+234,Infrastructure,Microgrids,Community Microgrids,Local power systems for neighborhoods
+235,Infrastructure,Microgrids,Remote/Island Microgrids,Self-sufficient systems for isolated areas
+236,Infrastructure,Energy Storage Hubs,Battery Storage Facilities,Large-scale electrochemical storage
+237,Infrastructure,Energy Storage Hubs,Pumped Hydro,Water-based gravitational storage
+238,Infrastructure,Energy Storage Hubs,Compressed Air Energy Storage,Air compression/expansion for energy storage
+239,Intermediate,Acetic Acid,Methanol Carbonylation (Monsanto/Cativa),Methanol reacts with CO (carbonylation) in the presence of a catalyst (Rh or Ir) to form acetic acid.
+240,Intermediate,Acetic Acid,Acetaldehyde Oxidation,Older process where acetaldehyde is oxidized to acetic acid (less common now).
+241,Intermediate,Formaldehyde,Methanol Oxidation (Silver Catalyst),Methanol is partially oxidized over a silver catalyst at moderate temperature.
+242,Intermediate,Formaldehyde,Formox Process (Metal Oxide Catalyst),Similar oxidation route using iron/molybdenum oxide catalysts.
+243,Manufacturing,Lithium-ion Batteries,Electrode Manufacturing,"Mixing, coating, calendering, and slitting electrode materials"
+244,Manufacturing,Lithium-ion Batteries,Cell Assembly,"Winding/stacking, electrolyte filling, formation, and aging"
+245,Manufacturing,Lithium-ion Batteries,Pack Assembly,"Module assembly, thermal management, BMS integration"
+246,Manufacturing,Solar PV Panels,Silicon Ingot/Wafer Production,"Crystal growth, wafering, and surface treatment"
+247,Manufacturing,Solar PV Panels,Cell Manufacturing,"Doping, metallization, and anti-reflective coating"
+248,Manufacturing,Solar PV Panels,Module Assembly,"Stringing, lamination, framing, and testing"
+249,Manufacturing,Fuel Cells,Membrane Electrode Assembly,"Catalyst deposition, membrane coating, hot pressing"
+250,Manufacturing,Fuel Cells,Stack Assembly,"Cell stacking, compression systems, manifold assembly"
+251,Manufacturing,Fuel Cells,Balance of Plant Integration,"Power conditioning, thermal management, fuel processing"
+252,Manufacturing,Electronics,Wafer Fabrication,"Photolithography, etching, deposition, and ion implantation"
+253,Manufacturing,Electronics,Assembly and Packaging,"Die bonding, wire bonding, encapsulation, and testing"
+254,Manufacturing,Semiconductors,Front-End Processing,"Lithography, etching, deposition, doping"
+255,Manufacturing,Semiconductors,Back-End Processing,"Dicing, bonding, packaging, testing"
+256,Manufacturing,Wind Turbines,Blade Manufacturing,"Composite layup, resin infusion, curing, finishing"
+257,Manufacturing,Wind Turbines,Nacelle Assembly,"Generator, gearbox, control systems integration"
+258,Manufacturing,Wind Turbines,Tower Manufacturing,"Steel plate rolling, welding, coating"
+259,Manufacturing,Electrolyzer,Stack Manufacturing,"Electrode fabrication, membrane coating, assembly"
+260,Manufacturing,Electrolyzer,System Integration,"Power supply, water processing, gas handling"
+261,Metal,Lead,Secondary Lead (Battery Recycling + Smelting),"Used lead–acid batteries are broken down, smelted, and refined to produce recycled lead."
+262,Metal,Nickel,Sulfide Ore Smelting + Refining (Flash Smelting),"Nickel sulfide concentrates are smelted, converted, and refined to pure nickel."
+263,Metal,Nickel,Laterite Ore (HPAL or Ferronickel),High-pressure acid leaching or ferronickel smelting routes for nickel laterite ores.
+264,Metal,Titanium,Kroll Process (TiCl₄ + Mg Reduction),"Titanium tetrachloride is reduced by magnesium to produce sponge titanium, which is melted into ingots."
+265,Metal,Titanium,FFC Cambridge Process,Direct electrolytic reduction of titanium oxide in molten salt.
+266,Metal,Magnesium,Pidgeon Process,Dolomite is reduced with ferrosilicon in retorts under vacuum at high temperature.
+267,Metal,Magnesium,Electrolytic Process (MgCl₂),Molten magnesium chloride is electrolyzed in a cell to produce magnesium metal and chlorine gas.
+268,Metal,Gold,Cyanide Leaching (Carbon-in-Pulp/Carbon-in-Leach),"Ore is crushed and leached with a cyanide solution, gold is adsorbed onto activated carbon, then stripped."
+269,Metal,Gold,Gravity + Flotation + Smelting,"Higher-grade ores may be concentrated by gravity/flotation methods, then smelted directly."
+270,Metal,Silver,Cyanide Leaching,"Similar process to gold cyanidation, though silver complexes differ slightly."
+271,Metal,Silver,Lead or Copper Refining Byproduct,Silver is recovered from lead bullion (Parkes process) or copper electrolytic slimes.
+272,Metal,Platinum,PGM Concentration + Smelting + Refining,"Platinum group metals are extracted from ore via flotation, smelted, then separated in complex refining steps."
+273,Metal,Platinum,Recycling from Catalytic Converters,Spent autocatalysts are processed (leached/smelting) to recover platinum.
+274,Metal,Palladium,Co-produced with Platinum (PGM Refining),Typically recovered alongside platinum in PGM ore.
+275,Metal,Palladium,"Recycling (Electronics, Catalysts)",Significant palladium is recovered from e-waste and catalytic converters.
+276,Metal,Molybdenum,"Byproduct from Copper Porphyry (Flotation, Roasting)",Molybdenite is separated from copper concentrates by flotation; roasted to MoO₃.
+277,Metal,Molybdenum,Primary Molybdenite Mining + Roasting,Direct mining of high-grade Mo deposits; concentrate is roasted to produce technical Mo oxide.
+278,Metal,Tungsten,Wolframite/Scheelite Concentrate + APT Route,"Ores are concentrated, then chemically processed to ammonium paratungstate (APT), reduced to tungsten powder."
+279,Metal,Tungsten,Scrap Recycling + Chemical Conversion,"Tungsten scrap is chemically digested to produce APT or tungsten oxides, then reduced."
+280,Metal,Steel (Carbon),Blast Furnace + Basic Oxygen Furnace (BF–BOF),"Iron ore is reduced in a blast furnace to pig iron, then refined in a BOF to produce steel."
+281,Metal,Steel (Carbon),Electric Arc Furnace (EAF),"Scrap steel or DRI is melted in an EAF, refined, and cast into new steel."
+282,Metal,Stainless Steel,EAF Smelting (Scrap + Ferroalloys) + Argon-Oxygen Decarburization,"Stainless grades are melted in EAF, then refined using AOD to reduce carbon and control alloy composition."
+283,Metal,Aluminum,Bayer Process (Bauxite → Alumina) + Hall-Héroult Electrolysis,"Bauxite is refined to alumina (Bayer), then electrolytically reduced to aluminum metal (Hall-Héroult)."
+284,Metal,Aluminum,Secondary (Recycling Scrap),"Scrap aluminum is remelted, refined, and cast, using far less energy than primary production."
+285,Metal,Copper,Pyrometallurgical (Smelting + Converting + Fire Refining),"Copper sulfide concentrates are smelted and converted to blister copper, then fire/refined further."
+286,Metal,Copper,Hydrometallurgical (Leaching + SX-EW),"Low-grade ores are leached with acid, copper is extracted with solvent extraction and recovered by electrowinning."
+287,Metal,Zinc,Roast–Leach–Electrowinning (RLE),"Zinc sulfide concentrates are roasted to ZnO, leached, then Zn is recovered by electrowinning."
+288,Metal,Zinc,Imperial Smelting Furnace (ISF),Simultaneous smelting of zinc and lead from mixed concentrates in a blast furnace–like reactor.
+289,Metal,Lead,Primary Smelting (Blast Furnace),"Lead concentrates (PbS) are sintered, then reduced in a blast furnace, producing lead bullion."
+290,Metals,Steel,Basic Oxygen Furnace (BOF),Conversion of pig iron to steel using oxygen
+291,Metals,Steel,Electric Arc Furnace (EAF),Melting recycled steel scrap using electric arcs
+292,Metals,Steel,Open Hearth Furnace,Older method using reverberatory furnaces
+293,Metals,Aluminum,Hall-Héroult Process,Electrolytic reduction of alumina in cryolite
+294,Metals,Aluminum,Secondary Production (Recycling),Remelting of aluminum scrap
+295,Metals,Aluminum,Carbothermic Reduction,Alternative process using carbon to reduce alumina
+296,Metals,Copper,Electrorefining,Purification by electrolysis
+297,Metals,Zinc,Imperial Smelting Process,Blast furnace smelting of zinc ores
+298,Metals,Zinc,Electrolytic Process,Electrowinning from zinc sulfate solution
+299,Metals,Zinc,Hydrometallurgical Process,Leaching followed by precipitation or electrowinning
+300,Metals,Nickel,Pyrometallurgical Process,Smelting of nickel sulfide ores
+301,Metals,Nickel,Hydrometallurgical Process,Leaching of laterite ores (HPAL)
+302,Metals,Nickel,Mond Process,Purification using nickel carbonyl
+303,Metals,Lead,Sintering-Smelting Process,Traditional blast furnace smelting
+304,Metals,Lead,Direct Smelting,"Modern processes like Kivcet, QSL, or Isasmelt"
+305,Metals,Lead,Secondary Production (Recycling),Recovery from lead-acid batteries
+306,Metals,Magnesium,Magnetherm Process,Silicothermic reduction in electric furnace
+307,Metals,Titanium,Kroll Process,Reduction of titanium tetrachloride with magnesium
+308,Metals,Titanium,Hunter Process,Reduction with sodium instead of magnesium
+309,Metals,Titanium,FFC Cambridge Process,Direct electrochemical reduction of titanium dioxide
+310,Metals,Stainless Steel,Argon Oxygen Decarburization (AOD),Refining process to reduce carbon content
+311,Metals,Stainless Steel,Vacuum Oxygen Decarburization (VOD),Alternative refining in vacuum
+312,Metals,Stainless Steel,Electric Arc Furnace (EAF),Primary melting of raw materials
+313,Minerals,Gypsum,Phosphogypsum,By-product from phosphoric acid production
+314,Minerals,Ceramic,Dry Pressing,Compaction of dry powder
+315,Minerals,Ceramic,Slip Casting,Pouring slurry into molds
+316,Minerals,Ceramic,Extrusion,Forcing clay through a die
+317,Minerals,Silicon,Carbothermic Reduction,Reduction of silica with carbon
+318,Minerals,Silicon,Electrochemical Process,Direct electrochemical reduction
+319,Minerals,Silicon,Metallurgical Grade Refining,Purification for semiconductor applications
+320,Minerals,Graphite,Natural Graphite Mining,Extraction and processing of natural deposits
+321,Minerals,Graphite,Synthetic Graphite Production,High-temperature treatment of carbon precursors
+322,Minerals,Graphite,Acheson Process,Electric heating of coke and silica
+323,Minerals,Cement,Dry Process,Raw materials processed in dry state
+324,Minerals,Cement,Wet Process,Raw materials processed as slurry
+325,Minerals,Cement,Semi-Dry/Semi-Wet Process,Hybrid approaches
+326,Minerals,Lime,Calcination of Limestone,Thermal decomposition of limestone in kilns
+327,Minerals,Lime,Hydration Process,Converting quicklime to hydrated lime
+328,Minerals,Lime,Recausticizing,Recovery from kraft pulping
+329,Minerals,Glass,Float Glass Process,Continuous casting on molten tin
+330,Minerals,Glass,Rolled Glass Process,Forming between rollers
+331,Minerals,Glass,Container Glass Process,Forming in molds for containers
+332,Mining,Lithium Extraction,Hard Rock Mining,Traditional mining of lithium-bearing minerals
+333,Mining,Lithium Extraction,Brine Extraction,Pumping and evaporating lithium-rich brines
+334,Mining,Lithium Extraction,Direct Lithium Extraction (DLE),Selective adsorption technologies
+335,Mining,Rare Earth Mining,Open Pit Mining,Surface extraction of rare earth-bearing ores
+336,Mining,Rare Earth Mining,In-Situ Leaching,Dissolving minerals underground for extraction
+337,Mining,Rare Earth Mining,Recycling from End-of-Life Products,"Recovering REEs from electronics, magnets, etc."
+338,Mining,Copper Mining,Open Pit Mining,Large-scale surface mining operations
+339,Mining,Copper Mining,Underground Mining,Shaft and tunnel-based extraction
+340,Mining,Copper Mining,Solution Mining,In-situ leaching of copper minerals
+341,Mining,Critical Minerals,Conventional Mining,Traditional extraction methods
+342,Mining,Critical Minerals,Deep Sea Mining,Ocean floor nodule and crust collection
+343,Mining,Critical Minerals,Urban Mining,Recovery from waste streams and landfills
+344,Mining & Minerals,Phosphate Rock,Surface Mining + Beneficiation,"Open-pit extraction, then crushing, screening, flotation."
+345,Mining & Minerals,Phosphate Rock,Underground Mining,Less common approach for deeper deposits.
+346,Mining & Minerals,Iron Ore,Surface (Open-pit) Mining + Beneficiation,"Ore is drilled, blasted, crushed, screened; sometimes concentrated."
+347,Mining & Minerals,Iron Ore,Underground Mining,Used where ore deposits are deep or in specific geologic conditions.
+348,Mining & Minerals,Bauxite,Open-pit Mining + Washing/Screening,"Major global route for aluminum ore, removing clay/silica contaminants."
+349,Mining & Minerals,Bauxite,Underground Mining,Rare; only in certain geologic settings.
+350,Mining & Minerals,Limestone,Open-pit Quarrying + Crushing,"Limestone is blasted, crushed, and sorted."
+351,Mining & Minerals,Limestone,Underground Quarry,Limited usage if surface access is restricted.
+352,Mining & Minerals,Silica Sand,Open-pit Quarrying + Washing/Sizing,"Silica-bearing sand is excavated, washed, classified to meet specs."
+353,Mining & Minerals,Silica Sand,Dredging + Wet Processing,"Sand is dredged from rivers or lakes, then processed."
+354,Paper & Pulp,Pulp (General),Kraft Process,"Wood chips are cooked with a strong alkali solution, yielding pulp with stronger fibers."
+355,Paper & Pulp,Pulp (General),Sulfite Process,"Uses acidic cooking liquor, producing a different fiber quality, less common today."
+356,Paper & Pulp,Newsprint,Mechanical Pulping (Groundwood),Logs are ground against stones to produce pulp for newsprint.
+357,Paper & Pulp,Newsprint,Thermomechanical Pulping (TMP),"Wood chips are heated and mechanically refined, improving strength and brightness."
+358,Paper & Pulp,Printing & Writing Paper,Chemical Pulp (Kraft) Bleaching,Bleached kraft pulp formed into fine paper on large papermaking machines.
+359,Paper & Pulp,Printing & Writing Paper,Recycled Pulp (Deinked),"Recycled office paper or newsprint is deinked, refined, and formed into new paper."
+360,Paper & Pulp,Corrugated Paper,Semi-chemical Pulp (Neutral Sulfite) + Papermaking,Semi-chemical pulp used for medium; liners often from kraft or recycled.
+361,Paper & Pulp,Corrugated Paper,Recycled OCC (Old Corrugated Containers),Re-pulping used cardboard to form containerboard.
+362,Paper & Pulp,Tissue Paper,Virgin Kraft Pulp + Tissue Machine (Creping),Softwood or hardwood pulp is formed into thin sheets and creped for softness.
+363,Paper & Pulp,Tissue Paper,Recycled Pulp,"Lower-grade tissues from mixed wastepaper, often with deinking."
+364,Petrochemical,Ethylene,"Steam Cracking of Hydrocarbons (Naphtha, Ethane)","Hydrocarbons are “cracked” at high temperature to yield ethylene, propylene, and other olefins."
+365,Petrochemical,Ethylene,Ethanol Dehydration,"Ethanol vapor is passed over a catalyst to remove water, forming ethylene."
+366,Petrochemical,Propylene,Steam Cracking (Co-product),Propylene is produced alongside ethylene in steam crackers.
+367,Petrochemical,Propylene,FCC Off-gas (Fluid Catalytic Cracking in Refineries),Propylene is recovered from refinery FCC units as a byproduct stream.
+368,Petrochemical,Benzene,Catalytic Reforming of Petroleum Naphtha,"Naphtha is reformed using platinum catalysts, producing benzene, toluene, and hydrogen."
+369,Petrochemical,Benzene,Steam Cracking Byproduct (Pyrolysis Gasoline),Raw pyrolysis gasoline from cracking is hydrotreated and separated to recover benzene.
+370,Petrochemical,Toluene,Catalytic Reforming of Naphtha,"Same approach as benzene, but yields toluene fraction."
+371,Petrochemical,Toluene,Steam Cracking Byproduct (Pyrolysis Gasoline),Toluene is separated from pyrolysis gasoline similar to benzene recovery.
+372,Petrochemical,Xylenes (Mixed Xylenes),Catalytic Reforming + Xylene Recovery,Mixed xylenes are recovered from reformate via fractionation and extraction.
+373,Petrochemical,Xylenes (Mixed Xylenes),Toluene Disproportionation (TDP),Toluene is converted to xylenes (and benzene) via catalytic reaction.
+374,Petrochemical,Vinyl Chloride (VCM),EDC Cracking,Ethylene dichloride is thermally cracked to form vinyl chloride monomer + HCl.
+375,Petrochemical,Vinyl Chloride (VCM),Acetylene Hydrochlorination,"Older method, reacting acetylene with hydrogen chloride over a catalyst."
+376,Petroleum Fuels,Gasoline,Crude Distillation + Catalytic Reforming + Blending,"Straight-run naphtha plus reformate, isomerate, etc., are blended into finished gasoline."
+377,Petroleum Fuels,Gasoline,Fluid Catalytic Cracking (FCC) + Blending,Heavier fractions are cracked in the FCC to produce high-octane components for gasoline.
+378,Petroleum Fuels,Diesel,Crude Distillation (Middle Distillates) + Hydrotreating,"Diesel cut is separated in distillation, then hydrotreated to remove sulfur/aromatics."
+379,Petroleum Fuels,Diesel,Hydrocracking of Heavier Fractions + Distillation,Heavier oil fractions are cracked into lighter components suitable for diesel blending.
+380,Petroleum Fuels,Jet Fuel,Crude Distillation (Kerosene Cut) + Hydrotreater,The kerosene fraction is separated and treated to meet jet fuel specifications.
+381,Petroleum Fuels,Jet Fuel,Hydrocracking + Fractionation,Hydrocracking heavy distillates to produce a kerosene-range jet fuel fraction.
+382,Petroleum Fuels,Fuel Oil,Direct Distillation (Resid Fraction),Heaviest fraction from crude distillation is sold as fuel oil or bunker fuel.
+383,Petroleum Fuels,Fuel Oil,Vacuum Distillation + Blending,"Residual oils are further distilled under vacuum, then blended to meet fuel specs."
+384,Petroleum Fuels,LPG,Crude Distillation (Light Ends) + Fractionation,Propane and butane are separated from the overhead streams.
+385,Petroleum Fuels,LPG,Natural Gas Processing (NGL Separation),"Liquids are extracted from raw natural gas, yielding LPG components."
+386,Polymer,Polyethylene (HDPE/LDPE),Gas-phase Polymerization (Fluidized Bed),"Ethylene polymerized under low/high pressure in a gas-phase reactor, often with Ziegler–Natta or metallocene."
+387,Polymer,Polyethylene (HDPE/LDPE),Slurry or Solution Process,Hydrocarbon solvents/slurry used to polymerize ethylene with catalysts.
+388,Polymer,Polypropylene,Gas-phase Polymerization,Propylene polymerized in a fluidized-bed or stirred-bed reactor.
+389,Polymer,Polypropylene,Bulk (Liquid-phase) Process,Loop reactor system with liquefied propylene as both reactant and diluent.
+390,Polymer,Polyvinyl Chloride (PVC),Suspension Polymerization of VCM,VCM is dispersed in water with initiators; polymer forms in suspended droplets.
+391,Polymer,Polyvinyl Chloride (PVC),Emulsion Polymerization of VCM,"Similar approach but with emulsifying agents, producing finer particle sizes."
+392,Polymer,Polystyrene,Batch Suspension Polymerization,"Styrene monomer droplets in water are polymerized, typically with a free-radical initiator."
+393,Polymer,Polystyrene,Continuous Mass (Bulk) Polymerization,Styrene is polymerized in a continuous reactor without a solvent or suspending medium.
+394,Polymer,Polyethylene Terephthalate (PET),Direct Esterification (PTA + MEG) + Polycondensation,Terephthalic acid and monoethylene glycol are esterified and then polycondensed.
+395,Polymer,Polyethylene Terephthalate (PET),Transesterification (DMT + MEG) + Polycondensation,"Dimethyl terephthalate is reacted with MEG, then polycondensed (older process)."
+396,Polymer,Polycarbonate,Phosgene Route (BPA + Phosgene),Bisphenol A is reacted with phosgene in an interfacial or solution process to form polycarbonate.
+397,Polymer,Polycarbonate,Non-phosgene (Diphenyl Carbonate + BPA),Transesterification route avoiding phosgene.
+398,Polymer,Polyamide (Nylon),Nylon 6: Caprolactam Polymerization,Ring-opening polymerization of caprolactam.
+399,Polymer,Polyamide (Nylon),"Nylon 6,6: Hexamethylene Diamine + Adipic Acid","Condensation reaction forming a salt, then polymerized at high temperature."
+400,Polymer,"Polyester (Unsaturated, etc.)",Polycondensation of Diacids/Anhydrides with Glycols,"Dicarboxylic acids or anhydrides react with glycols, often resulting in unsaturated sites for crosslinking."
+401,Polymer,"Polyester (Unsaturated, etc.)",Reactive Diluent Approach (Styrene),"Unsaturated polyester is dissolved in styrene (or similar) to make resin for fiberglass composites, etc."
+402,Polymer,"Acrylic (PAN, PMMA)",Acrylonitrile Polymerization (PAN),"Free-radical polymerization of acrylonitrile, often used for carbon fiber precursors."
+403,Polymer,"Acrylic (PAN, PMMA)",Methyl Methacrylate Polymerization (PMMA),"MMA is polymerized (bulk, solution, or suspension) to form Plexiglas-type materials."
+404,Polymer,Polyurethane,"Polyol + Diisocyanate (MDI, TDI)","Most common route; polyol reacts with diisocyanate to form foams, elastomers, adhesives, etc."
+405,Polymer,Polyurethane,Prepolymer Method,"An isocyanate-terminated prepolymer is formed, then extended with chain extenders or additional polyol."
+406,Polymer,Polyacetal (POM),Formaldehyde Polymerization (Anionic),"Formaldehyde monomer is polymerized, often stabilized by end-capping."
+407,Polymer,Polyacetal (POM),Trioxane Co-Polymerization,Trioxane (cyclic trimer of formaldehyde) co-polymerized with comonomers.
+408,Polymer,Polyphenylene Ether (PPE),Oxidative Coupling of Phenols (Copper Catalysts),"Phenol is oxidatively polymerized to form PPE, often blended with polystyrene."
+409,Polymer,Polyphenylene Ether (PPE),Modified PPO Blends in Reactors,Blending PPO with PS or other polymers during polymerization for improved properties.
+410,Polymer/Elastomer,Synthetic Rubber (SBR),Emulsion Polymerization,Styrene and butadiene are polymerized in an emulsion system.
+411,Polymer/Elastomer,Synthetic Rubber (SBR),Solution Polymerization,"Polymerization in an organic solvent, allowing better control of polymer microstructure."
+412,Polymer/Elastomer,EPDM Rubber,Solution Polymerization (Ziegler–Natta),"Ethylene, propylene, and a diene monomer are polymerized in solution with specific catalysts."
+413,Polymer/Elastomer,EPDM Rubber,Suspension Polymerization (Less Common),Monomers are polymerized in a water-based suspension with suitable surfactants.
+414,Transportation,Electric Vehicle Charging,Level 1 Charging,Slow charging using standard outlets
+415,Transportation,Electric Vehicle Charging,Level 2 Charging,Medium-speed charging with dedicated equipment
+416,Transportation,Electric Vehicle Charging,Direct Current Fast Charging (DCFC),High-power rapid charging
+417,Transportation,Hydrogen Refueling,Gaseous Hydrogen Storage,Compression and dispensing of gaseous H₂
+418,Transportation,Hydrogen Refueling,Liquid Hydrogen Storage,Cryogenic storage and dispensing
+419,Transportation,Hydrogen Refueling,On-Site Generation,Electrolysis with integrated dispensing
+420,Transportation,Biofuel Distribution,Blending Terminals,Mixing biofuels with conventional fuels
+421,Transportation,Biofuel Distribution,Dedicated Biofuel Stations,Pure biofuel dispensing infrastructure
+422,Transportation,Low-Carbon Shipping,LNG-Powered Vessels,Ships using liquefied natural gas as fuel
+423,Transportation,Low-Carbon Shipping,Ammonia-Powered Vessels,Ships using ammonia as fuel
+424,Transportation,Low-Carbon Shipping,Hydrogen Fuel Cell Ships,Ships using hydrogen fuel cells
+425,Transportation,Low-Carbon Aviation,Sustainable Aviation Fuel (SAF),Infrastructure for bio-based jet fuels
+426,Transportation,Low-Carbon Aviation,Hydrogen Aviation,Infrastructure for hydrogen-powered aircraft
+427,Transportation,Low-Carbon Aviation,Electric Aviation,Charging infrastructure for electric aircraft
+428,Waste,Plastic Recycling,Mechanical Recycling,"Sorting, shredding, washing, and reprocessing"
+429,Waste,Plastic Recycling,Chemical Recycling (Pyrolysis),Thermal decomposition to basic chemical components
+430,Waste,Plastic Recycling,Solvent-Based Recycling,Dissolution and precipitation to recover polymers
+431,Waste,E-Waste Processing,Manual Disassembly,Physical separation of components
+432,Waste,E-Waste Processing,Automated Shredding/Separation,Mechanical processing with automated sorting
+433,Waste,E-Waste Processing,Hydrometallurgical Recovery,Chemical leaching to recover precious metals
+434,Waste,Composting,Windrow Composting,Long rows of organic material with periodic turning
+435,Waste,Composting,In-Vessel Composting,Controlled environment for accelerated decomposition
+436,Waste,Composting,Vermicomposting,Using worms to break down organic material
+437,Waste,Wastewater Treatment,Activated Sludge Process,Biological treatment using aeration
+438,Waste,Wastewater Treatment,Membrane Bioreactors,Combined membrane filtration with biological treatment
+439,Waste,Wastewater Treatment,Constructed Wetlands,Natural systems for water purification
+440,Waste,Battery Recycling,Pyrometallurgical Process,High-temperature smelting of batteries
+441,Waste,Battery Recycling,Hydrometallurgical Process,Chemical leaching and precipitation of metals
+442,Waste,Battery Recycling,Direct Recycling,Recovery of cathode materials without decomposition
+443,Waste,Landfill Management,Sanitary Landfill,Controlled waste disposal with environmental protection
+444,Waste,Landfill Management,Bioreactor Landfill,Enhanced decomposition for methane generation
+445,Waste,Landfill Management,Landfill Mining,Recovery of materials from existing landfills
+446,Water,Desalination,Reverse Osmosis,Pressure-driven membrane separation
+447,Water,Desalination,Thermal Distillation (MSF/MED),Evaporation and condensation processes
+448,Water,Desalination,Electrodialysis,Ion separation using electrical potential
+449,Water,Municipal Water Treatment,Conventional Treatment,"Coagulation, flocculation, sedimentation, filtration"
+450,Water,Municipal Water Treatment,Membrane Filtration,"Using various membrane types (MF, UF, NF)"
+451,Water,Municipal Water Treatment,Advanced Oxidation,Chemical oxidation for contaminant destruction
+452,Water,Industrial Water Treatment,Ion Exchange,Removing specific ions from water
+453,Water,Industrial Water Treatment,Electrodeionization,Combination of ion exchange and membranes
+454,Water,Industrial Water Treatment,Zero Liquid Discharge,Complete water recovery with solid waste only
+455,Water,Water Reuse,Potable Reuse,Advanced treatment for drinking water production
+456,Water,Water Reuse,Non-Potable Reuse,"Treatment for irrigation, industrial use, etc."

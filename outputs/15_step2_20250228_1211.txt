@@ -1,0 +1,93 @@
+Reference Class: 15,Alcohol,Methanol
+
+Step 2 - Process Flow Description:
+### High-Level Industrial Process Flow for Methanol Production
+
+Below is the high-level process flow for the industrial-scale production of methanol, outlining the major unit operations and key streams connecting them.
+
+1. **Natural Gas Storage and Handling**
+   - **Description:** Raw natural gas is received, stored, and conditioned for processing.
+   - **Key Streams:**
+     - **Input:** Natural Gas Feed
+     - **Output:** Conditioned Natural Gas
+
+2. **Steam Generation**
+   - **Description:** Water is heated to produce steam necessary for the reforming process.
+   - **Key Streams:**
+     - **Input:** Water Supply
+     - **Output:** Steam
+
+3. **Steam Methane Reforming (SMR)**
+   - **Description:** Conditioned natural gas reacts with steam at high temperatures to produce synthesis gas (a mixture of hydrogen and carbon monoxide).
+   - **Key Streams:**
+     - **Input:** Conditioned Natural Gas, Steam
+     - **Output:** Synthesis Gas (H₂ + CO)
+
+4. **Water-Gas Shift (WGS) Conversion**
+   - **Description:** Additional steam reacts with carbon monoxide in the synthesis gas to produce more hydrogen and carbon dioxide.
+   - **Key Streams:**
+     - **Input:** Synthesis Gas, Steam
+     - **Output:** Shifted Gas (H₂, CO₂)
+
+5. **Carbon Dioxide (CO₂) Removal**
+   - **Description:** CO₂ is separated from the shifted gas to purify the hydrogen stream for methanol synthesis.
+   - **Key Streams:**
+     - **Input:** Shifted Gas
+     - **Output:** Purified Hydrogen-Rich Gas, Separated CO₂
+
+6. **Methanol Synthesis**
+   - **Description:** Purified hydrogen-rich gas reacts with carbon monoxide to produce methanol in the presence of a catalyst.
+   - **Key Streams:**
+     - **Input:** Purified Hydrogen-Rich Gas, Carbon Monoxide
+     - **Output:** Crude Methanol Vapor
+
+7. **Methanol Condensation and Separation**
+   - **Description:** Crude methanol vapor is condensed and separated from unreacted gases.
+   - **Key Streams:**
+     - **Input:** Crude Methanol Vapor
+     - **Output:** Liquid Methanol, Unreacted Gases
+
+8. **Methanol Distillation and Purification**
+   - **Description:** Liquid methanol is distilled to achieve the desired purity level (≥99.9%).
+   - **Key Streams:**
+     - **Input:** Liquid Methanol
+     - **Output:** Pure Methanol Product, Distillation Byproducts
+
+9. **Product Storage and Handling**
+   - **Description:** Purified methanol is stored in tanks and prepared for distribution.
+   - **Key Streams:**
+     - **Input:** Pure Methanol
+     - **Output:** Stored Methanol for Distribution
+
+10. **Utilities and Recycle Streams**
+    - **Description:** Manage utility requirements (e.g., cooling water, electricity) and recycle unreacted gases back into the process to enhance efficiency.
+    - **Key Streams:**
+      - **Input:** Unreacted Gases, Utility Inputs
+      - **Output:** Recycled Gases, Utilized Utilities
+
+### Summary of Key Streams
+
+- **Input Feed Streams:**
+  - Natural Gas Feed
+  - Water Supply
+
+- **Internal Streams:**
+  - Conditioned Natural Gas
+  - Steam
+  - Synthesis Gas (H₂ + CO)
+  - Shifted Gas (H₂, CO₂)
+  - Purified Hydrogen-Rich Gas
+  - Separated CO₂
+  - Crude Methanol Vapor
+  - Unreacted Gases
+  - Liquid Methanol
+
+- **Product Streams:**
+  - Pure Methanol Product
+  - Stored Methanol for Distribution
+
+- **Byproduct Streams:**
+  - Distillation Byproducts
+  - Recycled Gases
+
+This structured process flow ensures an efficient and environmentally compliant production of methanol at an industrial scale.

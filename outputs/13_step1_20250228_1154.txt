@@ -1,0 +1,17 @@
+Reference Class: 13,Chemical,Methanol
+
+Step 1 - Context Elaboration:
+```json
+{
+  "product": "Methanol",
+  "production_method": "Steam Methane Reforming (SMR) followed by Methanol Synthesis",
+  "production_scale": "1,000,000 metric tons per year",
+  "product_specs": "99.9% purity methanol",
+  "feedstocks": [
+    "Natural Gas",
+    "Water (for steam generation)",
+    "Air or pure oxygen"
+  ],
+  "additional_constraints": "Compliance with environmental regulations, energy-efficient processes, and minimal greenhouse gas emissions"
+}
+```
