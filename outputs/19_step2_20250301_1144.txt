@@ -1,0 +1,78 @@
+Reference Class: 19,Basic Inorganic,Sodium Hydroxide
+
+Step 2 - Process Flow Description:
+1. **Brine Preparation**
+   - **Description:** Raw brine (sodium chloride solution) is purified to remove impurities such as calcium, magnesium, and other divalent ions to prevent scaling and ensure efficient electrolysis.
+   - **Key Streams:**
+     - **Input:** Raw Brine
+     - **Output:** Purified Brine
+     - **By-products:** Residual Impurities (waste)
+
+2. **Pre-Electrolysis Treatment**
+   - **Description:** The purified brine may undergo additional treatments, such as deaeration or pH adjustment, to optimize the conditions for the electrolysis process.
+   - **Key Streams:**
+     - **Input:** Purified Brine
+     - **Output:** Treated Brine
+     - **By-products:** None
+
+3. **Membrane Cell Electrolysis**
+   - **Description:** The treated brine is electrolyzed in membrane cells where an electric current facilitates the separation of chloride ions to produce chlorine gas at the anode and hydrogen gas at the cathode, while sodium hydroxide is formed in the cell.
+   - **Key Streams:**
+     - **Input:** Treated Brine, Electricity
+     - **Outputs:** Chlorine Gas, Hydrogen Gas, Sodium Hydroxide Solution
+
+4. **Chlorine Gas Cooling and Drying**
+   - **Description:** Chlorine gas produced from electrolysis is cooled and dried to remove any moisture and impurities before storage or further processing.
+   - **Key Streams:**
+     - **Input:** Chlorine Gas
+     - **Outputs:** Dry Chlorine Gas, Moisture (removed)
+
+5. **Hydrogen Gas Handling**
+   - **Description:** Hydrogen gas generated at the cathode is separated and either utilized as a fuel source within the plant or sold as a by-product.
+   - **Key Streams:**
+     - **Input:** Hydrogen Gas
+     - **Outputs:** Utilized Hydrogen, Stored/Sold Hydrogen
+
+6. **Sodium Hydroxide Concentration**
+   - **Description:** The sodium hydroxide solution produced in the electrolysis step is concentrated to the desired specification (e.g., 50% aqueous solution) through evaporation or other concentration methods.
+   - **Key Streams:**
+     - **Input:** Dilute Sodium Hydroxide Solution
+     - **Output:** Concentrated Sodium Hydroxide Solution
+     - **By-products:** Water Vapor (if evaporation is used)
+
+7. **Product Storage**
+   - **Description:** Concentrated sodium hydroxide solution is stored in appropriate storage tanks under controlled conditions to maintain stability and prevent contamination.
+   - **Key Streams:**
+     - **Input:** Concentrated Sodium Hydroxide Solution
+     - **Output:** Stored Sodium Hydroxide
+
+8. **Chlorine Gas Storage**
+   - **Description:** Dry chlorine gas is stored in gas cylinders or tanks designed to handle hazardous materials safely.
+   - **Key Streams:**
+     - **Input:** Dry Chlorine Gas
+     - **Output:** Stored Chlorine Gas
+
+9. **Energy Management and Distribution**
+   - **Description:** Electricity supply is managed and distributed to various units within the plant, ensuring efficient energy usage and integration of renewable sources if applicable.
+   - **Key Streams:**
+     - **Input:** External Electricity Supply
+     - **Outputs:** Distributed Electricity to Electrolysis and Other Units
+
+10. **Waste Treatment and Environmental Compliance**
+    - **Description:** Any waste streams, including residual impurities from brine preparation and by-products from other units, are treated to comply with environmental regulations before disposal or recycling.
+    - **Key Streams:**
+      - **Input:** Waste Streams from Various Units
+      - **Outputs:** Treated Waste, Recycled Materials, Discharge to Environment (if permitted)
+
+---
+
+**Key Stream Connections Overview:**
+
+- **Raw Brine** → Brine Preparation → Purified Brine → Pre-Electrolysis Treatment → Treated Brine → Membrane Cell Electrolysis
+- **Electricity** → Membrane Cell Electrolysis
+- **Membrane Cell Electrolysis Outputs:**
+  - **Chlorine Gas** → Chlorine Gas Cooling and Drying → Chlorine Gas Storage
+  - **Hydrogen Gas** → Hydrogen Gas Handling
+  - **Sodium Hydroxide Solution** → Sodium Hydroxide Concentration → Product Storage
+- **Waste Streams** from Brine Preparation and other units → Waste Treatment and Environmental Compliance
+- **External Electricity Supply** → Energy Management and Distribution

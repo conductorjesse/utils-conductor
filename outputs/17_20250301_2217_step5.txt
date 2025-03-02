@@ -1,0 +1,73 @@
+Reference Class: 17,Alcohol/Intermediate,Ethanol (Industrial)
+
+Step 5 - Mermaid Diagram Generation:
+I'll create a Mermaid diagram based on the provided information about the industrial ethanol production process. Since I don't have the complete JSON structure (it appears to have been cut off), I'll use what was provided and ensure the diagram represents the process flow accurately:
+
+```mermaid
+flowchart LR
+    %% External source nodes
+    raw_corn[/"Raw Corn Input"/]
+    process_water[/"Process Water Input"/]
+    alpha_amylase[/"Alpha Amylase Enzyme Input"/]
+    glucoamylase[/"Glucoamylase Enzyme Input"/]
+    yeast[/"Yeast Input"/]
+
+    %% Process operation nodes
+    op_001["op_001: Feedstock Receiving and Storage"]
+    op_002["op_002: Feedstock Preparation"]
+    op_003["op_003: Liquefaction and Saccharification"]
+    op_004["op_004: Fermentation"]
+    op_005["op_005: Distillation"]
+    op_006["op_006: Dehydration"]
+    op_007["op_007: Product Storage"]
+
+    %% External sink nodes
+    ethanol_product{{" Industrial Ethanol Product"}}
+    co2_product{{" Carbon Dioxide By-product"}}
+    distillers_grains{{" Distillers' Grains By-product"}}
+    water_waste{{" Water Waste"}}
+
+    %% Process stream connections
+    raw_corn --> |raw_corn_input| op_001
+    op_001 --> |stored_corn_output| op_002
+    op_002 --> |milled_corn_stream| op_003
+    process_water --> |process_water_input| op_003
+    alpha_amylase --> |alpha_amylase_enzyme_input| op_003
+    glucoamylase --> |glucoamylase_enzyme_input| op_003
+    op_003 --> |fermentable_sugar_stream| op_004
+    yeast --> |yeast_input| op_004
+    op_004 --> |fermentation_broth_stream| op_005
+    op_004 --> |co2_stream| co2_product
+    op_005 --> |ethanol_distillate_stream| op_006
+    op_005 --> |distillers_solubles_stream| distillers_grains
+    op_006 --> |dehydrated_ethanol_stream| op_007
+    op_006 --> |water_byproduct_stream| water_waste
+    op_007 --> |final_ethanol_product| ethanol_product
+
+    %% Styling
+    classDef process rect;
+    classDef source stadium;
+    classDef sink hexagon;
+    classDef productStream stroke-width:3px;
+    classDef wasteStream stroke-dasharray: 2 2;
+    classDef utilityStream stroke-dasharray: 5 5;
+
+    class op_001,op_002,op_003,op_004,op_005,op_006,op_007 process;
+    class raw_corn,process_water,alpha_amylase,glucoamylase,yeast source;
+    class ethanol_product,co2_product,distillers_grains,water_waste sink;
+    
+    linkStyle 13 stroke-width:3px;
+    linkStyle 8,11,12 stroke-dasharray: 2 2;
+```
+
+This diagram shows:
+1. The complete process flow from feedstock receiving through to ethanol production
+2. External inputs (raw materials) as stadium-shaped nodes
+3. Core process operations as rectangular nodes
+4. Product and by-product outputs as hexagonal nodes
+5. Different line styles for different types of streams:
+   - Bold line for final product stream
+   - Dotted lines for waste/by-product streams
+   - Regular lines for internal process streams
+
+The diagram follows the process sequence described in the text, with each unit operation connected by the appropriate streams, and clearly shows the transformation of corn into industrial ethanol.

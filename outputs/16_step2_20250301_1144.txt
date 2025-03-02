@@ -1,0 +1,70 @@
+Reference Class: 16,Alcohol,Methanol
+
+Step 2 - Process Flow Description:
+### High-Level At-Scale Process Flow for Methanol Production
+
+1. **Feed Pretreatment**
+   - **Description:** Purifies natural gas by removing impurities such as sulfur compounds, water, and heavy hydrocarbons to protect catalysts in downstream processes.
+   - **Key Streams:** 
+     - **Input:** Natural Gas Feed
+     - **Output:** Purified Natural Gas
+     - **Byproducts:** Impurity Waste Streams
+
+2. **Steam Generation**
+   - **Description:** Produces steam by heating water, supplying necessary steam for the reforming and shift conversion processes.
+   - **Key Streams:** 
+     - **Input:** Water
+     - **Output:** Steam
+
+3. **Steam Methane Reforming (SMR)**
+   - **Description:** Reacts purified natural gas with steam over a nickel-based catalyst to produce synthesis gas (a mixture of hydrogen, carbon monoxide, and carbon dioxide).
+   - **Key Streams:** 
+     - **Input:** Purified Natural Gas, Steam
+     - **Output:** Synthesis Gas
+
+4. **Water-Gas Shift Reactor**
+   - **Description:** Converts carbon monoxide in the synthesis gas to carbon dioxide and additional hydrogen by reacting with steam.
+   - **Key Streams:** 
+     - **Input:** Synthesis Gas, Steam
+     - **Output:** Shifted Gas (Increased H₂, CO₂)
+
+5. **CO₂ Removal Unit**
+   - **Description:** Removes carbon dioxide from the shifted gas using technologies such as amine scrubbing or pressure swing adsorption, resulting in a hydrogen-rich gas stream.
+   - **Key Streams:** 
+     - **Input:** Shifted Gas
+     - **Output:** Purified Hydrogen-Rich Gas
+     - **Byproducts:** Separated CO₂
+
+6. **Methanol Synthesis Reactor**
+   - **Description:** Catalytically converts the hydrogen-rich gas and remaining carbon oxides into methanol and water under high pressure and temperature.
+   - **Key Streams:** 
+     - **Input:** Purified Hydrogen-Rich Gas, CO, CO₂
+     - **Output:** Crude Methanol, Water
+
+7. **Methanol Separation and Purification**
+   - **Description:** Separates crude methanol from water and other byproducts through distillation to achieve preliminary purification.
+   - **Key Streams:** 
+     - **Input:** Crude Methanol, Water
+     - **Output:** Partially Purified Methanol, Byproduct Streams
+
+8. **Product Distillation**
+   - **Description:** Performs final distillation to ensure methanol meets product specifications (≥99.85% purity) by removing residual water and impurities.
+   - **Key Streams:** 
+     - **Input:** Partially Purified Methanol
+     - **Output:** Pure Methanol, Impure Water/Byproducts
+
+9. **Recycling and Gas Handling**
+   - **Description:** Recycles unreacted synthesis gas and other byproducts back into the process to enhance efficiency and minimize waste.
+   - **Key Streams:** 
+     - **Input:** Unreacted Synthesis Gas
+     - **Output:** Recycled Gas to SMR or Shift Reactor
+
+10. **Utilities and Emissions Control**
+    - **Description:** Manages necessary utilities such as steam, electricity, and cooling, and handles emissions to ensure compliance with environmental regulations.
+    - **Key Streams:** 
+      - **Inputs:** Steam, Electricity
+      - **Outputs:** Treated Emissions, Waste Heat
+
+---
+
+This process flow ensures an efficient and environmentally compliant production of high-purity methanol at an industrial scale.

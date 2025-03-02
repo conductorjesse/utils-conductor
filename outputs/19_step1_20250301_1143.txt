@@ -1,0 +1,17 @@
+Reference Class: 19,Basic Inorganic,Sodium Hydroxide
+
+Step 1 - Context Elaboration:
+```json
+{
+  "product": "Sodium Hydroxide",
+  "production_method": "Membrane Cell Chlor-Alkali Process",
+  "production_scale": "100,000 metric tons per year",
+  "product_specs": "50% aqueous solution, ≥98% purity",
+  "feedstocks": [
+    "Brine (Sodium Chloride Solution)",
+    "Water",
+    "Electricity"
+  ],
+  "additional_constraints": "Compliance with environmental regulations for chlorine and caustic production; energy-efficient operation; waste management protocols for by-products."
+}
+```

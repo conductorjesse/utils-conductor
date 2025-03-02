@@ -1,0 +1,34 @@
+Reference Class: 17,Alcohol/Intermediate,Ethanol (Industrial)
+
+Step 5 - Mermaid Diagram Generation:
+```mermaid
+flowchart LR
+    raw_ethylene_source[Raw Ethylene Source] --> |raw_ethylene_feed| op_001[Ethylene Purification Unit]
+    water_source[Water Source] --> |water_feed| op_002[Steam Generation Unit]
+    
+    op_001 --> |purified_ethylene| op_003[Hydration Reactor]
+    op_001 --> |removed_impurities| op_010[Waste Treatment and Emissions Control]
+    
+    op_002 --> |high_purity_steam| op_003
+    
+    op_003 --> |reacted_gas_stream| op_004[Cooling and Condensation Unit]
+    
+    op_004 --> |overhead_gas| op_005[Gas Separation Unit]
+    op_004 --> |condensed_liquid| op_006[Initial Distillation Column]
+    
+    op_005 --> |recycled_ethylene| op_008[Reflux and Recycle System]
+    op_005 --> |purged_gas| op_010
+    
+    op_006 --> |ethanol_rich_distillate| op_007[Dehydration Unit]
+    op_006 --> |water_rich_bottoms| op_008
+    
+    op_007 --> |anhydrous_ethanol| op_009[Product Storage and Handling]
+    op_007 --> |dehydration_byproducts| op_008
+    
+    op_008 --> |recycled_ethylene_to_reactor| op_003
+    op_008 --> |recycled_steam| op_002
+    
+    op_009 --> |final_ethanol_product| product_distribution[Product Distribution]
+    
+    op_010 --> |treated_effluents| effluent_disposal[Effluent Disposal]
+```

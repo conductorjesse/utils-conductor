@@ -1,0 +1,85 @@
+Reference Class: 19,Basic Inorganic,Sodium Hydroxide
+
+Step 5 - Mermaid Diagram Generation:
+Here's the Mermaid flowchart diagram based on the JSON structure:
+
+```mermaid
+flowchart LR
+    %% External Sources
+    src_brine([Crude Brine Source]) 
+    src_electricity([Electricity Source])
+    src_water([Water Source])
+    src_fuel([Fuel Source])
+
+    %% Unit Operations
+    op_001[Brine Preparation]
+    op_002[Electrolysis]
+    op_003[Chlorine Gas Treatment]
+    op_004[Hydrogen Gas Handling]
+    op_005[Sodium Hydroxide Concentration]
+    op_006[Crystallization and Filtration]
+    op_007[Drying and Packaging]
+    op_008[Wastewater Treatment]
+    op_009[Utilities and Energy Management]
+
+    %% External Sinks
+    sink_naoh{{Dried NaOH Product}}
+    sink_chlorine{{Purified Chlorine}}
+    sink_hydrogen{{Compressed Hydrogen}}
+    sink_waste{{Waste Residues}}
+    sink_vapor{{Water Vapor}}
+
+    %% Process Flows
+    src_brine --> |crude_brine| op_001
+    op_001 --> |purified_brine| op_002
+    op_002 --> |chlorine_gas_raw| op_003
+    op_002 --> |hydrogen_gas_raw| op_004
+    op_002 --> |naoh_solution| op_005
+    op_005 --> |concentrated_naoh_solution| op_006
+    op_005 --> |evaporated_water| op_008
+    op_006 --> |naoh_pellets| op_007
+    op_006 --> |mother_liquor| op_008
+    op_007 --> |dried_naoh_pellets| sink_naoh
+    op_007 --> |water_vapor| sink_vapor
+    op_003 --> |purified_chlorine_gas| sink_chlorine
+    op_004 --> |compressed_hydrogen_gas| sink_hydrogen
+    op_008 --> |waste_residues| sink_waste
+    op_008 --> |recycled_water| op_001
+
+    %% Utility Flows
+    src_electricity -.-> |electricity_feed| op_002
+    src_water -.-> |raw_water| op_009
+    src_fuel -.-> |fuel_input| op_009
+    src_electricity -.-> |main_electricity| op_009
+    op_009 -.-> |distributed_electricity| op_002
+    op_009 -.-> |process_steam| op_005
+    op_009 -.-> |cooling_water| op_002
+    op_009 -.-> |cooling_water| op_003
+    op_009 -.-> |cooling_water| op_004
+    op_009 -.-> |cooling_water| op_006
+    src_water -.-> |process_water| op_008
+
+    %% Styling
+    classDef operation rect, fill:#f9f9f9, stroke:#333
+    classDef source stadium, fill:#e6f7ff, stroke:#0066cc
+    classDef sink hexagon, fill:#f9e6ff, stroke:#9933cc
+    classDef product_out stroke-width:2px
+    
+    class op_001,op_002,op_003,op_004,op_005,op_006,op_007,op_008,op_009 operation
+    class src_brine,src_electricity,src_water,src_fuel source
+    class sink_naoh,sink_chlorine,sink_hydrogen,sink_waste,sink_vapor sink
+    class sink_naoh,sink_chlorine,sink_hydrogen product_out
+```
+
+This diagram shows the complete process flow for sodium hydroxide production using the membrane cell chlor-alkali process. It includes:
+
+1. All unit operations (OP-001 through OP-009)
+2. All material streams connecting the operations
+3. External sources (crude brine, electricity, water, fuel)
+4. Product sinks (NaOH, chlorine, hydrogen)
+5. Waste sinks (residues, water vapor)
+6. Utility streams shown as dashed lines
+7. Process streams shown as solid lines
+8. Product streams shown as bold lines
+
+The layout follows a left-to-right flow direction, with the core process (electrolysis and subsequent processing steps) forming the main backbone of the diagram, while utilities and auxiliary operations are positioned to support the main process flow.

@@ -1,0 +1,337 @@
+Reference Class: 15,Alcohol,Methanol
+
+Step 4 - JSON Structure Generation:
+```json
+{
+  "reference_class": {
+    "ref_class_id": "methanol_smr_process",
+    "ref_class_name": "Methanol Production via SMR",
+    "ref_class_description": "Industrial production of methanol using Steam Methane Reforming (SMR) and catalytic synthesis, converting natural gas to methanol via syngas intermediate.",
+    "feedstocks": [
+      {
+        "feed_name": "Natural Gas",
+        "feed_description": "Primary carbon source for methanol production",
+        "feed_composition": "~95% methane, 3% ethane, 1% propane, 1% other gases, ~50 ppm H₂S impurities",
+        "feed_specs": "Pipeline quality, 1-2 MPa pressure, ambient temperature"
+      },
+      {
+        "feed_name": "Water",
+        "feed_description": "Required for steam production and Water-Gas Shift reaction",
+        "feed_composition": "Demineralized water",
+        "feed_specs": "Low mineral content, ambient temperature"
+      }
+    ],
+    "products": [
+      {
+        "product_name": "Methanol",
+        "product_description": "Primary product used for industrial applications and fuel",
+        "product_composition": "99.9% pure methanol (CH₃OH)",
+        "product_specs": "IMPCA grade, <0.1% water, <50 ppm impurities, suitable for industrial and fuel applications"
+      },
+      {
+        "product_name": "Carbon Dioxide",
+        "product_description": "By-product captured during CO₂ removal stage",
+        "product_composition": ">95% CO₂",
+        "product_specs": "Can be used for industrial applications or sequestered"
+      }
+    ],
+    "production_method": "Steam Methane Reforming (SMR) combined with Catalytic Synthesis",
+    "production_scale": "1,000 metric tons of methanol per day"
+  },
+  "unit_operations": [
+    {
+      "op_id": "op_001",
+      "op_name": "Feed Pre-treatment",
+      "op_description": "Removes sulfur compounds from raw natural gas to prevent catalyst poisoning",
+      "op_type": "purification",
+      "equipment": [
+        {
+          "equipment_name": "Desulfurization Unit",
+          "equipment_specs": "ZnO beds or amine-based scrubbers, operating at moderate pressure"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Removal of sulfur compounds from natural gas",
+          "parameters": {
+            "removal_efficiency": ">99.99%",
+            "inlet_h2s_concentration": "~50 ppm",
+            "outlet_h2s_concentration": "<0.5 ppm",
+            "operating_temperature": "350-400°C for ZnO beds"
+          },
+          "impacted_input_streams": ["raw_natural_gas"],
+          "impacted_output_streams": ["cleaned_natural_gas"]
+        }
+      ],
+      "input_streams": ["raw_natural_gas"],
+      "output_streams": ["cleaned_natural_gas"],
+      "energy_requirements": "5-10% of total process energy, moderate heating requirements",
+      "utilities": "Steam for heating, cooling water"
+    },
+    {
+      "op_id": "op_002",
+      "op_name": "Steam Generation",
+      "op_description": "Produces high-pressure steam by heating water for the reforming process",
+      "op_type": "heating",
+      "equipment": [
+        {
+          "equipment_name": "Boiler System",
+          "equipment_specs": "High-pressure steam generators capable of producing steam at 3-5 MPa and ~800°C"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Conversion of demineralized water to high-pressure steam",
+          "parameters": {
+            "water_consumption": "~3,000 kg per metric ton methanol",
+            "steam_temperature": "800°C",
+            "steam_pressure": "3-5 MPa",
+            "steam_to_methane_ratio": "3:1 molar ratio"
+          },
+          "impacted_input_streams": ["process_water"],
+          "impacted_output_streams": ["high_pressure_steam"]
+        }
+      ],
+      "input_streams": ["process_water"],
+      "output_streams": ["high_pressure_steam"],
+      "energy_requirements": "30-40% of total process energy, high heat input required",
+      "utilities": "Fuel gas, combustion air, water treatment chemicals"
+    },
+    {
+      "op_id": "op_003",
+      "op_name": "Steam Methane Reforming",
+      "op_description": "Reacts natural gas with steam over a catalyst to produce syngas (H₂ and CO)",
+      "op_type": "reaction",
+      "equipment": [
+        {
+          "equipment_name": "Reformer Furnace",
+          "equipment_specs": "High-temperature reactors with nickel-based catalysts, operating at 800-900°C"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Catalytic conversion of methane and steam to synthesis gas",
+          "parameters": {
+            "primary_reaction": "CH₄ + H₂O ↔ CO + 3H₂",
+            "conversion_rate": "~80% of CH₄ per pass",
+            "operating_temperature": "800-900°C",
+            "operating_pressure": "1.5-3.0 MPa",
+            "h2_co_ratio": "~3:1 in output syngas"
+          },
+          "impacted_input_streams": ["cleaned_natural_gas", "high_pressure_steam"],
+          "impacted_output_streams": ["raw_syngas"]
+        }
+      ],
+      "input_streams": ["cleaned_natural_gas", "high_pressure_steam"],
+      "output_streams": ["raw_syngas"],
+      "energy_requirements": "20-25% of total process energy, highly endothermic process",
+      "utilities": "Fuel gas for heating, combustion air"
+    },
+    {
+      "op_id": "op_004",
+      "op_name": "Water-Gas Shift Conversion",
+      "op_description": "Converts CO in syngas to additional H₂ and CO₂, enhancing hydrogen yield",
+      "op_type": "reaction",
+      "equipment": [
+        {
+          "equipment_name": "Shift Reactors",
+          "equipment_specs": "High-temperature and low-temperature shift reactors with iron oxide or copper-based catalysts"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Catalytic conversion of CO and steam to CO₂ and H₂",
+          "parameters": {
+            "shift_reaction": "CO + H₂O ↔ CO₂ + H₂",
+            "conversion_efficiency": "~95% of CO converted",
+            "high_temp_stage": "350-450°C with Fe₃O₄/Cr₂O₃ catalyst",
+            "low_temp_stage": "200-250°C with Cu/ZnO/Al₂O₃ catalyst",
+            "exothermic_heat": "Heat released and partially recovered"
+          },
+          "impacted_input_streams": ["raw_syngas"],
+          "impacted_output_streams": ["shifted_syngas"]
+        }
+      ],
+      "input_streams": ["raw_syngas"],
+      "output_streams": ["shifted_syngas"],
+      "energy_requirements": "Net exothermic process, heat recovery systems used",
+      "utilities": "Cooling water for temperature control"
+    },
+    {
+      "op_id": "op_005",
+      "op_name": "CO₂ Removal",
+      "op_description": "Captures and separates CO₂ from the hydrogen-rich gas",
+      "op_type": "separation",
+      "equipment": [
+        {
+          "equipment_name": "Absorption Columns",
+          "equipment_specs": "Amine scrubbing system (MEA) or physical solvent system like Selexol"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Separation of CO₂ from hydrogen-rich syngas",
+          "parameters": {
+            "removal_efficiency": "90-95% of CO₂ captured",
+            "inlet_co2_concentration": "~10-15% in shifted syngas",
+            "gas_purity_achieved": "Syngas with ~90% H₂ purity",
+            "solvent_regeneration": "High energy consumption for thermal regeneration"
+          },
+          "impacted_input_streams": ["shifted_syngas"],
+          "impacted_output_streams": ["purified_syngas", "captured_co2"]
+        }
+      ],
+      "input_streams": ["shifted_syngas"],
+      "output_streams": ["purified_syngas", "captured_co2"],
+      "energy_requirements": "10-15% of total process energy, high energy for solvent regeneration",
+      "utilities": "Steam for regeneration, cooling water"
+    },
+    {
+      "op_id": "op_006",
+      "op_name": "Syngas Compression and Cooling",
+      "op_description": "Compresses and cools syngas to prepare for methanol synthesis",
+      "op_type": "compression",
+      "equipment": [
+        {
+          "equipment_name": "Multi-stage Compressors",
+          "equipment_specs": "Capable of compressing syngas to 50-100 bar with intercoolers"
+        },
+        {
+          "equipment_name": "Heat Exchangers",
+          "equipment_specs": "Gas-to-gas and gas-to-liquid heat exchangers for cooling"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Pressurization and temperature reduction of syngas",
+          "parameters": {
+            "inlet_pressure": "~5-10 bar",
+            "outlet_pressure": "50-100 bar",
+            "inlet_temperature": "~300°C",
+            "outlet_temperature": "~50°C",
+            "compression_stages": "3-4 stages with intercooling"
+          },
+          "impacted_input_streams": ["purified_syngas"],
+          "impacted_output_streams": ["compressed_syngas"]
+        }
+      ],
+      "input_streams": ["purified_syngas"],
+      "output_streams": ["compressed_syngas"],
+      "energy_requirements": "10-15% of total process energy, high electricity demand for compression",
+      "utilities": "Cooling water, lubricating oil"
+    },
+    {
+      "op_id": "op_007",
+      "op_name": "Methanol Synthesis",
+      "op_description": "Catalytically converts compressed syngas into methanol",
+      "op_type": "reaction",
+      "equipment": [
+        {
+          "equipment_name": "Methanol Synthesis Reactor",
+          "equipment_specs": "Fixed-bed reactors with Cu/ZnO/Al₂O₃ catalyst, operating at 250°C and 50-100 bar"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Catalytic conversion of syngas to methanol",
+          "parameters": {
+            "primary_reactions": "CO + 2H₂ ↔ CH₃OH, CO₂ + 3H₂ ↔ CH₃OH + H₂O",
+            "conversion_rate": ">90% per pass",
+            "operating_temperature": "~250°C",
+            "operating_pressure": "50-100 bar",
+            "catalyst_type": "Cu/ZnO/Al₂O₃"
+          },
+          "impacted_input_streams": ["compressed_syngas", "recycled_syngas"],
+          "impacted_output_streams": ["crude_methanol"]
+        }
+      ],
+      "input_streams": ["compressed_syngas", "recycled_syngas"],
+      "output_streams": ["crude_methanol"],
+      "energy_requirements": "15-20% of total process energy, exothermic reaction with heat recovery",
+      "utilities": "Cooling water for temperature control"
+    },
+    {
+      "op_id": "op_008",
+      "op_name": "Methanol Purification",
+      "op_description": "Distills methanol to achieve 99.9% purity suitable for industrial applications",
+      "op_type": "separation",
+      "equipment": [
+        {
+          "equipment_name": "Distillation Columns",
+          "equipment_specs": "Multi-stage distillation with reflux capability to achieve high purity"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Separation of methanol from water and impurities",
+          "parameters": {
+            "feed_composition": "Crude methanol with water and dissolved gases",
+            "product_purity": "99.9% methanol",
+            "recovery_rate": ">99% of methanol recovered",
+            "operating_pressure": "Atmospheric to slight positive pressure",
+            "reboiler_temperature": "~110-130°C"
+          },
+          "impacted_input_streams": ["crude_methanol"],
+          "impacted_output_streams": ["purified_methanol", "wastewater", "unreacted_gas"]
+        }
+      ],
+      "input_streams": ["crude_methanol"],
+      "output_streams": ["purified_methanol", "wastewater", "unreacted_gas"],
+      "energy_requirements": "10-15% of total process energy, significant heat for reboilers",
+      "utilities": "Steam for reboilers, cooling water for condensers"
+    },
+    {
+      "op_id": "op_009",
+      "op_name": "Recycling and Energy Integration",
+      "op_description": "Recycles unreacted syngas back to synthesis and integrates heat recovery systems",
+      "op_type": "recycling",
+      "equipment": [
+        {
+          "equipment_name": "Recycle Compressors",
+          "equipment_specs": "Compressors to return unreacted gases to appropriate pressure"
+        },
+        {
+          "equipment_name": "Heat Exchangers Network",
+          "equipment_specs": "Integrated heat recovery system to transfer heat between process streams"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Recovery and recirculation of unreacted syngas",
+          "parameters": {
+            "recycle_ratio": "~10% of feed syngas",
+            "energy_savings": "5-10% improvement in overall energy efficiency",
+            "heat_recovery_efficiency": "60-70% of available waste heat recovered"
+          },
+          "impacted_input_streams": ["unreacted_gas"],
+          "impacted_output_streams": ["recycled_syngas"]
+        }
+      ],
+      "input_streams": ["unreacted_gas"],
+      "output_streams": ["recycled_syngas"],
+      "energy_requirements": "Net energy savings of 5-10% through heat integration",
+      "utilities": "Electricity for pumps and compressors"
+    },
+    {
+      "op_id": "op_010",
+      "op_name": "Waste Treatment and Emissions Control",
+      "op_description": "Treats wastewater and controls emissions to comply with environmental regulations",
+      "op_type": "waste_treatment",
+      "equipment": [
+        {
+          "equipment_name": "Wastewater Treatment System",
+          "equipment_specs": "Physical, chemical, and biological treatment stages"
+        },
+        {
+          "equipment_name": "Flue Gas Treatment",
+          "equipment_specs": "Scrubbers and filters for emissions control"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Treatment of process effluents and emissions",
+          "parameters": {
+            "wastewater_volume": "~5-10% of total process streams",
+            "contaminant_reduction": ">95% removal of pollutants",
+            "emissions_control_efficiency": ">90% reduction in harmful emissions",
+            "treatment_methods": "Neutralization, filtration, biological

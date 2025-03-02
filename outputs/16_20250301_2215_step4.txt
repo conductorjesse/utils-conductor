@@ -1,0 +1,348 @@
+Reference Class: 16,Alcohol,Methanol
+
+Step 4 - JSON Structure Generation:
+```json
+{
+  "reference_class": {
+    "ref_class_id": "methanol_via_smr",
+    "ref_class_name": "Methanol Production via Steam Methane Reforming",
+    "ref_class_description": "Industrial-scale production of methanol from natural gas through steam reforming, shift conversion, and catalytic methanol synthesis.",
+    "feedstocks": [
+      {
+        "feed_name": "Natural Gas",
+        "feed_description": "Primary carbon source for methanol production",
+        "feed_composition": "Predominantly methane (CH₄) with minor amounts of other hydrocarbons and impurities",
+        "feed_specs": "High methane content, minimal sulfur compounds"
+      },
+      {
+        "feed_name": "Water",
+        "feed_description": "Source for steam generation and shift reactions",
+        "feed_composition": "Treated process water",
+        "feed_specs": "Demineralized to prevent scaling and fouling"
+      }
+    ],
+    "products": [
+      {
+        "product_name": "Methanol",
+        "product_description": "High-purity liquid methanol for industrial and chemical applications",
+        "product_composition": "≥99.9% methanol (CH₃OH)",
+        "product_specs": "Liquid state at ambient conditions, meets IMPCA or equivalent specifications"
+      },
+      {
+        "product_name": "Carbon Dioxide",
+        "product_description": "Captured CO₂ from gas purification process",
+        "product_composition": "High-purity CO₂",
+        "product_specs": "Suitable for sequestration or utilization"
+      }
+    ],
+    "production_method": "Steam Methane Reforming (SMR) followed by shift conversion and catalytic methanol synthesis",
+    "production_scale": "1,000,000 metric tons of methanol per year"
+  },
+  "unit_operations": [
+    {
+      "op_id": "op_001",
+      "op_name": "Feedstock Pre-treatment",
+      "op_description": "Removal of impurities from natural gas and water to prevent downstream catalyst poisoning",
+      "op_type": "purification",
+      "equipment": [
+        {
+          "equipment_name": "Amine Scrubber",
+          "equipment_specs": "Removes H₂S and CO₂ from natural gas"
+        },
+        {
+          "equipment_name": "Water Treatment System",
+          "equipment_specs": "Demineralization and filtration units for water purification"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Removal of sulfur compounds and other impurities from natural gas",
+          "parameters": {
+            "removal_efficiency": ">99.5% impurity removal",
+            "reaction": "H₂S + MEA → MEA-HS + H₂O"
+          },
+          "impacted_input_streams": ["raw_natural_gas"],
+          "impacted_output_streams": ["purified_natural_gas"]
+        },
+        {
+          "trans_description": "Water treatment to remove dissolved solids and minerals",
+          "parameters": {
+            "purity": "High-purity water suitable for steam generation"
+          },
+          "impacted_input_streams": ["raw_water"],
+          "impacted_output_streams": ["treated_water"]
+        }
+      ],
+      "input_streams": ["raw_natural_gas", "raw_water"],
+      "output_streams": ["purified_natural_gas", "treated_water"],
+      "energy_requirements": "2-5% of total plant energy consumption",
+      "utilities": "Electricity for pumps, steam for amine regeneration"
+    },
+    {
+      "op_id": "op_002",
+      "op_name": "Steam Generation",
+      "op_description": "Production of high-pressure steam for SMR and shift conversion processes",
+      "op_type": "heat exchange",
+      "equipment": [
+        {
+          "equipment_name": "Steam Boiler",
+          "equipment_specs": "Produces steam at 25 bar and approximately 800°C"
+        },
+        {
+          "equipment_name": "Heat Recovery System",
+          "equipment_specs": "Recovers heat from process streams to improve efficiency"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Heating of treated water to produce high-pressure steam",
+          "parameters": {
+            "steam_conditions": "25 bar, 800°C",
+            "steam_ratio": "3 kg steam per kg of methanol produced"
+          },
+          "impacted_input_streams": ["treated_water"],
+          "impacted_output_streams": ["high_pressure_steam", "condensate_water"]
+        }
+      ],
+      "input_streams": ["treated_water"],
+      "output_streams": ["high_pressure_steam", "condensate_water"],
+      "energy_requirements": "20-25% of total plant energy consumption",
+      "utilities": "Natural gas for boiler firing, boiler feed water chemicals"
+    },
+    {
+      "op_id": "op_003",
+      "op_name": "Steam Methane Reforming",
+      "op_description": "Conversion of natural gas and steam to syngas through catalytic reforming reactions",
+      "op_type": "reaction",
+      "equipment": [
+        {
+          "equipment_name": "SMR Reformer",
+          "equipment_specs": "Nickel-based catalyst reactor operating at 800-950°C and 15-30 bar"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Endothermic reaction of methane with steam to produce syngas",
+          "parameters": {
+            "primary_reaction": "CH₄ + H₂O ↔ CO + 3H₂ (ΔH = +206 kJ/mol)",
+            "conversion": "70-80% methane conversion per pass",
+            "syngas_composition": "~65% H₂, 30% CO, 5% CO₂ and minor byproducts"
+          },
+          "impacted_input_streams": ["purified_natural_gas", "high_pressure_steam"],
+          "impacted_output_streams": ["raw_syngas"]
+        }
+      ],
+      "input_streams": ["purified_natural_gas", "high_pressure_steam", "recycled_gases"],
+      "output_streams": ["raw_syngas"],
+      "energy_requirements": "15-20% of total plant energy consumption, highly endothermic process",
+      "utilities": "Natural gas for reformer firing, combustion air"
+    },
+    {
+      "op_id": "op_004",
+      "op_name": "Shift Conversion",
+      "op_description": "Conversion of CO and steam to produce additional hydrogen through water-gas shift reaction",
+      "op_type": "reaction",
+      "equipment": [
+        {
+          "equipment_name": "High-Temperature Shift Reactor",
+          "equipment_specs": "Fe-Cr catalyst, 350-450°C"
+        },
+        {
+          "equipment_name": "Low-Temperature Shift Reactor",
+          "equipment_specs": "Cu-Zn catalyst, 200-250°C"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Exothermic water-gas shift reaction",
+          "parameters": {
+            "reaction": "CO + H₂O ↔ CO₂ + H₂ (ΔH = -41 kJ/mol)",
+            "conversion": "Up to 95% CO conversion across both reactors",
+            "shifted_gas_composition": "~85% H₂, 5-7% CO₂, 8-10% residual CO"
+          },
+          "impacted_input_streams": ["raw_syngas", "high_pressure_steam"],
+          "impacted_output_streams": ["shifted_syngas"]
+        }
+      ],
+      "input_streams": ["raw_syngas", "high_pressure_steam"],
+      "output_streams": ["shifted_syngas"],
+      "energy_requirements": "Net exothermic process, heat recovery possible",
+      "utilities": "Cooling water for temperature control between stages"
+    },
+    {
+      "op_id": "op_005",
+      "op_name": "Gas Purification",
+      "op_description": "Removal of CO₂ from shifted syngas to prepare for methanol synthesis",
+      "op_type": "separation",
+      "equipment": [
+        {
+          "equipment_name": "Amine Absorption Column",
+          "equipment_specs": "MEA or MDEA solvent system"
+        },
+        {
+          "equipment_name": "Solvent Regenerator",
+          "equipment_specs": "Reboiled stripper column for solvent regeneration"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Absorption of CO₂ from syngas and subsequent regeneration of solvent",
+          "parameters": {
+            "removal_efficiency": ">90% CO₂ removal",
+            "purified_syngas": "~90% H₂, 10% CO (adjusted for residual impurities)"
+          },
+          "impacted_input_streams": ["shifted_syngas"],
+          "impacted_output_streams": ["purified_syngas", "captured_co2"]
+        }
+      ],
+      "input_streams": ["shifted_syngas"],
+      "output_streams": ["purified_syngas", "captured_co2"],
+      "energy_requirements": "~10% of total plant energy, primarily for solvent regeneration",
+      "utilities": "Steam for solvent regeneration, cooling water for absorption"
+    },
+    {
+      "op_id": "op_006",
+      "op_name": "Methanol Synthesis",
+      "op_description": "Catalytic conversion of syngas to methanol under high pressure and moderate temperature",
+      "op_type": "reaction",
+      "equipment": [
+        {
+          "equipment_name": "Methanol Synthesis Reactor",
+          "equipment_specs": "Cu/ZnO/Al₂O₃ catalyst, 50-100 bar, 200-300°C"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Exothermic catalytic conversion of syngas to methanol",
+          "parameters": {
+            "reactions": [
+              "CO + 2H₂ → CH₃OH (ΔH = -90 kJ/mol)",
+              "CO₂ + 3H₂ → CH₃OH + H₂O (ΔH = -49 kJ/mol)"
+            ],
+            "conversion": "~80% per pass conversion of H₂ and CO",
+            "yield": "~1.75 kg methanol per Nm³ syngas"
+          },
+          "impacted_input_streams": ["purified_syngas"],
+          "impacted_output_streams": ["raw_methanol_product"]
+        }
+      ],
+      "input_streams": ["purified_syngas"],
+      "output_streams": ["raw_methanol_product"],
+      "energy_requirements": "Exothermic process, heat recovery implemented",
+      "utilities": "Cooling water for temperature control, electricity for feed compression"
+    },
+    {
+      "op_id": "op_007",
+      "op_name": "Methanol Separation",
+      "op_description": "Separation of methanol from unreacted gases through condensation",
+      "op_type": "separation",
+      "equipment": [
+        {
+          "equipment_name": "Flash Separator",
+          "equipment_specs": "Operates at reduced temperature to condense methanol"
+        },
+        {
+          "equipment_name": "Gas Recycle Compressor",
+          "equipment_specs": "Compresses unreacted gases for recycle"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Phase separation of methanol from unreacted gases",
+          "parameters": {
+            "separation_efficiency": "~95% methanol condensation",
+            "recycle_ratio": "15-20% of total gas recycled"
+          },
+          "impacted_input_streams": ["raw_methanol_product"],
+          "impacted_output_streams": ["separated_methanol", "recycled_gases"]
+        }
+      ],
+      "input_streams": ["raw_methanol_product"],
+      "output_streams": ["separated_methanol", "recycled_gases"],
+      "energy_requirements": "5-10% of total energy for refrigeration and compression",
+      "utilities": "Cooling water or refrigerant, electricity for compression"
+    },
+    {
+      "op_id": "op_008",
+      "op_name": "Methanol Distillation",
+      "op_description": "Purification of separated methanol to achieve high-purity product",
+      "op_type": "separation",
+      "equipment": [
+        {
+          "equipment_name": "Distillation Columns",
+          "equipment_specs": "Series of distillation columns for achieving 99.9% purity"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Fractional distillation to separate methanol from water and impurities",
+          "parameters": {
+            "purity_achieved": "≥99.9% methanol",
+            "recovery": "98-99% methanol recovery"
+          },
+          "impacted_input_streams": ["separated_methanol"],
+          "impacted_output_streams": ["high_purity_methanol", "distillation_overheads"]
+        }
+      ],
+      "input_streams": ["separated_methanol"],
+      "output_streams": ["high_purity_methanol", "distillation_overheads"],
+      "energy_requirements": "10-15% of total plant energy for reboiling and condensing",
+      "utilities": "Steam for reboiling, cooling water for condensing"
+    },
+    {
+      "op_id": "op_009",
+      "op_name": "Utilities and Recycle Management",
+      "op_description": "Management of utilities and recycling of unreacted gases to improve efficiency",
+      "op_type": "support",
+      "equipment": [
+        {
+          "equipment_name": "Cooling Towers",
+          "equipment_specs": "Closed-loop cooling water system"
+        },
+        {
+          "equipment_name": "Utility Distribution System",
+          "equipment_specs": "Steam, electricity, and compressed air distribution"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Distribution of utilities and management of recycle streams",
+          "parameters": {
+            "recycle_efficiency": "Improves overall process conversion to >95%"
+          },
+          "impacted_input_streams": ["recycled_gases"],
+          "impacted_output_streams": ["distributed_utilities"]
+        }
+      ],
+      "input_streams": ["recycled_gases", "distillation_overheads"],
+      "output_streams": ["distributed_utilities"],
+      "energy_requirements": "10-15% of total energy for pumps, compressors, and other utility equipment",
+      "utilities": "Electricity, cooling water, instrument air"
+    },
+    {
+      "op_id": "op_010",
+      "op_name": "Waste Treatment",
+      "op_description": "Treatment of waste streams and emissions control to ensure environmental compliance",
+      "op_type": "environmental",
+      "equipment": [
+        {
+          "equipment_name": "CO₂ Compression System",
+          "equipment_specs": "Compressors for captured CO₂"
+        },
+        {
+          "equipment_name": "Wastewater Treatment Plant",
+          "equipment_specs": "Biological and physical treatment systems"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Treatment of waste streams to meet environmental regulations",
+          "parameters": {
+            "CO₂_capture": "5-7% of total gas feed captured as CO₂",
+            "wastewater_treatment": "Removal of contaminants to discharge standards"
+          },
+          "impacted_input_streams": ["captured_co2", "condensate_water", "distillation_overheads"],
+          "impacted_output_streams": ["processed_co2", "treated_effluents"]
+        }
+      ],
+      "input

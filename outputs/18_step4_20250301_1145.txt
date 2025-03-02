@@ -1,0 +1,338 @@
+Reference Class: 18,Alcohol/Intermediate,Ethanol (Industrial)
+
+Step 4 - JSON Structure Generation:
+```json
+{
+  "reference_class": {
+    "ref_class_id": "industrial_ethanol_fermentation",
+    "ref_class_name": "Industrial Ethanol Production via Fermentation",
+    "ref_class_description": "Production of industrial-grade ethanol through fermentation of carbohydrate-rich feedstocks, followed by distillation and dehydration to achieve high purity.",
+    "feedstocks": [
+      {
+        "feed_name": "Corn",
+        "feed_description": "Starch-rich grain commonly used for ethanol production",
+        "feed_composition": "70% starch, 9% protein, 4% oil, 17% other components",
+        "feed_specs": "Moisture content < 15%, Low foreign material content"
+      },
+      {
+        "feed_name": "Sugarcane",
+        "feed_description": "Sugar-rich crop used as alternative feedstock",
+        "feed_composition": "12-17% sucrose, 10-16% fiber, remainder water and other components",
+        "feed_specs": "Fresh harvest, minimal deterioration"
+      },
+      {
+        "feed_name": "Molasses",
+        "feed_description": "By-product of sugar production with high fermentable sugar content",
+        "feed_composition": "45-55% fermentable sugars, 10-15% non-fermentable matter, 20-25% water",
+        "feed_specs": "Sugar content > 45%, pH 5-6"
+      }
+    ],
+    "products": [
+      {
+        "product_name": "Industrial Ethanol",
+        "product_description": "High-purity ethanol for industrial applications",
+        "product_composition": "99% ethanol, 1% water",
+        "product_specs": "Clear, colorless liquid, density 0.789 g/mL at 20°C, boiling point 78°C"
+      },
+      {
+        "product_name": "Carbon Dioxide",
+        "product_description": "By-product of fermentation process",
+        "product_composition": "99% CO₂, trace amounts of impurities",
+        "product_specs": "Gaseous state at ambient conditions"
+      }
+    ],
+    "production_method": "Fermentation of sugar-based feedstocks followed by distillation and dehydration",
+    "production_scale": "500,000 liters per year (~893,475 kg/year)"
+  },
+  "unit_operations": [
+    {
+      "op_id": "op_001",
+      "op_name": "Feedstock Receiving and Storage",
+      "op_description": "Raw feedstocks are delivered to the facility and stored in appropriate storage units",
+      "op_type": "material handling",
+      "equipment": [
+        {
+          "equipment_name": "Silos",
+          "equipment_specs": "Storage capacity for up to 2 months of feedstock supply, temperature and humidity controlled"
+        },
+        {
+          "equipment_name": "Tanks",
+          "equipment_specs": "For liquid feedstock storage (e.g., molasses), stainless steel construction"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Physical storage with minimal material loss",
+          "parameters": {
+            "material_loss": "1%",
+            "storage_time": "Up to 60 days",
+            "storage_conditions": "Dry, cool, ventilated"
+          },
+          "impacted_input_streams": ["stream_raw_feedstock"],
+          "impacted_output_streams": ["stream_stored_feedstock"]
+        }
+      ],
+      "input_streams": ["stream_raw_feedstock"],
+      "output_streams": ["stream_stored_feedstock"],
+      "energy_requirements": "Minimal energy for mechanical handling and environmental control",
+      "utilities": "Electricity for conveyors and ventilation systems"
+    },
+    {
+      "op_id": "op_002",
+      "op_name": "Feedstock Preparation",
+      "op_description": "The stored feedstock is cleaned and mechanically processed to increase surface area",
+      "op_type": "size reduction",
+      "equipment": [
+        {
+          "equipment_name": "Cleaning equipment",
+          "equipment_specs": "Screens, magnets, and air classifiers for removing impurities"
+        },
+        {
+          "equipment_name": "Hammer mill",
+          "equipment_specs": "Capable of producing particle sizes <1mm, 50-100 kW power"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Physical size reduction and removal of impurities",
+          "parameters": {
+            "size_reduction": "Particles <1mm diameter",
+            "impurity_removal": "99.5% efficiency",
+            "material_loss": "0.5%"
+          },
+          "impacted_input_streams": ["stream_stored_feedstock"],
+          "impacted_output_streams": ["stream_prepared_feedstock"]
+        }
+      ],
+      "input_streams": ["stream_stored_feedstock"],
+      "output_streams": ["stream_prepared_feedstock"],
+      "energy_requirements": "0.1 MJ/kg of feedstock, approximately 69 GJ/year",
+      "utilities": "Electricity for grinding and cleaning equipment, compressed air"
+    },
+    {
+      "op_id": "op_003",
+      "op_name": "Liquefaction and Cooking",
+      "op_description": "Prepared feedstock is mixed with water and heated to break down complex carbohydrates",
+      "op_type": "thermal processing",
+      "equipment": [
+        {
+          "equipment_name": "Slurry tank",
+          "equipment_specs": "Stainless steel construction, agitated vessel with heating capability"
+        },
+        {
+          "equipment_name": "Heat exchanger",
+          "equipment_specs": "Shell and tube design, steam-heated to achieve 100°C"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Gelatinization of starch and breakdown of complex carbohydrates",
+          "parameters": {
+            "water_addition": "3 liters per kg feedstock",
+            "cooking_temperature": "100°C",
+            "residence_time": "1-2 hours",
+            "pH": "6.0-6.5"
+          },
+          "impacted_input_streams": ["stream_prepared_feedstock", "stream_process_water"],
+          "impacted_output_streams": ["stream_liquefied_mash"]
+        }
+      ],
+      "input_streams": ["stream_prepared_feedstock", "stream_process_water"],
+      "output_streams": ["stream_liquefied_mash"],
+      "energy_requirements": "High energy demand of approximately 4,200 GJ/year",
+      "utilities": "Steam at 150 psi, process water at ambient temperature"
+    },
+    {
+      "op_id": "op_004",
+      "op_name": "Saccharification",
+      "op_description": "Enzymes are added to convert liquefied carbohydrates into fermentable sugars",
+      "op_type": "biochemical conversion",
+      "equipment": [
+        {
+          "equipment_name": "Enzymatic reactor",
+          "equipment_specs": "Jacketed stainless steel vessel with temperature control and agitation"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Enzymatic conversion of dextrins to glucose",
+          "parameters": {
+            "enzyme_dosage": "0.5-1.0 g/kg starch",
+            "temperature": "50-60°C",
+            "pH": "4.5-5.0",
+            "conversion_efficiency": "95%",
+            "residence_time": "6-8 hours"
+          },
+          "impacted_input_streams": ["stream_liquefied_mash", "stream_enzymes"],
+          "impacted_output_streams": ["stream_sugary_wort"]
+        }
+      ],
+      "input_streams": ["stream_liquefied_mash", "stream_enzymes"],
+      "output_streams": ["stream_sugary_wort"],
+      "energy_requirements": "Moderate energy input of approximately 1,000 GJ/year",
+      "utilities": "Hot water for temperature control, electricity for agitation"
+    },
+    {
+      "op_id": "op_005",
+      "op_name": "Fermentation",
+      "op_description": "Yeast ferments sugars into ethanol and carbon dioxide",
+      "op_type": "biochemical reaction",
+      "equipment": [
+        {
+          "equipment_name": "Fermentation tanks",
+          "equipment_specs": "Large stainless steel vessels with cooling jackets, agitators, and gas release valves"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Conversion of glucose to ethanol and carbon dioxide via yeast metabolism",
+          "parameters": {
+            "reaction_equation": "C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂",
+            "yeast_dosage": "0.2-0.5 g/L",
+            "temperature": "30-35°C",
+            "pH": "4.0-5.0",
+            "ethanol_yield": "90% of theoretical",
+            "fermentation_time": "48-72 hours"
+          },
+          "impacted_input_streams": ["stream_sugary_wort", "stream_yeast"],
+          "impacted_output_streams": ["stream_fermented_mash", "stream_co2"]
+        }
+      ],
+      "input_streams": ["stream_sugary_wort", "stream_yeast"],
+      "output_streams": ["stream_fermented_mash", "stream_co2"],
+      "energy_requirements": "Cooling energy of approximately 5,000 GJ/year due to exothermic reaction",
+      "utilities": "Chilled water at 5-10°C, electricity for agitation"
+    },
+    {
+      "op_id": "op_006",
+      "op_name": "Distillation",
+      "op_description": "Separation of ethanol from water and other components based on boiling point differences",
+      "op_type": "separation",
+      "equipment": [
+        {
+          "equipment_name": "Distillation columns",
+          "equipment_specs": "Multi-stage columns with trays or packing, operating at atmospheric pressure"
+        },
+        {
+          "equipment_name": "Reboilers and condensers",
+          "equipment_specs": "Heat exchangers for providing vapor and condensing distillate"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Thermal separation of ethanol-water mixture",
+          "parameters": {
+            "feed_ethanol_concentration": "10-12 vol%",
+            "distillate_ethanol_concentration": "92-95 vol%",
+            "bottom_ethanol_concentration": "<0.1 vol%",
+            "reflux_ratio": "3-5",
+            "ethanol_recovery": "95%",
+            "operating_temperature": "78-100°C"
+          },
+          "impacted_input_streams": ["stream_fermented_mash"],
+          "impacted_output_streams": ["stream_ethanol_rich_distillate", "stream_residual_bottoms"]
+        }
+      ],
+      "input_streams": ["stream_fermented_mash"],
+      "output_streams": ["stream_ethanol_rich_distillate", "stream_residual_bottoms"],
+      "energy_requirements": "Very high energy demand of approximately 74,250 GJ/year",
+      "utilities": "Steam at 150 psi, cooling water"
+    },
+    {
+      "op_id": "op_007",
+      "op_name": "Dehydration",
+      "op_description": "Further removal of water to achieve anhydrous ethanol",
+      "op_type": "separation",
+      "equipment": [
+        {
+          "equipment_name": "Molecular sieves",
+          "equipment_specs": "Zeolite beds with automated regeneration capability"
+        },
+        {
+          "equipment_name": "Pressure swing system",
+          "equipment_specs": "Multiple beds operating in sequence for continuous operation"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Adsorption-based water removal from ethanol",
+          "parameters": {
+            "feed_ethanol_concentration": "95 vol%",
+            "product_ethanol_concentration": "99 vol%",
+            "water_removal": "99% efficiency",
+            "operating_pressure": "1-2 bar",
+            "operating_temperature": "120-150°C during regeneration"
+          },
+          "impacted_input_streams": ["stream_ethanol_rich_distillate"],
+          "impacted_output_streams": ["stream_anhydrous_ethanol", "stream_water_byproduct"]
+        }
+      ],
+      "input_streams": ["stream_ethanol_rich_distillate"],
+      "output_streams": ["stream_anhydrous_ethanol", "stream_water_byproduct"],
+      "energy_requirements": "Moderate energy demand of approximately 5,000 GJ/year",
+      "utilities": "Steam for regeneration, electricity for pressure control"
+    },
+    {
+      "op_id": "op_008",
+      "op_name": "Ethanol Storage and Handling",
+      "op_description": "Anhydrous ethanol is stored in tanks under controlled conditions",
+      "op_type": "material handling",
+      "equipment": [
+        {
+          "equipment_name": "Storage tanks",
+          "equipment_specs": "Stainless steel tanks with floating roofs, temperature-controlled"
+        },
+        {
+          "equipment_name": "Loading systems",
+          "equipment_specs": "Pumps, meters, and loading arms for product transfer"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Physical storage with minimal quality change",
+          "parameters": {
+            "storage_temperature": "15-25°C",
+            "storage_capacity": "1-2 months of production",
+            "product_loss": "<0.1%"
+          },
+          "impacted_input_streams": ["stream_anhydrous_ethanol"],
+          "impacted_output_streams": ["stream_final_ethanol_product"]
+        }
+      ],
+      "input_streams": ["stream_anhydrous_ethanol"],
+      "output_streams": ["stream_final_ethanol_product"],
+      "energy_requirements": "Low energy demand of approximately 500 GJ/year",
+      "utilities": "Electricity for pumps and monitoring systems"
+    },
+    {
+      "op_id": "op_009",
+      "op_name": "Wastewater Treatment",
+      "op_description": "Treatment of process effluents to comply with environmental regulations",
+      "op_type": "waste treatment",
+      "equipment": [
+        {
+          "equipment_name": "Aerobic treatment system",
+          "equipment_specs": "Aeration basins, clarifiers, and sludge handling equipment"
+        },
+        {
+          "equipment_name": "Anaerobic digesters",
+          "equipment_specs": "UASB reactors for high-strength wastewater"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Biological degradation of organic contaminants",
+          "parameters": {
+            "BOD removal": "95-99%",
+            "COD removal": "90-95%",
+            "total suspended solids removal": "95%",
+            "hydraulic retention time": "24-48 hours",
+            "sludge production": "0.4-0.5 kg/kg BOD removed"
+          },
+          "impacted_input_streams": ["stream_residual_bottoms", "stream_process_effluents"],
+          "impacted_output_streams": ["stream_treated_water", "stream_sludge"]
+        }
+      ],
+      "input_streams": ["stream_residual_bottoms", "stream_process_effluents"],
+      "output_streams": ["stream_treated_water", "stream_sludge"],
+      "energy_requirements": "Significant energy demand of approximately 10,000 GJ/year",

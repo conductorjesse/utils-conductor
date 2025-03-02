@@ -1,0 +1,68 @@
+Reference Class: 16,Alcohol,Methanol
+
+Step 2 - Process Flow Description:
+**High-Level At-Scale Process Flow for Methanol Production**
+
+1. **Feedstock Receiving and Pre-treatment**
+   - **Description:** Reception of natural gas and water feedstocks. Natural gas is purified to remove impurities such as sulfur compounds, moisture, and other contaminants to prevent catalyst poisoning in downstream units.
+   - **Key Streams:**
+     - *Input:* Raw Natural Gas, Water
+     - *Output:* Purified Natural Gas, Treated Water
+
+2. **Steam Generation**
+   - **Description:** Production of high-pressure steam required for the Steam Methane Reforming (SMR) process by heating treated water.
+   - **Key Streams:**
+     - *Input:* Treated Water, Heat Energy
+     - *Output:* High-Pressure Steam, Condensate Water
+
+3. **Steam Methane Reforming (SMR)**
+   - **Description:** Conversion of purified natural gas and steam into synthesis gas (syngas), a mixture of hydrogen (H₂) and carbon monoxide (CO), through endothermic reforming reactions over a catalyst.
+   - **Key Streams:**
+     - *Input:* Purified Natural Gas, High-Pressure Steam
+     - *Output:* Syngas (H₂ and CO), Minor Byproducts
+
+4. **Shift Conversion (Water-Gas Shift Reaction)**
+   - **Description:** Further reacts syngas with additional steam to convert CO and water into more hydrogen and carbon dioxide (CO₂), enhancing hydrogen yield.
+   - **Key Streams:**
+     - *Input:* Syngas, Steam
+     - *Output:* Shifted Gas (Increased H₂ and CO₂)
+
+5. **Gas Purification (CO₂ Removal)**
+   - **Description:** Removal of CO₂ from the shifted gas using solvents or other separation technologies to purify the synthesis gas for methanol synthesis.
+   - **Key Streams:**
+     - *Input:* Shifted Gas
+     - *Output:* Purified Synthesis Gas (H₂ and CO), Separated CO₂
+
+6. **Methanol Synthesis**
+   - **Description:** Catalytic reaction of purified synthesis gas under high pressure and temperature to produce methanol and unreacted gases.
+   - **Key Streams:**
+     - *Input:* Purified Synthesis Gas
+     - *Output:* Raw Methanol Product, Unreacted Gases
+
+7. **Methanol Separation**
+   - **Description:** Separation of methanol from the reaction mixture using techniques like condensation and absorption, recovering methanol and recycling unreacted gases.
+   - **Key Streams:**
+     - *Input:* Raw Methanol Product
+     - *Output:* Separated Methanol, Recycled Gases
+
+8. **Methanol Distillation**
+   - **Description:** Purification of separated methanol to achieve the desired purity level (e.g., 99.9%) through distillation.
+   - **Key Streams:**
+     - *Input:* Separated Methanol
+     - *Output:* High-Purity Methanol, Distillation Overheads
+
+9. **Utilities and Recycle Streams**
+   - **Description:** Management of utility requirements such as energy, cooling, and water. Unreacted gases from methanol separation are recycled back to the SMR unit to improve overall process efficiency.
+   - **Key Streams:**
+     - *Input:* Various Utility Inputs (e.g., Electricity, Cooling Water)
+     - *Output:* Recycled Gases, Treated Waste Streams
+
+10. **Waste Treatment and Emissions Control**
+    - **Description:** Handling of waste streams and control of emissions to ensure environmental compliance, including treatment of CO₂ and other pollutants.
+    - **Key Streams:**
+      - *Input:* Separated CO₂, Wastewater, Emissions
+      - *Output:* Treated Effluents, Captured CO₂, Compliant Emissions
+
+---
+
+This structured process flow outlines the major unit operations involved in the industrial-scale production of methanol via Steam Methane Reforming, ensuring clarity in the sequence and interaction of each step.

@@ -1,0 +1,76 @@
+Reference Class: 15,Alcohol,Methanol
+
+Step 5 - Mermaid Diagram Generation:
+Here's the Mermaid diagram representing the methanol production process using the structure from the JSON:
+
+```mermaid
+flowchart LR
+    %% External Sources
+    raw_ng[("Raw Natural Gas")] 
+    water[("Process Water")]
+    
+    %% Unit Operations - Rectangular nodes
+    op_001["op_001: Feed Pre-treatment"]
+    op_002["op_002: Steam Generation"]
+    op_003["op_003: Steam Methane Reforming"]
+    op_004["op_004: Water-Gas Shift Conversion"]
+    op_005["op_005: CO₂ Removal"]
+    op_006["op_006: Syngas Compression and Cooling"]
+    op_007["op_007: Methanol Synthesis"]
+    op_008["op_008: Methanol Purification"]
+    op_009["op_009: Recycling and Energy Integration"]
+    op_010["op_010: Waste Treatment and Emissions Control"]
+    
+    %% External Sinks - Hexagonal nodes
+    methanol_product{{Purified Methanol}}
+    co2_product{{Captured CO₂}}
+    treated_waste{{Treated Effluents}}
+    
+    %% Process Flow Connections
+    raw_ng -->|raw_natural_gas| op_001
+    op_001 -->|cleaned_natural_gas| op_003
+    
+    water -->|process_water| op_002
+    op_002 -->|high_pressure_steam| op_003
+    
+    op_003 -->|raw_syngas| op_004
+    op_004 -->|shifted_syngas| op_005
+    
+    op_005 -->|purified_syngas| op_006
+    op_005 -->|captured_co2| co2_product
+    
+    op_006 -->|compressed_syngas| op_007
+    
+    op_009 -->|recycled_syngas| op_007
+    
+    op_007 -->|crude_methanol| op_008
+    
+    op_008 -->|purified_methanol| methanol_product
+    op_008 -->|unreacted_gas| op_009
+    op_008 -->|wastewater| op_010
+    
+    op_010 -->|treated_effluents| treated_waste
+    
+    %% Styling
+    classDef process rect;
+    classDef source stadium;
+    classDef sink hexagon;
+    
+    class op_001,op_002,op_003,op_004,op_005,op_006,op_007,op_008,op_009,op_010 process;
+    class raw_ng,water source;
+    class methanol_product,co2_product,treated_waste sink;
+    
+    %% Edge styling
+    linkStyle 7 stroke:#f66,stroke-width:2.5; %% Bold for CO2 product
+    linkStyle 11 stroke:#f66,stroke-width:2.5; %% Bold for methanol product
+    linkStyle 13 stroke-dasharray: 3 3; %% Dotted for waste streams
+```
+
+This diagram shows:
+- The complete methanol production process flow from raw materials to final products
+- All 10 unit operations from the JSON structure
+- All key material streams connecting the operations
+- Appropriate styling for sources, processes, and product/waste sinks
+- The recycling loop from methanol purification back to synthesis
+
+The flow direction is left-to-right, making it easy to follow the process sequence from feedstock preparation through to final product purification and waste treatment.

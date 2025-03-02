@@ -1,0 +1,192 @@
+Reference Class: 15,Alcohol,Methanol
+
+Step 3 - Mass-Balance Analysis:
+### Detailed Stoichiometric and Mass-Balance Transformations for Methanol Production
+
+Below is an ordered list of the major unit operations involved in the industrial-scale production of methanol via Steam Methane Reforming (SMR). Each unit operation includes key transformations, approximate yields or conversions, and notes on energy consumption.
+
+---
+
+#### 1. **Feed Gas Pretreatment**
+- **Transformation:**
+  - **Desulfurization Reaction:** Removal of hydrogen sulfide (H₂S) and other sulfur compounds from natural gas to prevent catalyst poisoning downstream.
+  - **Reaction Example:** H₂S is absorbed by amine solutions (e.g., MEA) and removed from the gas stream.
+- **Mass Balance:**
+  - **Input:** 
+    - Natural Gas Feed: 1,000 kg/hr (containing ~100 ppm H₂S)
+  - **Output:** 
+    - Desulfurized Natural Gas: 1,000 kg/hr (H₂S < 1 ppm)
+    - Sulfur-Containing Waste Stream: ~0.1 kg/hr H₂S captured
+- **Yield/Conversion:**
+  - **Sulfur Removal Efficiency:** ≥99%
+- **Energy Considerations:**
+  - **Energy Intensive:** Moderate energy required for amine regeneration, typically supplied by steam or heat exchangers.
+
+---
+
+#### 2. **Steam Generation**
+- **Transformation:**
+  - **Water Heating:** Conversion of liquid water to high-temperature steam required for the SMR reaction.
+- **Mass Balance:**
+  - **Input:** 
+    - Water Feed: 3,000 kg/hr
+  - **Output:** 
+    - Steam: 3,000 kg/hr (at ~700°C and 25 bar)
+- **Yield/Conversion:**
+  - **Efficiency:** Near 100% conversion of water to steam
+- **Energy Considerations:**
+  - **Highly Energy Intensive:** Significant heat input required, typically supplied by boilers using natural gas or waste heat.
+
+---
+
+#### 3. **Steam Methane Reforming (SMR) Reactor**
+- **Transformation:**
+  - **Reformulation Reaction:** Methane reacts with steam to produce synthesis gas (syngas).
+  - **Reaction:** CH₄ + H₂O → CO + 3 H₂ (ΔH = +206 kJ/mol)
+- **Mass Balance:**
+  - **Input:** 
+    - Desulfurized Natural Gas: 1,000 kg/hr (CH₄-rich)
+    - Steam: 3,000 kg/hr
+  - **Output:** 
+    - Syngas: 2,500 kg/hr (approx. 25% CO, 75% H₂)
+    - Light Hydrocarbons: Minor streams (e.g., unreacted methane)
+- **Yield/Conversion:**
+  - **Methane Conversion:** ~70%
+  - **Hydrogen Yield:** Approximately 75% of theoretical H₂ produced
+- **Energy Considerations:**
+  - **Energy Intensive:** Endothermic reaction requires continuous heat input, often integrated with furnace heating.
+
+---
+
+#### 4. **Shift Conversion Reactor (Water-Gas Shift Reactor)**
+- **Transformation:**
+  - **Water-Gas Shift Reaction:** Conversion of CO and H₂O to CO₂ and additional H₂.
+  - **Reaction:** CO + H₂O → CO₂ + H₂ (ΔH = –41 kJ/mol)
+- **Mass Balance:**
+  - **Input:** 
+    - Syngas: 2,500 kg/hr (CO and H₂)
+  - **Output:** 
+    - Shifted Syngas: 3,500 kg/hr (increased H₂, reduced CO)
+    - CO₂: 500 kg/hr
+- **Yield/Conversion:**
+  - **CO Conversion:** ~70%
+  - **Hydrogen Increase:** ~30% additional H₂ generated
+- **Energy Considerations:**
+  - **Exothermic Reaction:** May require cooling to maintain optimal reactor temperatures.
+
+---
+
+#### 5. **Gas Cooling and Quench**
+- **Transformation:**
+  - **Cooling and Condensation:** Lowering the temperature of shifted syngas to condense out water and other condensable species.
+- **Mass Balance:**
+  - **Input:** 
+    - Shifted Syngas: 3,500 kg/hr
+  - **Output:** 
+    - Cooled Syngas: 3,000 kg/hr (dry gas)
+    - Condensate: 500 kg/hr (water and minor components)
+- **Yield/Conversion:**
+  - **Water Removal:** ~85% of water condensed
+- **Energy Considerations:**
+  - **Energy Neutral:** Utilizes heat exchangers; may recover some heat for other process needs.
+
+---
+
+#### 6. **CO₂ Removal Unit**
+- **Transformation:**
+  - **Absorption Separation:** Removal of CO₂ from cooled syngas using amine-based solvents.
+- **Mass Balance:**
+  - **Input:** 
+    - Cooled Syngas: 3,000 kg/hr
+  - **Output:** 
+    - Purified Syngas (H₂-rich): 2,800 kg/hr
+    - Separated CO₂: 200 kg/hr
+- **Yield/Conversion:**
+  - **CO₂ Removal Efficiency:** ~95%
+- **Energy Considerations:**
+  - **Moderate Energy Consumption:** Energy required for solvent regeneration and separation.
+
+---
+
+#### 7. **Hydrogen Purification (Optional)**
+- **Transformation:**
+  - **Pressure Swing Adsorption (PSA):** Further purification of hydrogen to achieve high purity (>99.99%) if required.
+- **Mass Balance:**
+  - **Input:** 
+    - Purified Syngas: 2,800 kg/hr
+  - **Output:** 
+    - High-Purity Hydrogen: 2,600 kg/hr
+    - Rejected Streams (e.g., CO, unadsorbed gases): 200 kg/hr
+- **Yield/Conversion:**
+  - **Hydrogen Recovery:** ~92%
+- **Energy Considerations:**
+  - **Energy Intensive:** Significant electricity required for compression and adsorption cycles.
+
+---
+
+#### 8. **Methanol Synthesis Reactor**
+- **Transformation:**
+  - **Catalytic Conversion:** Conversion of syngas (CO and H₂) into methanol using a catalyst under high pressure and temperature.
+  - **Reaction:** CO + 2 H₂ → CH₃OH (ΔH = –90 kJ/mol)
+- **Mass Balance:**
+  - **Input:** 
+    - Purified Syngas: 2,800 kg/hr (H₂ / CO ratio ~2:1)
+  - **Output:** 
+    - Crude Methanol: 1,200 kg/hr
+    - Unreacted Syngas: 1,600 kg/hr (recycled)
+- **Yield/Conversion:**
+  - **Methanol Conversion per Pass:** ~50%
+  - **Overall Methanol Yield:** ~60-70% based on recycle streams
+- **Energy Considerations:**
+  - **Energy Moderate:** Requires heating to reaction temperature (~250°C) and compression to reaction pressure (~50-100 bar).
+
+---
+
+#### 9. **Methanol Distillation/Purification**
+- **Transformation:**
+  - **Separation:** Distillation of crude methanol to achieve high-purity methanol (≥99.9%) by removing water and other impurities.
+- **Mass Balance:**
+  - **Input:** 
+    - Crude Methanol: 1,200 kg/hr
+  - **Output:** 
+    - Purified Methanol: 1,000 kg/hr
+    - Distillation Overheads (e.g., water, light gases): 200 kg/hr
+- **Yield/Conversion:**
+  - **Methanol Recovery:** ~83%
+- **Energy Considerations:**
+  - **Energy Intensive:** Significant heat required for distillation columns, often supplied by reboilers utilizing process heat or boilers.
+
+---
+
+#### 10. **Utilities and Waste Treatment**
+- **Transformation:**
+  - **Utility Management:** Supply and recycling of steam, cooling water, and electrical power.
+  - **Waste Treatment:** Treatment of CO₂ streams, condensates, and other waste effluents to comply with environmental regulations.
+- **Mass Balance:**
+  - **Input:** 
+    - Process Waste Streams: 500 kg/hr (e.g., CO₂, water)
+    - Energy Inputs: Based on utility demands
+  - **Output:** 
+    - Treated Waste: Compliant with emission standards
+    - Recycled Utilities: Steam and cooling water reused in the process
+- **Yield/Conversion:**
+  - **Recycling Efficiency:** >90% utility recycling
+- **Energy Considerations:**
+  - **Variable Energy Usage:** Depends on the extent of recycling and treatment technologies; may include significant electricity for pumps and compressors.
+
+---
+
+### Summary of Key Transformations and Energy Considerations
+
+1. **Desulfurization:** High sulfur removal to protect catalysts; moderate energy for solvent regeneration.
+2. **Steam Generation:** Essential for SMR; highly energy-intensive due to high-temperature steam production.
+3. **SMR Reactor:** Produces syngas through endothermic reactions; significant heat input required.
+4. **Shift Reactor:** Enhances hydrogen yield through exothermic reactions; may require cooling.
+5. **Cooling and Quench:** Prepares gas for CO₂ removal; utilizes heat exchangers with potential heat recovery.
+6. **CO₂ Removal:** Purifies syngas; moderate energy needed for solvent handling.
+7. **Hydrogen Purification:** Optional high-purity hydrogen via PSA; electricity-intensive.
+8. **Methanol Synthesis:** Converts syngas to methanol; requires heat and pressure.
+9. **Methanol Distillation:** Achieves product purity; highly energy-intensive due to distillation demands.
+10. **Utilities and Waste Treatment:** Ensures efficient energy and mass recycling; variable energy usage based on process design.
+
+This detailed breakdown ensures a comprehensive understanding of the mass and energy flows within each unit operation, facilitating accurate techno-economic analysis and process optimization for industrial-scale methanol production.

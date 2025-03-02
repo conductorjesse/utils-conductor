@@ -1,0 +1,83 @@
+Reference Class: 18,Alcohol/Intermediate,Ethanol (Industrial)
+
+Step 5 - Mermaid Diagram Generation:
+Here's a Mermaid diagram representing the industrial ethanol production process flow based on the JSON structure:
+
+```mermaid
+flowchart LR
+    %% External source node for raw feedstock
+    raw_source([Feedstock Source]) 
+
+    %% Process operation nodes
+    op_001[Feedstock Receiving and Storage]
+    op_002[Feedstock Preparation]
+    op_003[Saccharification/Hydrolysis]
+    op_004[Fermentation]
+    op_005[Distillation]
+    op_006[Dehydration]
+    op_007[Product Storage and Handling]
+    op_008[By-Product Handling]
+    op_009[Wastewater Treatment]
+    
+    %% Sink nodes
+    product_sink{{Ethanol Product Distribution}}
+    feed_sink{{Animal Feed Distribution}}
+    co2_sink{{CO2 Collection/Venting}}
+    waste_sink{{Waste Disposal}}
+    water_sink{{Water Discharge/Reuse}}
+    emissions_sink{{Emissions to Atmosphere}}
+
+    %% Process stream connections
+    raw_source --> |raw_feedstock: Raw Corn/Sugarcane/Molasses| op_001
+    op_001 --> |stored_feedstock: Stored Feedstock| op_002
+    op_002 --> |prepared_feedstock: Milled Corn/Mixed Molasses| op_003
+    op_002 --> |preparation_waste: Cleaning Residue| waste_sink
+    op_003 --> |glucose_rich_mash: Sugar-Rich Mash| op_004
+    op_003 --> |residual_fibers: Insoluble Residue| op_008
+    op_004 --> |fermented_broth: Ethanol-Containing Broth| op_005
+    op_004 --> |carbon_dioxide: CO2 By-product| co2_sink
+    op_005 --> |ethanol_vapor: Ethanol-Enriched Vapor| op_006
+    op_005 --> |distillers_spent_grain: Distillers' Spent Grain| op_008
+    op_006 --> |anhydrous_ethanol: 99.5% Ethanol| op_007
+    op_006 --> |removed_water: Separated Water| op_009
+    op_007 --> |stored_ethanol: Final Ethanol Product| product_sink
+    op_007 --> |storage_emissions: Storage Losses| emissions_sink
+    op_008 --> |animal_feed: Processed Animal Feed| feed_sink
+    op_008 --> |evaporated_water: Water Vapor| emissions_sink
+    op_009 --> |treated_effluent: Treated Wastewater| water_sink
+    op_009 --> |treatment_sludge: Waste Sludge| waste_sink
+
+    %% Styling
+    classDef process rect;
+    classDef source stadium;
+    classDef sink hexagon;
+    
+    class op_001,op_002,op_003,op_004,op_005,op_006,op_007,op_008,op_009 process;
+    class raw_source source;
+    class product_sink,feed_sink,co2_sink,waste_sink,water_sink,emissions_sink sink;
+    
+    %% Edge styling
+    linkStyle 0,1,2,4,6,8,10,12 stroke:#333,stroke-width:1; %% Process streams
+    linkStyle 14,16 stroke:#333,stroke-width:2; %% Product streams
+    linkStyle 3,5,7,9,11,13,15,17,18 stroke:#333,stroke-width:1,stroke-dasharray: 3 3; %% Waste/utility streams
+```
+
+This diagram shows:
+- The complete process flow from feedstock receipt through final product storage
+- All major unit operations (op_001 through op_009)
+- All key process streams connecting the operations
+- External sources and sinks for inputs and outputs
+- Different line styles for product streams versus waste/utility streams
+
+The flow follows the logical sequence of ethanol production:
+1. Feedstock handling
+2. Preparation
+3. Conversion to sugars
+4. Fermentation
+5. Distillation
+6. Dehydration
+7. Product storage
+8. By-product handling
+9. Wastewater treatment
+
+Each connection is labeled with both the stream_id and a descriptive name to make the diagram clear and directly connected to the JSON structure.

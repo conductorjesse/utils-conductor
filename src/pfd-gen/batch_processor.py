@@ -6,19 +6,27 @@ from tqdm import tqdm
 from typing import List, Dict, Any
 from dotenv import load_dotenv
 
-# Import our pipeline module
-from pipeline import process_reference_class
+# Add the root directory to the path so imports work properly
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
+
+# Import our pipeline module 
+# Using importlib to handle module names with dashes
+import importlib.util
+spec = importlib.util.spec_from_file_location("pipeline", os.path.join(os.path.dirname(__file__), "pipeline.py"))
+pipeline = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(pipeline)
+process_reference_class = pipeline.process_reference_class
 
 # Load environment variables (API keys)
 load_dotenv()
 
-# Default settings - hardcoded for simplicity
-INPUT_FILE = "batch_product_list.csv"
-OUTPUT_DIR = "outputs"
-PROMPTS_FILE = "prompts.txt"
-NUM_PROMPTS = 5
-SAVE_ALL_STEPS = True
-MAX_WORKERS = 5  # Number of concurrent processes
+# Default settings - use environment variables if set, otherwise use defaults
+INPUT_FILE = os.environ.get("INPUT_FILE", "data/batch_product_list.csv")
+OUTPUT_DIR = os.environ.get("OUTPUT_DIR", "outputs")
+PROMPTS_FILE = os.environ.get("PROMPTS_FILE", "src/pfd-gen/prompts.txt")
+NUM_PROMPTS = int(os.environ.get("NUM_PROMPTS", "5"))
+SAVE_ALL_STEPS = os.environ.get("SAVE_ALL_STEPS", "True").lower() == "true"
+MAX_WORKERS = int(os.environ.get("MAX_WORKERS", "5"))
 
 def load_reference_classes(file_path: str) -> pd.DataFrame:
     """
@@ -74,7 +82,14 @@ def process_reference_class_wrapper(args: Dict[str, Any]) -> Dict[str, Any]:
 
 def main():
     """Main function to run the batch processor."""
-    print(f"Starting batch processing with {INPUT_FILE}")
+    print("\nBatch Processor")
+    print("==============")
+    print(f"Input file:  {os.path.abspath(INPUT_FILE)}")
+    print(f"Output dir:  {os.path.abspath(OUTPUT_DIR)}")
+    print(f"Prompts file: {os.path.abspath(PROMPTS_FILE)}")
+    print(f"Max workers: {MAX_WORKERS}")
+    print(f"Save all steps: {SAVE_ALL_STEPS}")
+    print("==============\n")
     
     # Check if OpenAI and Claude API keys are set
     openai_key = os.environ.get('OPENAI_API_KEY')

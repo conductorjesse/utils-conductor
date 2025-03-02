@@ -1,0 +1,353 @@
+Reference Class: 17,Alcohol/Intermediate,Ethanol (Industrial)
+
+Step 4 - JSON Structure Generation:
+```json
+{
+  "reference_class": {
+    "ref_class_id": "industrial_ethanol_production",
+    "ref_class_name": "Industrial Ethanol Production Process",
+    "ref_class_description": "Catalytic hydration of ethylene to produce industrial-grade anhydrous ethanol at commercial scale, with integrated recycling systems for unreacted materials and energy efficiency.",
+    "feedstocks": [
+      {
+        "feed_name": "Ethylene",
+        "feed_description": "Raw ethylene gas for conversion to ethanol",
+        "feed_composition": "98% C₂H₄, 1% H₂S, 1% H₂O, trace CO₂ and other hydrocarbons",
+        "feed_specs": "Pressurized gas, typical industrial grade feedstock"
+      },
+      {
+        "feed_name": "Water",
+        "feed_description": "Process water for steam generation",
+        "feed_composition": "Water with trace minerals and impurities",
+        "feed_specs": "Standard process water requiring treatment before steam generation"
+      }
+    ],
+    "products": [
+      {
+        "product_name": "Industrial Ethanol",
+        "product_description": "Anhydrous ethanol for industrial applications",
+        "product_composition": "≥99.5% C₂H₅OH, <0.5% water",
+        "product_specs": "Anhydrous grade, suitable for industrial processes and solvent applications"
+      }
+    ],
+    "production_method": "Catalytic hydration of ethylene with steam",
+    "production_scale": "100,000 metric tons per year"
+  },
+  "unit_operations": [
+    {
+      "op_id": "op_001",
+      "op_name": "Ethylene Purification Unit",
+      "op_description": "Removes contaminants from raw ethylene feed to ensure catalyst longevity and process efficiency",
+      "op_type": "purification",
+      "equipment": [
+        {
+          "equipment_name": "Adsorption columns",
+          "equipment_specs": "Packed with activated carbon and molecular sieves for contaminant removal"
+        },
+        {
+          "equipment_name": "Amine scrubber",
+          "equipment_specs": "For H₂S removal when present in significant concentrations"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Removal of sulfur compounds, moisture, and other contaminants from ethylene",
+          "parameters": {
+            "removal_efficiency_sulfur": ">99%",
+            "removal_efficiency_moisture": ">95%",
+            "overall_yield": ">98.5% purified ethylene"
+          },
+          "impacted_input_streams": ["raw_ethylene_feed"],
+          "impacted_output_streams": ["purified_ethylene", "removed_impurities"]
+        }
+      ],
+      "input_streams": ["raw_ethylene_feed"],
+      "output_streams": ["purified_ethylene", "removed_impurities"],
+      "energy_requirements": "Moderate energy for compression and regeneration cycles",
+      "utilities": "Steam for adsorbent regeneration, cooling water for condensation"
+    },
+    {
+      "op_id": "op_002",
+      "op_name": "Steam Generation Unit",
+      "op_description": "Produces high-purity steam required for ethylene hydration reaction",
+      "op_type": "utility generation",
+      "equipment": [
+        {
+          "equipment_name": "Boiler system",
+          "equipment_specs": "High-pressure steam generation capable of 10 bar, 400°C"
+        },
+        {
+          "equipment_name": "Water treatment system",
+          "equipment_specs": "Removes minerals and impurities to prevent scaling and corrosion"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Conversion of process water to high-purity steam",
+          "parameters": {
+            "steam_pressure": "10 bar",
+            "steam_temperature": "400°C",
+            "conversion_efficiency": "~100%"
+          },
+          "impacted_input_streams": ["water_feed"],
+          "impacted_output_streams": ["high_purity_steam"]
+        }
+      ],
+      "input_streams": ["water_feed", "recycled_steam"],
+      "output_streams": ["high_purity_steam"],
+      "energy_requirements": "High energy demand: typically natural gas fired boiler system",
+      "utilities": "Boiler feed water, natural gas or other fuel source, water treatment chemicals"
+    },
+    {
+      "op_id": "op_003",
+      "op_name": "Hydration Reactor",
+      "op_description": "Catalytically hydrates ethylene with steam to produce ethanol under elevated temperature and pressure",
+      "op_type": "reaction",
+      "equipment": [
+        {
+          "equipment_name": "Fixed-bed catalytic reactor",
+          "equipment_specs": "High-pressure vessel with phosphoric acid catalyst on silica support"
+        },
+        {
+          "equipment_name": "Heat exchanger system",
+          "equipment_specs": "For temperature control of exothermic reaction"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Catalytic hydration reaction: C₂H₄ + H₂O → C₂H₅OH",
+          "parameters": {
+            "operating_temperature": "~300°C",
+            "operating_pressure": "~70 bar",
+            "conversion_per_pass": "~90% of ethylene",
+            "catalyst": "Phosphoric acid on silica supports",
+            "reaction_type": "Exothermic"
+          },
+          "impacted_input_streams": ["purified_ethylene", "high_purity_steam", "recycled_ethylene"],
+          "impacted_output_streams": ["reacted_gas_stream"]
+        }
+      ],
+      "input_streams": ["purified_ethylene", "high_purity_steam", "recycled_ethylene"],
+      "output_streams": ["reacted_gas_stream"],
+      "energy_requirements": "High initial heating, then self-sustaining due to exothermic reaction. Cooling required for temperature maintenance.",
+      "utilities": "Cooling water for heat removal, steam for initial heating"
+    },
+    {
+      "op_id": "op_004",
+      "op_name": "Cooling and Condensation Unit",
+      "op_description": "Cools the reacted gas stream to condense ethanol and water while separating unreacted ethylene",
+      "op_type": "heat exchange",
+      "equipment": [
+        {
+          "equipment_name": "Multi-stage cooler/condenser",
+          "equipment_specs": "Shell-and-tube heat exchangers with staged cooling capacity"
+        },
+        {
+          "equipment_name": "Flash drum",
+          "equipment_specs": "For separation of condensed liquid from gas phase"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Phase separation through cooling of reaction products",
+          "parameters": {
+            "inlet_temperature": "~300°C",
+            "outlet_temperature": "~40°C",
+            "condensation_efficiency": "~90% of ethanol and water",
+            "phase_separation": "Liquid (ethanol+water) from gas (ethylene)"
+          },
+          "impacted_input_streams": ["reacted_gas_stream"],
+          "impacted_output_streams": ["condensed_liquid", "overhead_gas"]
+        }
+      ],
+      "input_streams": ["reacted_gas_stream"],
+      "output_streams": ["condensed_liquid", "overhead_gas"],
+      "energy_requirements": "Significant cooling load; potential for heat recovery to preheat other streams",
+      "utilities": "Cooling water or refrigeration system"
+    },
+    {
+      "op_id": "op_005",
+      "op_name": "Gas Separation Unit",
+      "op_description": "Separates unreacted ethylene from the overhead gas stream for recycling",
+      "op_type": "separation",
+      "equipment": [
+        {
+          "equipment_name": "Absorption column",
+          "equipment_specs": "For ethylene recovery from gas mixture"
+        },
+        {
+          "equipment_name": "Compressor",
+          "equipment_specs": "For recycled ethylene compression to reactor pressure"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Separation and recovery of unreacted ethylene",
+          "parameters": {
+            "ethylene_recovery": ">95%",
+            "purity_of_recovered_ethylene": "95-98%",
+            "operating_pressure": "Variable depending on absorption method"
+          },
+          "impacted_input_streams": ["overhead_gas"],
+          "impacted_output_streams": ["recycled_ethylene", "purged_gas"]
+        }
+      ],
+      "input_streams": ["overhead_gas"],
+      "output_streams": ["recycled_ethylene", "purged_gas"],
+      "energy_requirements": "Moderate for compression and possibly refrigeration for absorption",
+      "utilities": "Refrigeration for absorption, electrical power for compression"
+    },
+    {
+      "op_id": "op_006",
+      "op_name": "Initial Distillation Column",
+      "op_description": "Separates ethanol from water based on differences in boiling points",
+      "op_type": "separation",
+      "equipment": [
+        {
+          "equipment_name": "Distillation column",
+          "equipment_specs": "Multi-tray or packed column for ethanol-water separation"
+        },
+        {
+          "equipment_name": "Reboiler",
+          "equipment_specs": "Steam-heated for providing vapor at column bottom"
+        },
+        {
+          "equipment_name": "Condenser",
+          "equipment_specs": "Water-cooled for distillate condensation"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Separation of ethanol-water mixture by distillation",
+          "parameters": {
+            "feed_composition": "Ethanol-water mixture",
+            "distillate_composition": "~95% ethanol, 5% water",
+            "bottoms_composition": "~5% ethanol, 95% water",
+            "reflux_ratio": "Optimized for separation efficiency",
+            "ethanol_recovery": "~95% ethanol recovery in distillate"
+          },
+          "impacted_input_streams": ["condensed_liquid"],
+          "impacted_output_streams": ["ethanol_rich_distillate", "water_rich_bottoms"]
+        }
+      ],
+      "input_streams": ["condensed_liquid"],
+      "output_streams": ["ethanol_rich_distillate", "water_rich_bottoms"],
+      "energy_requirements": "High energy for reboiler; significant energy intensity",
+      "utilities": "Steam for reboiler, cooling water for condenser"
+    },
+    {
+      "op_id": "op_007",
+      "op_name": "Dehydration Unit",
+      "op_description": "Removes remaining water from ethanol to achieve anhydrous purity using molecular sieves or azeotropic distillation",
+      "op_type": "dehydration",
+      "equipment": [
+        {
+          "equipment_name": "Molecular sieve beds",
+          "equipment_specs": "Multiple beds with cyclic operation for continuous processing"
+        },
+        {
+          "equipment_name": "Regeneration system",
+          "equipment_specs": "For molecular sieve regeneration via heating and/or vacuum"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Selective adsorption of water from ethanol mixture",
+          "parameters": {
+            "input_ethanol_concentration": "~95%",
+            "output_ethanol_concentration": "≥99.5%",
+            "water_removal_efficiency": ">99%",
+            "regeneration_cycle": "Operates on swing cycle with multiple beds"
+          },
+          "impacted_input_streams": ["ethanol_rich_distillate"],
+          "impacted_output_streams": ["anhydrous_ethanol", "dehydration_byproducts"]
+        }
+      ],
+      "input_streams": ["ethanol_rich_distillate"],
+      "output_streams": ["anhydrous_ethanol", "dehydration_byproducts"],
+      "energy_requirements": "Moderate energy for molecular sieve regeneration",
+      "utilities": "Steam or hot gas for regeneration, vacuum system (if applicable)"
+    },
+    {
+      "op_id": "op_008",
+      "op_name": "Reflux and Recycle System",
+      "op_description": "Manages internal recycle streams for unreacted ethylene and process streams",
+      "op_type": "material handling",
+      "equipment": [
+        {
+          "equipment_name": "Recycle compressor",
+          "equipment_specs": "For ethylene recycle back to reactor"
+        },
+        {
+          "equipment_name": "Pumps and control valves",
+          "equipment_specs": "For liquid recycling and process control"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Redirection and conditioning of recycle streams",
+          "parameters": {
+            "ethylene_recycle_rate": "95-98% of unreacted ethylene",
+            "steam_recycle_efficiency": "~90% of produced steam"
+          },
+          "impacted_input_streams": ["recycled_ethylene", "dehydration_byproducts", "water_rich_bottoms"],
+          "impacted_output_streams": ["recycled_ethylene_to_reactor", "recycled_steam"]
+        }
+      ],
+      "input_streams": ["recycled_ethylene", "dehydration_byproducts", "water_rich_bottoms"],
+      "output_streams": ["recycled_ethylene_to_reactor", "recycled_steam"],
+      "energy_requirements": "Moderate energy for compression and pumping",
+      "utilities": "Electrical power, cooling water for compressor aftercooling"
+    },
+    {
+      "op_id": "op_009",
+      "op_name": "Product Storage and Handling",
+      "op_description": "Stores the final anhydrous ethanol product and prepares for distribution",
+      "op_type": "storage",
+      "equipment": [
+        {
+          "equipment_name": "Storage tanks",
+          "equipment_specs": "Insulated, temperature-controlled tanks for ethanol storage"
+        },
+        {
+          "equipment_name": "Transfer pumps",
+          "equipment_specs": "For loading/unloading operations"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Temporary storage and handling of final product",
+          "parameters": {
+            "storage_capacity": "Sufficient for ~2 weeks production",
+            "storage_conditions": "Ambient temperature, slight positive pressure",
+            "product_losses": "<1% during handling and storage"
+          },
+          "impacted_input_streams": ["anhydrous_ethanol"],
+          "impacted_output_streams": ["final_ethanol_product"]
+        }
+      ],
+      "input_streams": ["anhydrous_ethanol"],
+      "output_streams": ["final_ethanol_product"],
+      "energy_requirements": "Low energy for pumping and minimal temperature control",
+      "utilities": "Electrical power for pumps, nitrogen blanket for tanks (if applicable)"
+    },
+    {
+      "op_id": "op_010",
+      "op_name": "Waste Treatment and Emissions Control",
+      "op_description": "Treats process wastes and controls emissions to comply with environmental regulations",
+      "op_type": "environmental control",
+      "equipment": [
+        {
+          "equipment_name": "Wastewater treatment system",
+          "equipment_specs": "For treatment of process wastewater and liquid effluents"
+        },
+        {
+          "equipment_name": "Scrubbers/incinerators",
+          "equipment_specs": "For VOC control and treatment of gaseous emissions"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Treatment and neutralization of waste streams",
+          "parameters": {
+            "pollutant_removal_efficiency": ">99%",
+            "emission_reduction":

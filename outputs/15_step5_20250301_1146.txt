@@ -1,0 +1,39 @@
+Reference Class: 15,Alcohol,Methanol
+
+Step 5 - Mermaid Diagram Generation:
+```mermaid
+flowchart LR
+    op_001[Feedstock Handling and Pretreatment]
+    op_002[Steam Generation]
+    op_003[Steam Methane Reforming]
+    op_004[Shift Conversion]
+    op_005[Carbon Dioxide Removal]
+    op_006[Methanol Synthesis]
+    op_007[Methanol Distillation]
+    op_008[Product Purification]
+    op_009[Storage and Handling]
+    op_010[Utilities and Waste Management]
+    
+    op_001 -->|Desulfurized Natural Gas| op_003
+    op_001 -->|Purified Water| op_002
+    op_002 -->|High-Pressure Steam| op_003
+    op_003 -->|Synthesis Gas| op_004
+    op_004 -->|Shifted Gas| op_005
+    op_005 -->|Hydrogen-Rich Gas| op_006
+    op_005 -->|Separated CO2| op_010
+    op_006 -->|Raw Methanol Vapor| op_007
+    op_007 -->|Distilled Methanol| op_008
+    op_007 -->|Unreacted Gases| op_006
+    op_008 -->|Purified Methanol| op_009
+    op_008 -->|Moisture| op_010
+    op_009 -->|Final Methanol Product| output
+    op_010 -.->|Utilities| op_001
+    op_010 -.->|Utilities| op_002
+    op_010 -.->|Utilities| op_003
+    op_010 -.->|Utilities| op_004
+    op_010 -.->|Utilities| op_005
+    op_010 -.->|Utilities| op_006
+    op_010 -.->|Utilities| op_007
+    op_010 -.->|Utilities| op_008
+    op_010 -.->|Utilities| op_009
+```

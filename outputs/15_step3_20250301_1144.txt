@@ -1,0 +1,157 @@
+Reference Class: 15,Alcohol,Methanol
+
+Step 3 - Mass-Balance Analysis:
+**Detailed Stoichiometric and Mass-Balance Transformations for Each Unit Operation in Methanol Production**
+
+**1. Feedstock Handling and Pretreatment**
+   - **Key Transformations:**
+     - **Desulfurization:** Removal of sulfur compounds (e.g., H₂S, COS) from natural gas using hydrodesulfurization (HDS) or adsorption techniques.
+     - **Water Purification:** Removal of impurities from water to produce high-purity steam.
+   - **Mass Balance:**
+     - **Natural Gas Feed:** Assuming 15,000 metric tonnes per annum (tpa) of methanol production, natural gas consumption is approximately 20,000 tpa.
+     - **Sulfur Removal:** Typically >99% of sulfur compounds are removed to protect catalysts downstream.
+   - **Energy Considerations:**
+     - **Moderate Energy Demand:** Energy is required for compression and heating during desulfurization.
+   - **Components Transformed:**
+     - **Input:** Natural Gas (primarily CH₄), Sulfur Compounds, Water
+     - **Output:** Desulfurized Natural Gas, Purified Water, Sulfur By-products
+
+**2. Steam Generation**
+   - **Key Transformations:**
+     - **Conversion of Water to Steam:** Heating purified water to produce high-pressure steam using boilers.
+   - **Mass Balance:**
+     - **Water to Steam:** Nearly 1:1 mass conversion; for example, 1 tonne of water yields approximately 1 tonne of steam.
+   - **Energy Considerations:**
+     - **High Energy Consumption:** Boilers require substantial heat input, typically around 2,500 kJ/kg of steam generated.
+   - **Components Transformed:**
+     - **Input:** Purified Water
+     - **Output:** High-Pressure Steam, Flue Gases (from boiler combustion)
+
+**3. Steam Methane Reforming (SMR)**
+   - **Key Transformations:**
+     - **Endothermic Reaction:** CH₄ + H₂O → CO + 3H₂ (ΔH = +206 kJ/mol)
+     - **Catalytic Reforming:** Occurs in the presence of a nickel-based catalyst at high temperatures (700-1000°C).
+   - **Mass Balance:**
+     - **Methane Conversion:** Approximately 70-80% of CH₄ is converted to synthesis gas.
+     - **Synthesis Gas Composition:** For every mole of CH₄, producing ~3 moles of H₂ and ~1 mole of CO.
+   - **Energy Considerations:**
+     - **High Energy Demand:** Significant heat is required to sustain the endothermic reaction.
+   - **Components Transformed:**
+     - **Input:** Desulfurized Natural Gas (CH₄), High-Pressure Steam (H₂O)
+     - **Output:** Synthesis Gas (H₂, CO, CO₂), Light Hydrocarbons
+
+**4. Shift Conversion (Water-Gas Shift Reaction)**
+   - **Key Transformations:**
+     - **Reaction:** CO + H₂O → CO₂ + H₂ (ΔH = -41 kJ/mol, exothermic)
+     - **Dual-Stage Shift:** Typically performed in high-temperature and low-temperature shift reactors for optimal conversion.
+   - **Mass Balance:**
+     - **Conversion Efficiency:** Approximately 50-70% of CO is converted to CO₂ and additional H₂.
+     - **Resulting Gas Composition:** Increased H₂ concentration and elevated CO₂ levels.
+   - **Energy Considerations:**
+     - **Heat Management:** High-temperature shift requires heat integration; low-temperature shift may require cooling.
+   - **Components Transformed:**
+     - **Input:** Synthesis Gas (H₂, CO, CO₂, H₂O)
+     - **Output:** Shifted Gas (Increased H₂, CO₂), Residual CO
+
+**5. Carbon Dioxide Removal**
+   - **Key Transformations:**
+     - **Separation Processes:** Solvent-based absorption (e.g., amine scrubbing) or pressure swing adsorption (PSA) to remove CO₂.
+   - **Mass Balance:**
+     - **CO₂ Capture Efficiency:** Typically >90% of CO₂ is removed from the shifted gas.
+     - **Hydrogen-Rich Gas:** Post-removal stream enriched in H₂ (>95% purity).
+   - **Energy Considerations:**
+     - **Energy Intensive:** Solvent regeneration requires significant energy input; PSA systems consume electricity.
+   - **Components Transformed:**
+     - **Input:** Shifted Gas (H₂, CO₂)
+     - **Output:** Hydrogen-Rich Gas, Separated CO₂
+
+**6. Methanol Synthesis**
+   - **Key Transformations:**
+     - **Reaction:** CO + 2H₂ → CH₃OH (ΔH = -90 kJ/mol, exothermic)
+                     CO₂ + 3H₂ → CH₃OH + H₂O (ΔH = -49 kJ/mol, exothermic)
+     - **Catalytic Reaction:** Occurs in the presence of Cu/ZnO/Al₂O₃ catalyst under high pressure (50-100 bar) and moderate temperatures (200-300°C).
+   - **Mass Balance:**
+     - **Methanol Yield:** Approximately 85-90% conversion of syngas to methanol.
+     - **Unreacted Gases:** About 10-15% unreacted H₂, CO, and CO₂ recycled back to the reactor.
+   - **Energy Considerations:**
+     - **Heat Removal:** Exothermic reactions require cooling to maintain optimal reactor temperature.
+   - **Components Transformed:**
+     - **Input:** Hydrogen-Rich Gas (H₂), CO, CO₂
+     - **Output:** Raw Methanol Vapor, Unreacted Gases
+
+**7. Methanol Distillation**
+   - **Key Transformations:**
+     - **Separation by Distillation:** Condensation of methanol vapor and separation from unreacted gases using distillation columns.
+     - **Refluxing:** Utilizes a portion of the condensed methanol to improve separation efficiency.
+   - **Mass Balance:**
+     - **Methanol Recovery:** High purity methanol (~95-98%) separated from ~2-5% unreacted gases.
+     - **Recycled Gases:** Unreacted H₂, CO, CO₂ are typically recycled to the methanol synthesis unit.
+   - **Energy Considerations:**
+     - **Energy Intensive:** Significant heating and cooling are required for vaporization and condensation processes.
+   - **Components Transformed:**
+     - **Input:** Raw Methanol Vapor
+     - **Output:** Distilled Methanol, Recycled Unreacted Gases
+
+**8. Product Purification**
+   - **Key Transformations:**
+     - **Dehydration:** Removal of residual water from distilled methanol using molecular sieves or azeotropic distillation.
+     - **Final Purification:** Achieves specified purity of 99.85% methanol through additional purification steps if necessary.
+   - **Mass Balance:**
+     - **Methanol Yield:** >99% of distilled methanol is converted to purified methanol.
+     - **Moisture Removal:** Water content reduced to below 0.2%.
+   - **Energy Considerations:**
+     - **Moderate Energy Demand:** Requires heating for dehydration processes.
+   - **Components Transformed:**
+     - **Input:** Distilled Methanol
+     - **Output:** Purified Methanol, Moisture
+
+**9. Storage and Handling**
+   - **Key Transformations:**
+     - **Storage:** Purified methanol is stored in tanks under controlled temperature and pressure conditions to prevent vaporization.
+     - **Handling:** Preparation for distribution, including pumping and metering.
+   - **Mass Balance:**
+     - **Inventory Management:** Ensures consistent supply and accounts for vapor losses (~0.5-1%) during storage.
+   - **Energy Considerations:**
+     - **Low Energy Demand:** Primarily involves mechanical energy for pumping and temperature control if necessary.
+   - **Components Transformed:**
+     - **Input:** Purified Methanol
+     - **Output:** Stored Methanol, Vapor Losses
+
+**10. Utilities and Waste Management**
+    - **Key Transformations:**
+      - **Utility Distribution:** Supplying necessary utilities such as electricity, cooling water, and steam to various units.
+      - **Waste Treatment:** Treating flue gases, wastewater, and solid wastes to comply with environmental regulations.
+      - **Energy Recovery:** Utilizing waste heat for process integration and improving overall energy efficiency.
+    - **Mass Balance:**
+      - **Waste Streams:** Flue gases treated to remove pollutants; wastewater treated to remove contaminants; solid wastes (e.g., spent catalysts) managed appropriately.
+    - **Energy Considerations:**
+      - **Energy Integration:** Recovering heat from exothermic processes and waste streams to reduce overall energy consumption.
+      - **Electricity Demand:** Moderate to high, depending on the scale of operations and efficiency measures implemented.
+    - **Components Transformed:**
+      - **Input:** Flue Gases, Wastewater, Solid Wastes
+      - **Output:** Treated Effluents, Recovered Energy, By-Products
+
+**Summary of Key Transformations and Balances:**
+
+1. **Feedstock Handling and Pretreatment:** Removal of sulfur compounds ensures catalyst longevity and process efficiency.
+2. **Steam Generation:** Provides necessary steam for SMR, a critical component for synthesis gas production.
+3. **Steam Methane Reforming (SMR):** Primary synthesis gas production through endothermic methane and steam reaction.
+4. **Shift Conversion:** Enhances hydrogen production by converting CO and H₂O to CO₂ and additional H₂.
+5. **Carbon Dioxide Removal:** Purifies hydrogen stream for efficient methanol synthesis.
+6. **Methanol Synthesis:** Converts synthesized hydrogen and carbon oxides into methanol, the primary product.
+7. **Methanol Distillation:** Separates methanol from unreacted gases for purity and recycling.
+8. **Product Purification:** Achieves high-purity methanol suitable for industrial applications.
+9. **Storage and Handling:** Ensures safe and efficient storage of methanol for downstream use or distribution.
+10. **Utilities and Waste Management:** Maintains operational support and environmental compliance through effective waste treatment and energy management.
+
+**Approximate Overall Mass Balance:**
+- **Natural Gas Consumption:** ~20,000 tpa
+- **Water Consumption:** ~20,000 tpa (for steam generation)
+- **Methanol Production:** 15,000 tpa (99.85% purity)
+- **By-Products:** CO₂ (~15,000 tpa), Unreacted Gases (~3,000 tpa), Moisture (~200 tpa)
+
+**Energy Integration Highlights:**
+- **High Energy Demand Units:** Steam Generation, SMR, Methanol Synthesis, Methanol Distillation
+- **Energy Recovery Opportunities:** Utilizing waste heat from exothermic reactions and flue gases to preheat incoming streams, reducing overall energy consumption.
+
+This comprehensive breakdown provides a clear understanding of the mass and energy flows within each unit operation, facilitating accurate techno-economic analysis for the methanol production process.

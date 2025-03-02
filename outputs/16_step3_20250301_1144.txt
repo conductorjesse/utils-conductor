@@ -1,0 +1,154 @@
+Reference Class: 16,Alcohol,Methanol
+
+Step 3 - Mass-Balance Analysis:
+### Detailed Stoichiometric and Mass-Balance Transformations for Methanol Production Process
+
+#### 1. **Feed Pretreatment**
+- **Transformations:**
+  - **Separation Processes:** Removal of impurities such as hydrogen sulfide (H₂S), water (H₂O), and heavy hydrocarbons (e.g., ethane, propane) from the raw natural gas.
+  - **Adsorption/Absorption:** Typically employs amine scrubbing or adsorption beds to capture sulfur compounds and water.
+- **Mass Balance:**
+  - **Conversion/Removal Rates:** 
+    - H₂S removal: >99%
+    - Water removal: >95%
+    - Heavy hydrocarbons removal: >90%
+  - **Stream Splits:**
+    - Purified Natural Gas: ~95-98% of the original feed.
+    - Impurity Waste Streams: ~2-5% of the original feed.
+- **Energy Considerations:**
+  - **Energy Consumption:** Moderate; mainly for compressors and pumps required for gas circulation and pressure control.
+  - **Cooling Needs:** Cooling of effluent streams post-treatment to prepare for subsequent processes.
+
+#### 2. **Steam Generation**
+- **Transformations:**
+  - **Heating Water:** Conversion of liquid water to steam using fired boilers or waste heat from other process streams.
+- **Mass Balance:**
+  - **Steam Output:** Approximately 2-3 moles of steam per mole of methane (CH₄) fed into the SMR.
+- **Energy Considerations:**
+  - **Energy Intensive:** Requires significant heat input, typically around 200-300 kJ/mol of methane.
+  - **Energy Source:** Combustion of natural gas or utilization of waste heat from exothermic reactions (e.g., from the SMR).
+
+#### 3. **Steam Methane Reforming (SMR)**
+- **Transformations:**
+  - **Primary Reaction:**
+    \[
+    \text{CH}_4 + \text{H}_2\text{O} \rightarrow \text{CO} + 3\text{H}_2 \quad (\Delta H° = +206 \text{ kJ/mol})
+    \]
+  - **Side Reactions:**
+    - **Partial Oxidation:** \(\text{CH}_4 + \frac{1}{2}\text{O}_2 \rightarrow \text{CO} + 2\text{H}_2\)
+    - **Methane Decomposition:** \(\text{CH}_4 \rightarrow \text{C} + 2\text{H}_2\)
+- **Mass Balance:**
+  - **Methane Conversion:** Typically ~70-80% conversion of methane.
+  - **Syngas Composition:** Approximately 60-65% H₂, 25-30% CO, and ~5-10% CO₂.
+- **Energy Considerations:**
+  - **Energy Intensive:** Endothermic reaction requiring high temperatures (700-1,000°C).
+  - **Heat Management:** Utilizes furnaces or heat exchangers; integration with steam generation for energy efficiency.
+
+#### 4. **Water-Gas Shift Reactor**
+- **Transformations:**
+  - **Reaction:**
+    \[
+    \text{CO} + \text{H}_2\text{O} \rightarrow \text{CO}_2 + \text{H}_2 \quad (\Delta H° = -41 \text{ kJ/mol})
+    \]
+- **Mass Balance:**
+  - **Conversion:** Converts ~60-70% of CO to CO₂, increasing H₂ yield by an equivalent amount.
+  - **Syngas Composition Post-Shift:** ~80% H₂, ~15% CO₂, ~5% remaining CO.
+- **Energy Considerations:**
+  - **Moderately Exothermic:** Releases heat; requires cooling to maintain optimal catalyst temperature (200-450°C).
+  - **Heat Recovery:** Heat may be reused in other process units, such as preheating feed streams.
+
+#### 5. **CO₂ Removal Unit**
+- **Transformations:**
+  - **Separation Techniques:** Typically employs amine scrubbing (e.g., monoethanolamine - MEA) or Pressure Swing Adsorption (PSA) to capture CO₂ from the shifted gas.
+- **Mass Balance:**
+  - **CO₂ Capture Efficiency:** >90% removal of CO₂ from the shifted gas.
+  - **Stream Splits:**
+    - Purified Hydrogen-Rich Gas: ~90-95% H₂ content.
+    - Separated CO₂: ~5-10% of the gas stream.
+- **Energy Considerations:**
+  - **Energy Intensive:** Amine regeneration requires significant heat (≈ 3-4 GJ/ton CO₂).
+  - **Utility Consumption:** Steam for regeneration in amine scrubbing; compressors for PSA.
+
+#### 6. **Methanol Synthesis Reactor**
+- **Transformations:**
+  - **Primary Reaction:**
+    \[
+    \text{CO} + 2\text{H}_2 \rightarrow \text{CH}_3\text{OH} \quad (\Delta H° = -90 \text{ kJ/mol})
+    \]
+    \[
+    \text{CO}_2 + 3\text{H}_2 \rightarrow \text{CH}_3\text{OH} + \text{H}_2\text{O} \quad (\Delta H° = -49 \text{ kJ/mol})
+    \]
+- **Mass Balance:**
+  - **Conversion Rates:** 
+    - CO conversion: ~80% per pass.
+    - CO₂ conversion: ~70% per pass.
+  - **Methanol Yield:** Approximately 90-95% selectivity based on available H₂ and CO/CO₂ ratios.
+- **Energy Considerations:**
+  - **Moderately Exothermic:** Releases heat; operates under high pressure (50-100 bar) and moderate temperatures (200-300°C).
+  - **Heat Management:** Excess heat removed via cooling systems; potential for heat integration with other units.
+
+#### 7. **Methanol Separation and Purification**
+- **Transformations:**
+  - **Separation Processes:** Distillation to separate methanol from water and unreacted gases.
+  - **Phase Separation:** Crude methanol and water form a liquid mixture, while unreacted gases are vented or recycled.
+- **Mass Balance:**
+  - **Separation Efficiency:** Removes >95% of water from crude methanol.
+  - **Stream Splits:**
+    - Partially Purified Methanol: ~90-95% methanol content.
+    - Byproduct Streams: ~5-10% water and impurities.
+- **Energy Considerations:**
+  - **Energy Intensive:** Requires significant heat input for distillation columns.
+  - **Reflux Systems:** Utilize internal heat exchangers to improve energy efficiency.
+
+#### 8. **Product Distillation**
+- **Transformations:**
+  - **Final Purification:** Distillation columns separate methanol to achieve ≥99.85% purity by removing residual water and trace impurities.
+- **Mass Balance:**
+  - **Purity Achievement:** Final distillation achieves methanol purity >99.85%.
+  - **Stream Splits:**
+    - Pure Methanol: ≥99.85% purity.
+    - Impure Water/Byproducts: <0.15% residuals.
+- **Energy Considerations:**
+  - **Highly Energy Intensive:** Multiple distillation stages with high reflux ratios.
+  - **Heat Integration:** Steam and heat exchangers used to recover and reuse heat within the distillation process.
+
+#### 9. **Recycling and Gas Handling**
+- **Transformations:**
+  - **Gas Recycle:** Unreacted synthesis gas (H₂, CO, CO₂) is compressed and recycled back to the SMR or Shift Reactor.
+  - **Pressure Control:** Compressors adjust the pressure of recycled gases to match process requirements.
+- **Mass Balance:**
+  - **Recycle Ratio:** Typically 20-30% of synthesis gas is recycled to ensure optimal reactant concentrations and conversion rates.
+  - **Efficiency:** Reduces fresh feed requirements and improves overall process efficiency.
+- **Energy Considerations:**
+  - **Energy Intensive:** Compressors consume significant electricity, especially for high-pressure recycling streams.
+  - **Optimization:** Energy recovery systems (e.g., turbo-compressors) may be employed to reduce electricity demand.
+
+#### 10. **Utilities and Emissions Control**
+- **Transformations:**
+  - **Utility Management:** Provides necessary services such as steam, cooling water, and electricity to all process units.
+  - **Emissions Treatment:** Treats flue gases and other emissions to comply with environmental regulations (e.g., SOₓ, NOₓ, particulate matter removal).
+- **Mass Balance:**
+  - **Utility Streams:** 
+    - Steam consumption distributed across SMR, Shift Reactor, and other units.
+    - Cooling water circulated through heat exchangers and condensers.
+    - Electricity supplied to compressors, pumps, and control systems.
+  - **Emission Streams:** 
+    - Treated flue gases released to the atmosphere.
+    - Recovered heat from emissions used in other parts of the process.
+- **Energy Considerations:**
+  - **Energy Distribution:** Ensures efficient allocation and utilization of energy across the plant.
+  - **Emission Control:** May require additional energy for treatment processes (e.g., electrostatic precipitators, scrubbers).
+
+---
+
+### Summary of Key Component Transformations
+
+1. **Natural Gas (CH₄):** Purified and reformed to produce synthesis gas (H₂ and CO).
+2. **Water (H₂O):** Converted to steam for SMR and involved in the water-gas shift reaction.
+3. **Synthesis Gas (H₂, CO, CO₂):** Shifted to increase H₂ content and reduce CO; CO₂ is captured.
+4. **Hydrogen-Rich Gas (H₂):** Utilized in methanol synthesis; excess recycled.
+5. **Carbon Dioxide (CO₂):** Captured and either sequestered or utilized.
+6. **Methanol (CH₃OH):** Synthesized, separated, and purified to high purity.
+7. **Energy Flows:** Managed across all units with significant inputs for heating (SMR, distillation), cooling (Shift Reactor, condensers), and compression (recycling gases).
+
+This detailed breakdown provides a comprehensive view of the mass and energy transformations occurring within each unit operation of the industrial-scale methanol production process, facilitating accurate techno-economic analysis.

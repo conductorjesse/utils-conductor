@@ -1,0 +1,24 @@
+Reference Class: 19,Basic Inorganic,Sodium Hydroxide
+
+Step 5 - Mermaid Diagram Generation:
+```mermaid
+flowchart LR
+    op_001[Brine Preparation] --> |Purified Brine| op_002[Pre-Electrolysis Treatment]
+    op_002 --> |Treated Brine| op_003[Membrane Cell Electrolysis]
+    op_009[Energy Management] --> |Distributed Electricity| op_003
+    op_001 --> |Residual Impurities| op_010[Waste Treatment]
+    op_003 --> |Chlorine Gas| op_004[Chlorine Gas Cooling and Drying]
+    op_003 --> |Hydrogen Gas| op_005[Hydrogen Gas Handling]
+    op_003 --> |Dilute NaOH Solution| op_006[Sodium Hydroxide Concentration]
+    op_004 --> |Dry Chlorine Gas| op_008[Chlorine Gas Storage]
+    op_004 --> |Moisture| op_010
+    op_005 --> |Utilized Hydrogen| external1[Plant Use]
+    op_005 --> |Stored/Sold Hydrogen| external2[Market]
+    op_006 --> |Concentrated NaOH Solution| op_007[Product Storage]
+    op_006 --> |Water Vapor| op_010
+    op_007 --> |Sodium Hydroxide Product| external3[Market]
+    op_008 --> |Chlorine Product| external4[Market]
+    op_010 --> |Treated Waste| external5[Disposal]
+    op_010 --> |Recycled Materials| op_001
+    external6[External Electricity Supply] --> op_009
+```

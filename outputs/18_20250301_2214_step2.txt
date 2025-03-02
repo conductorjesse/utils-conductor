@@ -1,0 +1,75 @@
+Reference Class: 18,Alcohol/Intermediate,Ethanol (Industrial)
+
+Step 2 - Process Flow Description:
+### High-Level At-Scale Process Flow for Industrial Ethanol Production
+
+1. **Feedstock Receiving and Storage**
+   - **Description:** Raw feedstocks such as corn, sugarcane, or molasses are delivered to the plant and stored in bulk storage facilities.
+   - **Key Streams:**
+     - **Input Feed Stream:** Raw Corn/Sugarcane/Molasses
+     - **Storage Stream:** Stored Feedstock
+
+2. **Feedstock Preparation**
+   - **Description:** The stored feedstock is cleaned, milled (if using solid feedstocks like corn), and conditioned to prepare for enzymatic hydrolysis or direct fermentation.
+   - **Key Streams:**
+     - **Input Feed Stream:** Stored Feedstock
+     - **Prepared Feed Stream:** Milled Corn / Mixed Molasses Solution
+
+3. **Saccharification/Hydrolysis** *(if using starch-based feedstocks like corn)*
+   - **Description:** Enzymatic hydrolysis converts starches in the feedstock into fermentable sugars.
+   - **Key Streams:**
+     - **Input Feed Stream:** Prepared Milled Corn
+     - **Hydrolyzed Feed Stream:** Sugar-Rich Mash
+
+4. **Fermentation**
+   - **Description:** Fermentable sugars are converted into ethanol and carbon dioxide by yeast or other microorganisms in fermentation tanks.
+   - **Key Streams:**
+     - **Input Feed Stream:** Sugar-Rich Mash
+     - **Fermented Mash Stream:** Ethanol-Containing Broth
+     - **By-Product Stream:** Carbon Dioxide
+
+5. **Distillation**
+   - **Description:** The fermented broth is heated in distillation columns to separate ethanol from water and other components based on boiling points.
+   - **Key Streams:**
+     - **Input Feed Stream:** Fermented Mash
+     - **Distilled Ethanol Vapor Stream:** Ethanol-Enriched Vapor
+     - **Residue Stream:** Distillers' Spent Grain
+
+6. **Dehydration**
+   - **Description:** Ethanol vapor is further purified to remove remaining water, achieving anhydrous (99.5%) ethanol using methods such as molecular sieves or azeotropic distillation.
+   - **Key Streams:**
+     - **Input Feed Stream:** Distilled Ethanol Vapor
+     - **Product Stream:** Anhydrous Ethanol
+     - **Water By-Product Stream:** Separated Water
+
+7. **Product Storage and Handling**
+   - **Description:** Anhydrous ethanol is stored in designated tanks and prepared for distribution or further processing.
+   - **Key Streams:**
+     - **Input Feed Stream:** Anhydrous Ethanol
+     - **Product Stream:** Stored Ethanol Product
+
+8. **By-Product Handling**
+   - **Description:** By-products such as distillers' spent grains are processed for use as animal feed or other applications.
+   - **Key Streams:**
+     - **Input Feed Stream:** Distillers' Spent Grain
+     - **By-Product Stream:** Processed Animal Feed
+
+9. **Wastewater Treatment**
+   - **Description:** Effluents and wastewater generated from various unit operations are treated to meet environmental discharge standards.
+   - **Key Streams:**
+     - **Input Feed Stream:** Process Wastewater
+     - **Treated Water Stream:** Treated Effluent
+
+10. **Utilities and Ancillary Systems**
+    - **Description:** Provides necessary utilities such as steam, electricity, cooling water, and compressed air to support all unit operations.
+    - **Key Streams:**
+      - **Utility Streams:** Steam, Electricity, Cooling Water, Compressed Air
+
+#### **Key Process Streams Overview**
+- **Raw Materials:** Raw Corn, Sugarcane, Molasses
+- **Intermediate Streams:** Milled Corn, Sugar-Rich Mash, Fermented Mash, Distilled Ethanol Vapor
+- **By-Products:** Carbon Dioxide, Distillers' Spent Grain, Separated Water
+- **Utilities:** Steam, Electricity, Cooling Water
+- **Final Products:** Anhydrous Ethanol, Animal Feed
+
+This high-level process flow outlines the major unit operations involved in industrial-scale ethanol production, detailing the sequence of operations and the key streams connecting each step.

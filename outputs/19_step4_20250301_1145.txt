@@ -1,0 +1,370 @@
+Reference Class: 19,Basic Inorganic,Sodium Hydroxide
+
+Step 4 - JSON Structure Generation:
+```json
+{
+  "reference_class": {
+    "ref_class_id": "sodium_hydroxide_chloralkali_process",
+    "ref_class_name": "Sodium Hydroxide Chlor-Alkali Production",
+    "ref_class_description": "Production of sodium hydroxide through the membrane cell chlor-alkali process, which electrolyzes sodium chloride solution to produce sodium hydroxide, chlorine gas, and hydrogen gas.",
+    "feedstocks": [
+      {
+        "feed_name": "Brine",
+        "feed_description": "Sodium chloride solution for electrolysis",
+        "feed_composition": "~26% NaCl, 1-2% Ca²⁺, 0.5-1% Mg²⁺, other minor impurities",
+        "feed_specs": "Typically sourced from seawater or mined salt deposits"
+      },
+      {
+        "feed_name": "Water",
+        "feed_description": "Process water for electrolysis and other operations",
+        "feed_composition": "Purified water",
+        "feed_specs": "Must be deionized to prevent unwanted side reactions"
+      },
+      {
+        "feed_name": "Electricity",
+        "feed_description": "Electrical power for electrolysis",
+        "feed_composition": "N/A",
+        "feed_specs": "High amperage DC current for electrolytic cells"
+      }
+    ],
+    "products": [
+      {
+        "product_name": "Sodium Hydroxide",
+        "product_description": "Concentrated caustic soda solution",
+        "product_composition": "50% NaOH aqueous solution",
+        "product_specs": "≥98% purity, low chloride content, suitable for industrial applications"
+      },
+      {
+        "product_name": "Chlorine Gas",
+        "product_description": "Dry chlorine gas by-product",
+        "product_composition": "≥99.5% pure chlorine gas",
+        "product_specs": "Low moisture content, suitable for industrial applications or sale"
+      },
+      {
+        "product_name": "Hydrogen Gas",
+        "product_description": "Hydrogen gas by-product",
+        "product_composition": "≥99% pure hydrogen gas",
+        "product_specs": "Can be used as fuel or sold as industrial product"
+      }
+    ],
+    "production_method": "Membrane Cell Chlor-Alkali Process",
+    "production_scale": "100,000 metric tons of sodium hydroxide per year"
+  },
+  "unit_operations": [
+    {
+      "op_id": "op_001",
+      "op_name": "Brine Preparation",
+      "op_description": "Purification of raw brine to remove impurities such as calcium, magnesium, and other divalent ions",
+      "op_type": "separation",
+      "equipment": [
+        {
+          "equipment_name": "Precipitation Tank",
+          "equipment_specs": "Stainless steel tank with agitator for mixing chemicals with brine"
+        },
+        {
+          "equipment_name": "Filter Press",
+          "equipment_specs": "For removal of precipitated impurities as solid waste"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Chemical precipitation of divalent ions",
+          "parameters": {
+            "purification_method": "Addition of agents like sodium carbonate and caustic soda",
+            "removal_efficiency": "99% removal of Ca²⁺ and Mg²⁺ ions",
+            "yield": "95% of NaCl recovered in purified brine"
+          },
+          "impacted_input_streams": ["stream_001"],
+          "impacted_output_streams": ["stream_002", "stream_003"]
+        }
+      ],
+      "input_streams": ["stream_001"],
+      "output_streams": ["stream_002", "stream_003"],
+      "energy_requirements": "Moderate energy for pumping and mixing operations",
+      "utilities": "Process water for washing, electricity for pumps and agitators"
+    },
+    {
+      "op_id": "op_002",
+      "op_name": "Pre-Electrolysis Treatment",
+      "op_description": "Additional treatment of purified brine to optimize conditions for electrolysis",
+      "op_type": "treatment",
+      "equipment": [
+        {
+          "equipment_name": "Deaerator",
+          "equipment_specs": "Vacuum or sparging system to remove dissolved oxygen"
+        },
+        {
+          "equipment_name": "pH Adjustment Tank",
+          "equipment_specs": "Tank with pH monitoring and acid dosing system"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Removal of dissolved gases and pH adjustment",
+          "parameters": {
+            "pH_target": "4-5",
+            "oxygen_removal": "≥95%",
+            "carbon_dioxide_removal": "≥95%"
+          },
+          "impacted_input_streams": ["stream_002"],
+          "impacted_output_streams": ["stream_004"]
+        }
+      ],
+      "input_streams": ["stream_002"],
+      "output_streams": ["stream_004"],
+      "energy_requirements": "Low to moderate energy for deaeration systems",
+      "utilities": "Electricity, acids for pH adjustment"
+    },
+    {
+      "op_id": "op_003",
+      "op_name": "Membrane Cell Electrolysis",
+      "op_description": "Electrolytic separation of brine to produce chlorine gas, hydrogen gas, and sodium hydroxide solution",
+      "op_type": "electrochemical",
+      "equipment": [
+        {
+          "equipment_name": "Membrane Electrolyzer Cells",
+          "equipment_specs": "Multiple membrane cells with titanium anodes and nickel cathodes, separated by proton-exchange membranes"
+        },
+        {
+          "equipment_name": "DC Power Supply",
+          "equipment_specs": "High-capacity rectifier system to convert AC to DC power"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Electrochemical conversion of sodium chloride to products",
+          "parameters": {
+            "anode_reaction": "2Cl⁻ → Cl₂↑ + 2e⁻",
+            "cathode_reaction": "2H₂O + 2e⁻ → H₂↑ + 2OH⁻",
+            "overall_reaction": "2NaCl + 2H₂O → Cl₂↑ + H₂↑ + 2NaOH",
+            "conversion_efficiency": "90-95%",
+            "current_efficiency": "~95%"
+          },
+          "impacted_input_streams": ["stream_004", "stream_005"],
+          "impacted_output_streams": ["stream_006", "stream_007", "stream_008"]
+        }
+      ],
+      "input_streams": ["stream_004", "stream_005"],
+      "output_streams": ["stream_006", "stream_007", "stream_008"],
+      "energy_requirements": "3-4 kWh per kg of NaOH produced",
+      "utilities": "Cooling water for temperature control, electricity (major component)"
+    },
+    {
+      "op_id": "op_004",
+      "op_name": "Chlorine Gas Cooling and Drying",
+      "op_description": "Processing of chlorine gas to remove moisture and impurities",
+      "op_type": "purification",
+      "equipment": [
+        {
+          "equipment_name": "Chlorine Cooler",
+          "equipment_specs": "Heat exchanger system to reduce chlorine gas temperature"
+        },
+        {
+          "equipment_name": "Drying Tower",
+          "equipment_specs": "Tower with sulfuric acid or desiccant for moisture removal"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Temperature reduction and moisture removal from chlorine gas",
+          "parameters": {
+            "inlet_temperature": "~100-200°C",
+            "outlet_temperature": "~25°C",
+            "moisture_removal": "~100% of water vapor",
+            "purity_achieved": "≥99.5% chlorine"
+          },
+          "impacted_input_streams": ["stream_006"],
+          "impacted_output_streams": ["stream_009", "stream_010"]
+        }
+      ],
+      "input_streams": ["stream_006"],
+      "output_streams": ["stream_009", "stream_010"],
+      "energy_requirements": "Significant energy for cooling systems and refrigeration",
+      "utilities": "Cooling water, refrigeration systems, drying agents"
+    },
+    {
+      "op_id": "op_005",
+      "op_name": "Hydrogen Gas Handling",
+      "op_description": "Processing and directing hydrogen gas for utilization or storage",
+      "op_type": "separation",
+      "equipment": [
+        {
+          "equipment_name": "Hydrogen Separator",
+          "equipment_specs": "System to isolate hydrogen from other gases"
+        },
+        {
+          "equipment_name": "Hydrogen Compressor",
+          "equipment_specs": "Compressors to increase hydrogen pressure for storage or distribution"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Separation and compression of hydrogen gas",
+          "parameters": {
+            "hydrogen_purity": "≥99%",
+            "compression_ratio": "Varies based on end use",
+            "utilization_split": "30% for plant use, 70% for sale/storage"
+          },
+          "impacted_input_streams": ["stream_007"],
+          "impacted_output_streams": ["stream_011", "stream_012"]
+        }
+      ],
+      "input_streams": ["stream_007"],
+      "output_streams": ["stream_011", "stream_012"],
+      "energy_requirements": "Moderate energy for compression and purification",
+      "utilities": "Electricity for compressors, cooling water"
+    },
+    {
+      "op_id": "op_006",
+      "op_name": "Sodium Hydroxide Concentration",
+      "op_description": "Concentration of dilute sodium hydroxide solution to desired concentration",
+      "op_type": "evaporation",
+      "equipment": [
+        {
+          "equipment_name": "Multiple Effect Evaporators",
+          "equipment_specs": "Series of evaporators for energy-efficient water removal"
+        },
+        {
+          "equipment_name": "Condensers",
+          "equipment_specs": "For recovering water vapor and managing steam"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Water removal to concentrate sodium hydroxide solution",
+          "parameters": {
+            "initial_concentration": "~30% NaOH",
+            "final_concentration": "~50% NaOH",
+            "water_removal": "~80% of excess water",
+            "energy_efficiency": "Multiple effect design to reduce steam consumption"
+          },
+          "impacted_input_streams": ["stream_008"],
+          "impacted_output_streams": ["stream_013", "stream_014"]
+        }
+      ],
+      "input_streams": ["stream_008"],
+      "output_streams": ["stream_013", "stream_014"],
+      "energy_requirements": "High thermal energy for evaporation",
+      "utilities": "Steam for heating, cooling water for condensers"
+    },
+    {
+      "op_id": "op_007",
+      "op_name": "Product Storage",
+      "op_description": "Storage of concentrated sodium hydroxide solution in appropriate tanks",
+      "op_type": "storage",
+      "equipment": [
+        {
+          "equipment_name": "NaOH Storage Tanks",
+          "equipment_specs": "Corrosion-resistant tanks with temperature control"
+        },
+        {
+          "equipment_name": "Loading Systems",
+          "equipment_specs": "Systems for transferring product to transportation vessels"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Temporary storage of sodium hydroxide product",
+          "parameters": {
+            "storage_temperature": "Controlled at ~30-40°C",
+            "storage_capacity": "Sufficient for several days of production"
+          },
+          "impacted_input_streams": ["stream_013"],
+          "impacted_output_streams": ["stream_015"]
+        }
+      ],
+      "input_streams": ["stream_013"],
+      "output_streams": ["stream_015"],
+      "energy_requirements": "Minimal energy for temperature control and transfer pumps",
+      "utilities": "Electricity for pumps, insulation for temperature maintenance"
+    },
+    {
+      "op_id": "op_008",
+      "op_name": "Chlorine Gas Storage",
+      "op_description": "Storage of purified chlorine gas for sale or further processing",
+      "op_type": "storage",
+      "equipment": [
+        {
+          "equipment_name": "Chlorine Storage Tanks",
+          "equipment_specs": "Specialized pressure vessels for chlorine storage"
+        },
+        {
+          "equipment_name": "Safety Systems",
+          "equipment_specs": "Leak detection, emergency scrubber systems"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Safe storage of dry chlorine gas",
+          "parameters": {
+            "storage_pressure": "Based on temperature and state (gas or liquid)",
+            "safety_protocols": "Extensive monitoring and containment systems"
+          },
+          "impacted_input_streams": ["stream_009"],
+          "impacted_output_streams": ["stream_016"]
+        }
+      ],
+      "input_streams": ["stream_009"],
+      "output_streams": ["stream_016"],
+      "energy_requirements": "Minimal energy for compression and refrigeration if storing as liquid",
+      "utilities": "Cooling systems for temperature control"
+    },
+    {
+      "op_id": "op_009",
+      "op_name": "Energy Management",
+      "op_description": "Distribution and management of electricity throughout the plant",
+      "op_type": "utility",
+      "equipment": [
+        {
+          "equipment_name": "Power Distribution System",
+          "equipment_specs": "Transformers, switchgear, and control systems"
+        },
+        {
+          "equipment_name": "Energy Recovery Systems",
+          "equipment_specs": "Heat exchangers and integration systems for waste heat utilization"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Efficient distribution of electrical power",
+          "parameters": {
+            "power_requirements": "Dominated by electrolysis (~70-80%)",
+            "load_management": "Systems to handle peak loads and maintain stability"
+          },
+          "impacted_input_streams": ["stream_017"],
+          "impacted_output_streams": ["stream_005"]
+        }
+      ],
+      "input_streams": ["stream_017"],
+      "output_streams": ["stream_005"],
+      "energy_requirements": "N/A - this operation manages plant energy",
+      "utilities": "Cooling water for transformers, control systems power"
+    },
+    {
+      "op_id": "op_010",
+      "op_name": "Waste Treatment",
+      "op_description": "Treatment of waste streams to ensure environmental compliance",
+      "op_type": "treatment",
+      "equipment": [
+        {
+          "equipment_name": "Waste Collection System",
+          "equipment_specs": "Tanks and piping to collect various waste streams"
+        },
+        {
+          "equipment_name": "Treatment Units",
+          "equipment_specs": "Neutralization tanks, filtration systems, biological treatment as needed"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Processing of waste streams to meet environmental standards",
+          "parameters": {
+            "waste_source": "Brine purification residuals, process condensates, and other minor streams",
+            "treatment_methods": "Chemical, physical, and potentially biological depending on waste stream",
+            "discharge_compliance": "Must meet local environmental regulations"
+          },
+          "impacted_input_streams": ["stream_003", "stream_010", "stream_014"],
+          "impacted_output_streams": ["stream_018", "stream_019"]
+        }
+      ],
+      "input_streams": ["stream_003", "stream_010

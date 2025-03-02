@@ -1,0 +1,361 @@
+Reference Class: 18,Alcohol/Intermediate,Ethanol (Industrial)
+
+Step 4 - JSON Structure Generation:
+```json
+{
+  "reference_class": {
+    "ref_class_id": "industrial_ethanol_production",
+    "ref_class_name": "Industrial Ethanol Production Process",
+    "ref_class_description": "Production of anhydrous ethanol (99.5% purity) from sugar-based feedstocks through fermentation, distillation, and dehydration.",
+    "feedstocks": [
+      {
+        "feed_name": "Corn",
+        "feed_description": "Primary starch-based feedstock for ethanol production",
+        "feed_composition": "Approximately 65% starch, 9% protein, 4% fat, remainder fiber and moisture",
+        "feed_specs": "Clean, dry corn with moisture content < 15%"
+      },
+      {
+        "feed_name": "Sugarcane",
+        "feed_description": "Sugar-rich feedstock for direct fermentation",
+        "feed_composition": "12-17% sucrose, remainder fiber, water, and other compounds",
+        "feed_specs": "Fresh harvested sugarcane with minimal debris"
+      },
+      {
+        "feed_name": "Molasses",
+        "feed_description": "By-product of sugar refining used as fermentation feedstock",
+        "feed_composition": "45-55% fermentable sugars, remainder water and minerals",
+        "feed_specs": "Blackstrap molasses with high sugar content"
+      }
+    ],
+    "products": [
+      {
+        "product_name": "Anhydrous Ethanol",
+        "product_description": "High purity ethanol for industrial applications",
+        "product_composition": "99.5% ethanol, 0.5% water",
+        "product_specs": "Conforms to ASTM D4806 standards, suitable for industrial applications"
+      },
+      {
+        "product_name": "Distillers' Dried Grains",
+        "product_description": "Nutritious animal feed by-product from ethanol production",
+        "product_composition": "Protein, fiber, and residual carbohydrates from the fermentation process",
+        "product_specs": "Moisture content < 10%, protein content > 25%"
+      },
+      {
+        "product_name": "Carbon Dioxide",
+        "product_description": "CO2 generated during fermentation",
+        "product_composition": "99% CO2 with trace impurities",
+        "product_specs": "Food-grade purity for potential capture and sale"
+      }
+    ],
+    "production_method": "Fermentation of sugar-based feedstocks followed by distillation and dehydration",
+    "production_scale": "100,000 metric tons of ethanol per year"
+  },
+  "unit_operations": [
+    {
+      "op_id": "op_001",
+      "op_name": "Feedstock Receiving and Storage",
+      "op_description": "Receipt, sorting, and storage of raw feedstock materials",
+      "op_type": "handling",
+      "equipment": [
+        {
+          "equipment_name": "Storage Silos",
+          "equipment_specs": "Multiple silos with combined capacity of 10,000 metric tons, climate-controlled"
+        },
+        {
+          "equipment_name": "Conveyor Systems",
+          "equipment_specs": "Belt conveyors for solid feedstocks, pumps for liquid feedstocks"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Physical handling and storage without chemical changes",
+          "parameters": {
+            "storage_capacity": "10,000 metric tons",
+            "moisture_loss": "20%"
+          },
+          "impacted_input_streams": ["raw_feedstock"],
+          "impacted_output_streams": ["stored_feedstock"]
+        }
+      ],
+      "input_streams": ["raw_feedstock"],
+      "output_streams": ["stored_feedstock"],
+      "energy_requirements": "Minimal energy for conveying systems and climate control",
+      "utilities": "Electricity for conveyors and material handling equipment"
+    },
+    {
+      "op_id": "op_002",
+      "op_name": "Feedstock Preparation",
+      "op_description": "Cleaning, milling, and conditioning of feedstock for optimal processing",
+      "op_type": "preparation",
+      "equipment": [
+        {
+          "equipment_name": "Cleaning System",
+          "equipment_specs": "Includes screens, magnets, and air classification system"
+        },
+        {
+          "equipment_name": "Hammer Mills",
+          "equipment_specs": "Multiple mills with capacity of 10 tons per hour each"
+        },
+        {
+          "equipment_name": "Conditioning Tanks",
+          "equipment_specs": "Stainless steel tanks with agitators and temperature control"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Size reduction and physical cleaning of feedstock",
+          "parameters": {
+            "particle_size_reduction": "2-4mm final size",
+            "cleaning_efficiency": "98%",
+            "waste_generation": "2% of input mass"
+          },
+          "impacted_input_streams": ["stored_feedstock"],
+          "impacted_output_streams": ["prepared_feedstock", "preparation_waste"]
+        }
+      ],
+      "input_streams": ["stored_feedstock"],
+      "output_streams": ["prepared_feedstock", "preparation_waste"],
+      "energy_requirements": "Moderate energy consumption, primarily for mechanical milling",
+      "utilities": "Electricity for milling equipment, compressed air for pneumatic systems"
+    },
+    {
+      "op_id": "op_003",
+      "op_name": "Saccharification/Hydrolysis",
+      "op_description": "Enzymatic conversion of starch to fermentable sugars",
+      "op_type": "reaction",
+      "equipment": [
+        {
+          "equipment_name": "Hydrolysis Reactors",
+          "equipment_specs": "Jacketed stainless steel vessels with agitators and temperature control"
+        },
+        {
+          "equipment_name": "Enzyme Dosing System",
+          "equipment_specs": "Precision pumps and mixing equipment for enzyme addition"
+        },
+        {
+          "equipment_name": "Heat Exchangers",
+          "equipment_specs": "Plate heat exchangers for temperature control of reaction mass"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Enzymatic hydrolysis of starch to glucose",
+          "parameters": {
+            "reaction_temperature": "50-60°C",
+            "reaction_time": "24-48 hours",
+            "conversion_efficiency": "90%",
+            "enzyme_dosage": "0.5-1.0% of substrate mass"
+          },
+          "impacted_input_streams": ["prepared_feedstock"],
+          "impacted_output_streams": ["glucose_rich_mash", "residual_fibers"]
+        }
+      ],
+      "input_streams": ["prepared_feedstock"],
+      "output_streams": ["glucose_rich_mash", "residual_fibers"],
+      "energy_requirements": "Moderate thermal energy for maintaining optimal enzyme reaction temperature",
+      "utilities": "Steam for heating, cooling water for temperature control, electricity for agitation"
+    },
+    {
+      "op_id": "op_004",
+      "op_name": "Fermentation",
+      "op_description": "Conversion of sugars to ethanol by yeast",
+      "op_type": "reaction",
+      "equipment": [
+        {
+          "equipment_name": "Fermentation Tanks",
+          "equipment_specs": "Large stainless steel vessels with cooling jackets, capacity 500,000 L each"
+        },
+        {
+          "equipment_name": "Yeast Propagation System",
+          "equipment_specs": "Smaller tanks for yeast cultivation and propagation"
+        },
+        {
+          "equipment_name": "CO2 Collection System",
+          "equipment_specs": "Piping and compressors for CO2 capture from fermentation"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Bioconversion of glucose to ethanol and CO2",
+          "parameters": {
+            "fermentation_temperature": "30-32°C",
+            "fermentation_time": "48-72 hours",
+            "theoretical_yield": "51.1% w/w ethanol from glucose",
+            "actual_yield": "90-95% of theoretical yield",
+            "ethanol_concentration": "10-15% v/v in final broth"
+          },
+          "impacted_input_streams": ["glucose_rich_mash"],
+          "impacted_output_streams": ["fermented_broth", "carbon_dioxide"]
+        }
+      ],
+      "input_streams": ["glucose_rich_mash"],
+      "output_streams": ["fermented_broth", "carbon_dioxide"],
+      "energy_requirements": "Low to moderate, primarily for temperature control and agitation",
+      "utilities": "Cooling water for maintaining fermentation temperature, electricity for agitation"
+    },
+    {
+      "op_id": "op_005",
+      "op_name": "Distillation",
+      "op_description": "Separation of ethanol from fermented broth",
+      "op_type": "separation",
+      "equipment": [
+        {
+          "equipment_name": "Beer Column",
+          "equipment_specs": "Primary distillation column with multiple trays/plates"
+        },
+        {
+          "equipment_name": "Rectification Column",
+          "equipment_specs": "Secondary column for achieving higher ethanol purity"
+        },
+        {
+          "equipment_name": "Reboilers/Condensers",
+          "equipment_specs": "Heat exchangers for providing vapor and condensing distillate"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Thermal separation of ethanol from water and solids",
+          "parameters": {
+            "feed_ethanol_concentration": "10-15% v/v",
+            "product_ethanol_concentration": "95% v/v (azeotropic concentration)",
+            "distillation_pressure": "1-1.2 bar",
+            "distillation_temperature": "78-100°C",
+            "recovery_rate": "95% of ethanol in feed"
+          },
+          "impacted_input_streams": ["fermented_broth"],
+          "impacted_output_streams": ["ethanol_vapor", "distillers_spent_grain"]
+        }
+      ],
+      "input_streams": ["fermented_broth"],
+      "output_streams": ["ethanol_vapor", "distillers_spent_grain"],
+      "energy_requirements": "High energy consumption, ~25-30% of total plant energy usage",
+      "utilities": "Steam for heating, cooling water for condensers"
+    },
+    {
+      "op_id": "op_006",
+      "op_name": "Dehydration",
+      "op_description": "Removal of remaining water to achieve anhydrous ethanol",
+      "op_type": "separation",
+      "equipment": [
+        {
+          "equipment_name": "Molecular Sieve Beds",
+          "equipment_specs": "Multiple beds with zeolite adsorbent for water removal"
+        },
+        {
+          "equipment_name": "Regeneration System",
+          "equipment_specs": "Equipment for regenerating the molecular sieves"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Selective adsorption of water to achieve anhydrous ethanol",
+          "parameters": {
+            "feed_ethanol_concentration": "95% v/v",
+            "product_ethanol_concentration": "99.5% v/v",
+            "adsorption_cycle_time": "8-12 minutes",
+            "regeneration_temperature": "150-180°C",
+            "recovery_rate": "95% of ethanol in feed"
+          },
+          "impacted_input_streams": ["ethanol_vapor"],
+          "impacted_output_streams": ["anhydrous_ethanol", "removed_water"]
+        }
+      ],
+      "input_streams": ["ethanol_vapor"],
+      "output_streams": ["anhydrous_ethanol", "removed_water"],
+      "energy_requirements": "Significant energy for molecular sieve regeneration",
+      "utilities": "Steam for regeneration heating, electricity for pumps and controls"
+    },
+    {
+      "op_id": "op_007",
+      "op_name": "Product Storage and Handling",
+      "op_description": "Storage of anhydrous ethanol in appropriate tanks",
+      "op_type": "handling",
+      "equipment": [
+        {
+          "equipment_name": "Storage Tanks",
+          "equipment_specs": "Fixed roof tanks with capacity for 30 days of production"
+        },
+        {
+          "equipment_name": "Loading Facilities",
+          "equipment_specs": "Truck and rail loading stations with metering"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Physical storage without chemical changes, minor losses during storage",
+          "parameters": {
+            "storage_temperature": "Ambient",
+            "storage_capacity": "30 days of production",
+            "evaporation_loss": "~1% of stored volume"
+          },
+          "impacted_input_streams": ["anhydrous_ethanol"],
+          "impacted_output_streams": ["stored_ethanol", "storage_emissions"]
+        }
+      ],
+      "input_streams": ["anhydrous_ethanol"],
+      "output_streams": ["stored_ethanol", "storage_emissions"],
+      "energy_requirements": "Minimal, primarily for pumping and minor temperature control",
+      "utilities": "Electricity for pumps and instrumentation"
+    },
+    {
+      "op_id": "op_008",
+      "op_name": "By-Product Handling",
+      "op_description": "Processing of distillers' spent grains for animal feed",
+      "op_type": "processing",
+      "equipment": [
+        {
+          "equipment_name": "Centrifuges",
+          "equipment_specs": "Decanter centrifuges for separating solids from liquid"
+        },
+        {
+          "equipment_name": "Dryers",
+          "equipment_specs": "Rotary drum dryers for reducing moisture content"
+        },
+        {
+          "equipment_name": "Pelletizers",
+          "equipment_specs": "Equipment for forming dried material into pellets"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Dewatering and drying of spent grains",
+          "parameters": {
+            "initial_moisture_content": "85-90%",
+            "final_moisture_content": "<10%",
+            "drying_temperature": "120-150°C",
+            "mass_reduction": "70-75% due to water removal"
+          },
+          "impacted_input_streams": ["distillers_spent_grain"],
+          "impacted_output_streams": ["animal_feed", "evaporated_water"]
+        }
+      ],
+      "input_streams": ["distillers_spent_grain"],
+      "output_streams": ["animal_feed", "evaporated_water"],
+      "energy_requirements": "Moderate to high, primarily for drying operations",
+      "utilities": "Steam or natural gas for dryers, electricity for motors and conveyors"
+    },
+    {
+      "op_id": "op_009",
+      "op_name": "Wastewater Treatment",
+      "op_description": "Treatment of process wastewater for discharge or reuse",
+      "op_type": "treatment",
+      "equipment": [
+        {
+          "equipment_name": "Anaerobic Digesters",
+          "equipment_specs": "Enclosed vessels for biological treatment of high-strength waste"
+        },
+        {
+          "equipment_name": "Aerobic Treatment",
+          "equipment_specs": "Aeration basins and clarifiers for secondary treatment"
+        },
+        {
+          "equipment_name": "Filtration Systems",
+          "equipment_specs": "Sand filters and other filtration for final polishing"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Biological and physical removal of contaminants from wastewater",
+          "parameters": {
+            "influent_BOD": "5,000-10,000 mg/L",
+            "effluent_BOD": "<30 mg/L

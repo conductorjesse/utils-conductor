@@ -1,0 +1,339 @@
+Reference Class: 19,Basic Inorganic,Sodium Hydroxide
+
+Step 4 - JSON Structure Generation:
+```json
+{
+  "reference_class": {
+    "ref_class_id": "membrane_chloralkali_naoh_process",
+    "ref_class_name": "Membrane Cell Chlor-Alkali Process",
+    "ref_class_description": "Production of sodium hydroxide via the membrane cell chlor-alkali electrolysis process, where brine (sodium chloride solution) is electrolyzed to produce sodium hydroxide, chlorine gas, and hydrogen gas.",
+    "feedstocks": [
+      {
+        "feed_name": "Brine",
+        "feed_description": "Sodium chloride solution used as the primary feedstock",
+        "feed_composition": "~26% NaCl, 0.1-0.5% Ca²⁺ and Mg²⁺, and other minor impurities",
+        "feed_specs": "Requires purification before electrolysis to remove impurities"
+      },
+      {
+        "feed_name": "Water",
+        "feed_description": "Process water used throughout the production process",
+        "feed_composition": "Treated water with low mineral content",
+        "feed_specs": "Demineralized water is preferred for electrolysis"
+      },
+      {
+        "feed_name": "Electricity",
+        "feed_description": "Main energy input for the electrolysis process",
+        "feed_composition": "High-amperage direct current",
+        "feed_specs": "3.5-4.0 kWh per kilogram of NaOH produced"
+      }
+    ],
+    "products": [
+      {
+        "product_name": "Sodium Hydroxide",
+        "product_description": "Primary product in pellet form",
+        "product_composition": "≥99% NaOH with <1% moisture content",
+        "product_specs": "50% purity in liquid form before drying, ≥99% purity in pellet form"
+      },
+      {
+        "product_name": "Chlorine Gas",
+        "product_description": "Co-product of the electrolysis process",
+        "product_composition": "≥99.5% Cl₂ after purification",
+        "product_specs": "Compressed, dry, free from impurities"
+      },
+      {
+        "product_name": "Hydrogen Gas",
+        "product_description": "Co-product of the electrolysis process",
+        "product_composition": "≥99.9% H₂",
+        "product_specs": "Compressed for storage or use as fuel"
+      }
+    ],
+    "production_method": "Membrane Cell Chlor-Alkali Process with crystallization and drying",
+    "production_scale": "100,000 metric tons of sodium hydroxide per annum"
+  },
+  "unit_operations": [
+    {
+      "op_id": "op_001",
+      "op_name": "Brine Preparation",
+      "op_description": "Purification of raw brine to remove impurities before electrolysis",
+      "op_type": "separation",
+      "equipment": [
+        {
+          "equipment_name": "Filtration System",
+          "equipment_specs": "Multiple-stage filtration system with reverse osmosis capabilities"
+        },
+        {
+          "equipment_name": "Chemical Treatment Unit",
+          "equipment_specs": "Dosing of anti-scalants and precipitants for ion removal"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Removal of calcium, magnesium, and other polyvalent ions",
+          "parameters": {
+            "removal_efficiency": ">95% of Ca²⁺ and Mg²⁺ ions",
+            "output_purity": ">99% NaCl with <0.05% impurities"
+          },
+          "impacted_input_streams": ["crude_brine"],
+          "impacted_output_streams": ["purified_brine"]
+        }
+      ],
+      "input_streams": ["crude_brine"],
+      "output_streams": ["purified_brine"],
+      "energy_requirements": "0.5-1 kWh per metric ton of brine",
+      "utilities": "Process water for dilution, electricity for pumping and filtration"
+    },
+    {
+      "op_id": "op_002",
+      "op_name": "Electrolysis",
+      "op_description": "Electrochemical conversion of brine to sodium hydroxide, chlorine, and hydrogen",
+      "op_type": "reaction",
+      "equipment": [
+        {
+          "equipment_name": "Membrane Cell Units",
+          "equipment_specs": "Multiple membrane cells with ion-selective membranes"
+        },
+        {
+          "equipment_name": "Electrodes",
+          "equipment_specs": "Titanium anodes with ruthenium dioxide coating, nickel cathodes"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Electrochemical decomposition of NaCl and water",
+          "parameters": {
+            "anode_reaction": "2Cl⁻ → Cl₂(g) + 2e⁻",
+            "cathode_reaction": "2H₂O + 2e⁻ → H₂(g) + 2OH⁻",
+            "overall_reaction": "2NaCl + 2H₂O → 2NaOH + Cl₂(g) + H₂(g)",
+            "current_efficiency": "65-70% for NaOH production",
+            "operating_temperature": "80-90°C",
+            "naoh_output_concentration": "~20% NaOH"
+          },
+          "impacted_input_streams": ["purified_brine", "electricity_feed"],
+          "impacted_output_streams": ["chlorine_gas_raw", "hydrogen_gas_raw", "naoh_solution"]
+        }
+      ],
+      "input_streams": ["purified_brine", "electricity_feed"],
+      "output_streams": ["chlorine_gas_raw", "hydrogen_gas_raw", "naoh_solution"],
+      "energy_requirements": "3.5-4.0 kWh per kilogram of NaOH produced, ~400 GWh per year",
+      "utilities": "Cooling water for temperature control, demineralized water for cathode compartment"
+    },
+    {
+      "op_id": "op_003",
+      "op_name": "Chlorine Gas Treatment",
+      "op_description": "Purification and compression of chlorine gas for storage or transportation",
+      "op_type": "separation",
+      "equipment": [
+        {
+          "equipment_name": "Drying Towers",
+          "equipment_specs": "Sulfuric acid drying columns for moisture removal"
+        },
+        {
+          "equipment_name": "Compressors",
+          "equipment_specs": "Multi-stage compressors with intercooling"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Purification of raw chlorine gas",
+          "parameters": {
+            "moisture_removal": "To <20 ppm water content",
+            "recovery": "98-100% of input chlorine"
+          },
+          "impacted_input_streams": ["chlorine_gas_raw"],
+          "impacted_output_streams": ["purified_chlorine_gas"]
+        }
+      ],
+      "input_streams": ["chlorine_gas_raw"],
+      "output_streams": ["purified_chlorine_gas"],
+      "energy_requirements": "0.5-1 kWh per metric ton of Cl₂",
+      "utilities": "Cooling water for compressor intercooling, concentrated sulfuric acid for drying"
+    },
+    {
+      "op_id": "op_004",
+      "op_name": "Hydrogen Gas Handling",
+      "op_description": "Compression and storage of hydrogen gas for use or sale",
+      "op_type": "compression",
+      "equipment": [
+        {
+          "equipment_name": "Hydrogen Compressors",
+          "equipment_specs": "Oil-free positive displacement compressors"
+        },
+        {
+          "equipment_name": "Storage Tanks",
+          "equipment_specs": "High-pressure storage vessels designed for hydrogen service"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Compression and storage of hydrogen",
+          "parameters": {
+            "compression_ratio": "Up to 200:1 depending on storage requirements",
+            "recovery": "~99% after minor losses"
+          },
+          "impacted_input_streams": ["hydrogen_gas_raw"],
+          "impacted_output_streams": ["compressed_hydrogen_gas"]
+        }
+      ],
+      "input_streams": ["hydrogen_gas_raw"],
+      "output_streams": ["compressed_hydrogen_gas"],
+      "energy_requirements": "3-4 kWh per kilogram of H₂",
+      "utilities": "Cooling water for compression, electricity for compressor motors"
+    },
+    {
+      "op_id": "op_005",
+      "op_name": "Sodium Hydroxide Concentration",
+      "op_description": "Concentration of NaOH solution through evaporation",
+      "op_type": "evaporation",
+      "equipment": [
+        {
+          "equipment_name": "Multiple-Effect Evaporators",
+          "equipment_specs": "Series of evaporators with decreasing pressure"
+        },
+        {
+          "equipment_name": "Heat Exchangers",
+          "equipment_specs": "Steam-heated plate or shell-and-tube exchangers"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Water removal to concentrate NaOH solution",
+          "parameters": {
+            "initial_concentration": "~20% NaOH",
+            "final_concentration": "50% NaOH",
+            "water_evaporated": "~400,000 metric tons/year"
+          },
+          "impacted_input_streams": ["naoh_solution"],
+          "impacted_output_streams": ["concentrated_naoh_solution", "evaporated_water"]
+        }
+      ],
+      "input_streams": ["naoh_solution"],
+      "output_streams": ["concentrated_naoh_solution", "evaporated_water"],
+      "energy_requirements": "2-3 GJ per metric ton of water evaporated, ~800,000 GJ/year",
+      "utilities": "Steam for heating, cooling water for condensers"
+    },
+    {
+      "op_id": "op_006",
+      "op_name": "Crystallization and Filtration",
+      "op_description": "Formation of solid NaOH pellets from concentrated solution",
+      "op_type": "crystallization",
+      "equipment": [
+        {
+          "equipment_name": "Cooling Crystallizers",
+          "equipment_specs": "Jacketed vessels with cooling capability"
+        },
+        {
+          "equipment_name": "Filtration Equipment",
+          "equipment_specs": "Vacuum filters or centrifuges"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Crystallization of NaOH from concentrated solution",
+          "parameters": {
+            "cooling_temperature": "Below 65°C for crystallization",
+            "yield": "~95% of input NaOH forms crystals",
+            "crystal_purity": "~99% NaOH"
+          },
+          "impacted_input_streams": ["concentrated_naoh_solution"],
+          "impacted_output_streams": ["naoh_pellets", "mother_liquor"]
+        }
+      ],
+      "input_streams": ["concentrated_naoh_solution"],
+      "output_streams": ["naoh_pellets", "mother_liquor"],
+      "energy_requirements": "~0.5 kWh per kilogram of NaOH crystallized, ~47.5 GWh/year",
+      "utilities": "Refrigeration for cooling, electricity for filtration equipment"
+    },
+    {
+      "op_id": "op_007",
+      "op_name": "Drying and Packaging",
+      "op_description": "Removal of residual moisture and packaging of NaOH pellets",
+      "op_type": "drying",
+      "equipment": [
+        {
+          "equipment_name": "Rotary Dryers",
+          "equipment_specs": "Indirectly heated rotary drums"
+        },
+        {
+          "equipment_name": "Packaging Equipment",
+          "equipment_specs": "Automated filling and sealing equipment for containers"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Moisture removal from NaOH pellets",
+          "parameters": {
+            "initial_moisture": "~5%",
+            "final_moisture": "<1%",
+            "water_removed": "~4,750 metric tons/year"
+          },
+          "impacted_input_streams": ["naoh_pellets"],
+          "impacted_output_streams": ["dried_naoh_pellets", "water_vapor"]
+        }
+      ],
+      "input_streams": ["naoh_pellets"],
+      "output_streams": ["dried_naoh_pellets", "water_vapor"],
+      "energy_requirements": "~1.5 kWh per kilogram of NaOH dried, ~135 GWh/year",
+      "utilities": "Heated air for drying, electricity for motors and packaging equipment"
+    },
+    {
+      "op_id": "op_008",
+      "op_name": "Wastewater Treatment",
+      "op_description": "Treatment of process wastewater for recycling or discharge",
+      "op_type": "treatment",
+      "equipment": [
+        {
+          "equipment_name": "Pretreatment Units",
+          "equipment_specs": "Settling tanks, neutralization equipment"
+        },
+        {
+          "equipment_name": "Biological Treatment",
+          "equipment_specs": "Activated sludge or membrane bioreactor if needed"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Removal of contaminants from process wastewater",
+          "parameters": {
+            "contaminant_removal": ">95% removal of suspended solids and dissolved contaminants",
+            "water_recovery": "~80% of input water is recycled",
+            "waste_generation": "~3,000 metric tons/year of waste residues"
+          },
+          "impacted_input_streams": ["mother_liquor", "process_water"],
+          "impacted_output_streams": ["recycled_water", "waste_residues"]
+        }
+      ],
+      "input_streams": ["mother_liquor", "process_water"],
+      "output_streams": ["recycled_water", "waste_residues"],
+      "energy_requirements": "0.2-0.5 kWh per metric ton of wastewater, ~3,000-7,500 kWh/year",
+      "utilities": "Chemicals for treatment, electricity for pumps and blowers"
+    },
+    {
+      "op_id": "op_009",
+      "op_name": "Utilities and Energy Management",
+      "op_description": "Supply and management of utilities across the plant",
+      "op_type": "utility",
+      "equipment": [
+        {
+          "equipment_name": "Steam Boilers",
+          "equipment_specs": "Natural gas-fired or electric boilers"
+        },
+        {
+          "equipment_name": "Cooling Systems",
+          "equipment_specs": "Cooling towers, chillers"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Distribution and optimization of utilities",
+          "parameters": {
+            "steam_generation": "~500,000 metric tons/year",
+            "cooling_water_circulation": "~1,000,000 metric tons/year",
+            "energy_efficiency_improvement": "10-15% reduction in overall consumption"
+          },
+          "impacted_input_streams": ["main_electricity", "fuel_input", "raw_water"],
+          "impacted_output_streams": ["distributed_electricity", "process_steam", "cooling_water"]
+        }
+      ],
+      "input_streams": ["main_electricity", "fuel_input", "raw_water"],
+      "output_streams": ["distributed_electricity", "process_steam", "cooling_water"],
+      "energy_requirements": "Manages ~800 GWh/

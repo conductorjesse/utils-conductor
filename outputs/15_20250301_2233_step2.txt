@@ -1,0 +1,93 @@
+Reference Class: 15,Alcohol,Methanol
+
+Step 2 - Process Flow Description:
+### High-Level Methanol Production Process Flow
+
+Below is an ordered list of the major unit operations involved in the industrial-scale production of methanol via Steam Methane Reforming (SMR), along with key streams connecting each operation.
+
+1. **Feed Gas Pretreatment**
+   - **Description:** Natural gas (primarily methane) is desulfurized to remove sulfur compounds that can poison catalysts in downstream processes.
+   - **Key Streams:**
+     - **Input:** Natural Gas Feed
+     - **Output:** Desulfurized Natural Gas
+
+2. **Steam Generation**
+   - **Description:** Water is heated to produce steam, which is required for the reforming reaction.
+   - **Key Streams:**
+     - **Input:** Water (Feed)
+     - **Output:** Steam
+
+3. **Steam Methane Reforming (SMR) Reactor**
+   - **Description:** Desulfurized natural gas reacts with steam over a catalyst to produce synthesis gas (syngas), a mixture of hydrogen (H₂) and carbon monoxide (CO).
+   - **Key Streams:**
+     - **Input:** Desulfurized Natural Gas, Steam
+     - **Output:** Syngas (H₂ + CO), Light Hydrocarbons
+
+4. **Shift Conversion Reactor**
+   - **Description:** Syngas undergoes the water-gas shift reaction to convert CO and water into additional H₂ and carbon dioxide (CO₂), enhancing hydrogen yield.
+   - **Key Streams:**
+     - **Input:** Syngas
+     - **Output:** Shifted Syngas (Increased H₂, CO₂)
+
+5. **Gas Cooling and Quench**
+   - **Description:** The shifted syngas is cooled to condense out water and other condensable components, preparing it for CO₂ removal.
+   - **Key Streams:**
+     - **Input:** Shifted Syngas
+     - **Output:** Cooled Syngas, Condensate
+
+6. **CO₂ Removal Unit**
+   - **Description:** Carbon dioxide is separated from the syngas using absorption methods (e.g., amine-based absorption) to purify the hydrogen stream.
+   - **Key Streams:**
+     - **Input:** Cooled Syngas
+     - **Output:** Purified Syngas (H₂-rich), Separated CO₂
+
+7. **Hydrogen Purification (Optional)**
+   - **Description:** Further purification of hydrogen may be performed using Pressure Swing Adsorption (PSA) to achieve high-purity hydrogen if required.
+   - **Key Streams:**
+     - **Input:** Purified Syngas
+     - **Output:** High-Purity Hydrogen, Rejected Streams
+
+8. **Methanol Synthesis Reactor**
+   - **Description:** Purified syngas is catalytically converted into methanol under high pressure and temperature in the presence of a catalyst.
+   - **Key Streams:**
+     - **Input:** Purified Syngas (H₂ and CO)
+     - **Output:** Crude Methanol, Unreacted Syngas
+
+9. **Methanol Distillation/Purification**
+   - **Description:** Crude methanol is separated and purified through distillation to achieve the desired purity level (≥99.9%).
+   - **Key Streams:**
+     - **Input:** Crude Methanol
+     - **Output:** Purified Methanol, Distillation Overheads
+
+10. **Utilities and Waste Treatment**
+    - **Description:** Management of utility streams (e.g., steam, cooling water) and treatment of waste streams to comply with environmental regulations and ensure energy-efficient operations.
+    - **Key Streams:**
+      - **Input:** Process Waste Streams, Energy Inputs
+      - **Output:** Treated Waste, Recycled Utilities
+
+### Key Stream Summary
+
+- **Input Feed Streams:**
+  - Natural Gas Feed
+  - Water (Feed)
+
+- **Internal Streams:**
+  - Desulfurized Natural Gas
+  - Steam
+  - Syngas (H₂ + CO)
+  - Shifted Syngas (Increased H₂, CO₂)
+  - Cooled Syngas
+  - Purified Syngas
+  - High-Purity Hydrogen
+  - Crude Methanol
+  - Unreacted Syngas
+  - Distillation Overheads
+  - Process Waste Streams
+
+- **Product Streams:**
+  - Purified Methanol
+  - Separated CO₂
+  - Treated Waste
+  - Recycled Utilities
+
+This process flow ensures the efficient and environmentally compliant production of high-purity methanol at an industrial scale.

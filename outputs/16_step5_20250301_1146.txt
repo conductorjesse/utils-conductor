@@ -1,0 +1,40 @@
+Reference Class: 16,Alcohol,Methanol
+
+Step 5 - Mermaid Diagram Generation:
+```mermaid
+flowchart LR
+    op001["Feed Pretreatment"] --> |"purified_natural_gas"| op003
+    source1["Natural Gas Source"] --> |"raw_natural_gas"| op001
+    op001 --> |"impurity_waste_stream"| sink1["Waste Handling"]
+    
+    source2["Water Source"] --> |"feed_water"| op002
+    op002["Steam Generation"] --> |"process_steam"| op003
+    op002 --> |"process_steam"| op004
+    
+    op003["Steam Methane Reforming"] --> |"synthesis_gas"| op004
+    op004["Water-Gas Shift Reactor"] --> |"shifted_gas"| op005
+    
+    op005["CO₂ Removal Unit"] --> |"hydrogen_rich_gas"| op006
+    op005 --> |"separated_co2"| sink2["CO₂ Storage/Use"]
+    
+    op006["Methanol Synthesis Reactor"] --> |"crude_methanol_stream"| op007
+    
+    op007["Methanol Separation"] --> |"partially_purified_methanol"| op008
+    op007 --> |"wastewater_stream"| sink3["Wastewater Treatment"]
+    op007 --> |"unreacted_gas_stream"| op009
+    
+    op008["Product Distillation"] --> |"pure_methanol"| sink4["Product Storage"]
+    op008 --> |"impure_byproducts"| sink5["Byproduct Processing"]
+    
+    op009["Recycling and Gas Handling"] --> |"recycled_gas"| op003
+    
+    op010["Utilities and Emissions Control"] --> |"utilities"| op001
+    op010 --> |"utilities"| op002
+    op010 --> |"utilities"| op003
+    op010 --> |"utilities"| op004
+    op010 --> |"utilities"| op005
+    op010 --> |"utilities"| op006
+    op010 --> |"utilities"| op007
+    op010 --> |"utilities"| op008
+    op010 --> |"utilities"| op009
+```

@@ -1,0 +1,76 @@
+Reference Class: 18,Alcohol/Intermediate,Ethanol (Industrial)
+
+Step 2 - Process Flow Description:
+### High-Level Industrial-Scale Ethanol Production Process Flow
+
+Below is an ordered list of the major unit operations involved in the industrial-scale production of ethanol, along with brief descriptions and key streams connecting each operation.
+
+1. **Feedstock Receiving and Storage**
+   - **Description:** Raw feedstocks such as corn, sugarcane, or molasses are delivered to the facility and stored in appropriate storage units (e.g., silos for grains or tanks for liquid feedstocks).
+   - **Key Streams:**
+     - **Input Feed Streams:** Raw corn, sugarcane, molasses
+     - **Output Stream:** Stored feedstock
+
+2. **Feedstock Preparation**
+   - **Description:** The stored feedstock is cleaned to remove impurities and, if necessary, ground or shredded to increase surface area for processing.
+   - **Key Streams:**
+     - **Input Stream:** Stored feedstock
+     - **Output Stream:** Prepared feedstock
+
+3. **Liquefaction and Cooking**
+   - **Description:** Prepared feedstock is mixed with water and heated to break down complex carbohydrates into simpler sugars, facilitating enzymatic action in subsequent steps.
+   - **Key Streams:**
+     - **Input Streams:** Prepared feedstock, water
+     - **Output Stream:** Liquefied mash
+
+4. **Saccharification (Enzymatic Hydrolysis)**
+   - **Description:** Enzymes are added to convert the liquefied carbohydrates into fermentable sugars.
+   - **Key Streams:**
+     - **Input Streams:** Liquefied mash, enzymes
+     - **Output Stream:** Sugary wort
+
+5. **Fermentation**
+   - **Description:** Yeast is added to the sugary wort to ferment the sugars, producing ethanol and carbon dioxide as by-products.
+   - **Key Streams:**
+     - **Input Streams:** Sugary wort, yeast
+     - **Output Streams:** Fermented mash, CO₂
+
+6. **Distillation**
+   - **Description:** The fermented mash undergoes distillation to separate ethanol from water and other components based on differences in boiling points.
+   - **Key Streams:**
+     - **Input Stream:** Fermented mash
+     - **Output Streams:** Ethanol-rich distillate, residual solids
+
+7. **Dehydration**
+   - **Description:** Further purification of ethanol is achieved through dehydration processes (e.g., molecular sieves or azeotropic distillation) to attain 99% purity.
+   - **Key Streams:**
+     - **Input Stream:** Ethanol-rich distillate
+     - **Output Streams:** Anhydrous ethanol, water by-product
+
+8. **Ethanol Storage and Handling**
+   - **Description:** The purified ethanol is stored in tanks under appropriate conditions to maintain quality before distribution.
+   - **Key Streams:**
+     - **Input Stream:** Anhydrous ethanol
+     - **Output Stream:** Stored ethanol ready for distribution
+
+9. **Wastewater Treatment**
+   - **Description:** Waste streams generated from process operations, including spent wash and effluents, are treated to comply with environmental regulations before disposal or reuse.
+   - **Key Streams:**
+     - **Input Streams:** Spent wash, process effluents
+     - **Output Streams:** Treated water, sludge
+
+10. **Utility Systems**
+    - **Description:** Essential utilities such as steam generation, cooling water, electricity supply, and compressed air are provided to support all unit operations efficiently.
+    - **Key Streams:**
+      - **Input Streams:** Fuel (for boilers), water (for cooling)
+      - **Output Streams:** Steam, cooling water, electrical power
+
+### Summary of Key Streams Flow
+
+- **Raw Feedstock** → *Feedstock Receiving and Storage* → *Feedstock Preparation* → *Liquefaction and Cooking* → *Saccharification* → *Fermentation* → *Distillation* → *Dehydration* → *Ethanol Storage and Handling*
+
+- **Water, Enzymes, Yeast** are added at respective stages and recycled or treated as necessary.
+
+- **By-products** such as CO₂ and wastewater are managed through separate treatment units to ensure environmental compliance.
+
+This structured process flow ensures an efficient and compliant production of industrial-grade ethanol at a scale of approximately 500,000 liters per year.

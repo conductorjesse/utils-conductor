@@ -1,0 +1,72 @@
+Reference Class: 15,Alcohol,Methanol
+
+Step 2 - Process Flow Description:
+**High-Level At-Scale Process Flow for Methanol Production via Steam Methane Reforming (SMR)**
+
+1. **Feedstock Handling and Pretreatment**
+   - **Description:** Natural gas is desulfurized to remove sulfur compounds that can poison catalysts. Water is purified to provide steam for the reforming process.
+   - **Key Streams:**
+     - **Input Feed Streams:** Natural Gas, Water
+     - **Output Streams:** Desulfurized Natural Gas, Purified Water
+
+2. **Steam Generation**
+   - **Description:** Purified water is heated and converted into high-pressure steam using boilers.
+   - **Key Streams:**
+     - **Input Feed Stream:** Purified Water
+     - **Output Streams:** High-Pressure Steam, Flue Gases
+
+3. **Steam Methane Reforming (SMR)**
+   - **Description:** Desulfurized natural gas reacts with steam in the presence of a catalyst to produce synthesis gas (a mixture of hydrogen, carbon monoxide, and carbon dioxide).
+   - **Key Streams:**
+     - **Input Feed Streams:** Desulfurized Natural Gas, High-Pressure Steam
+     - **Output Streams:** Synthesis Gas (H₂, CO, CO₂), Light Hydrocarbons
+
+4. **Shift Conversion (Water-Gas Shift Reaction)**
+   - **Description:** The synthesis gas undergoes the water-gas shift reaction to convert carbon monoxide and water into additional hydrogen and carbon dioxide.
+   - **Key Streams:**
+     - **Input Feed Stream:** Synthesis Gas
+     - **Output Streams:** Shifted Gas (Increased H₂, CO₂), Residual CO
+
+5. **Carbon Dioxide Removal**
+   - **Description:** CO₂ is separated from the shifted gas using solvent-based absorption or pressure swing adsorption to purify the hydrogen stream.
+   - **Key Streams:**
+     - **Input Feed Stream:** Shifted Gas
+     - **Output Streams:** Hydrogen-Rich Gas, Separated CO₂
+
+6. **Methanol Synthesis**
+   - **Description:** Hydrogen-rich gas is combined with carbon monoxide and carbon dioxide in a catalytic reactor to produce methanol.
+   - **Key Streams:**
+     - **Input Feed Streams:** Hydrogen-Rich Gas, CO, CO₂
+     - **Output Streams:** Raw Methanol Vapor, Unreacted Gases
+
+7. **Methanol Distillation**
+   - **Description:** Raw methanol vapor is condensed and separated from unreacted gases through distillation columns to achieve high-purity methanol.
+   - **Key Streams:**
+     - **Input Feed Stream:** Raw Methanol Vapor
+     - **Output Streams:** Distilled Methanol, Recycled Unreacted Gases
+
+8. **Product Purification**
+   - **Description:** Distilled methanol undergoes additional purification steps, such as dehydration, to achieve the specified purity of 99.85%.
+   - **Key Streams:**
+     - **Input Feed Stream:** Distilled Methanol
+     - **Output Streams:** Purified Methanol, Moisture
+
+9. **Storage and Handling**
+   - **Description:** Purified methanol is stored in storage tanks under controlled conditions and prepared for distribution.
+   - **Key Streams:**
+     - **Input Feed Stream:** Purified Methanol
+     - **Output Streams:** Stored Methanol, Vapor Losses
+
+10. **Utilities and Waste Management**
+    - **Description:** Manages utility requirements (electricity, cooling water) and treats any waste streams to comply with environmental regulations.
+    - **Key Streams:**
+      - **Input Feed Streams:** Flue Gases, Wastewater, Solid Wastes
+      - **Output Streams:** Treated Effluents, Recovered Energy, By-Products
+
+**Flow Summary:**
+1. **Feedstock Handling and Pretreatment** → 2. **Steam Generation** → 3. **Steam Methane Reforming (SMR)** → 4. **Shift Conversion** → 5. **Carbon Dioxide Removal** → 6. **Methanol Synthesis** → 7. **Methanol Distillation** → 8. **Product Purification** → 9. **Storage and Handling** → 10. **Utilities and Waste Management**
+
+**Key External Streams:**
+- **Input Feed Streams:** Natural Gas, Water, Air (for combustion in utilities)
+- **Product Streams:** 99.85% Pure Methanol
+- **Waste Streams:** CO₂, Flue Gases, Treated Effluents

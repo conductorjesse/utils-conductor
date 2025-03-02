@@ -1,0 +1,76 @@
+Reference Class: 15,Alcohol,Methanol
+
+Step 5 - Mermaid Diagram Generation:
+Here's a Mermaid diagram representing the methanol production process flow based on the JSON structure:
+
+```mermaid
+flowchart LR
+    %% Define node styles
+    classDef process rect;
+    classDef source stadium;
+    classDef sink hexagon;
+    classDef product_stream stroke-width:3px;
+    classDef waste_stream stroke-dasharray: 2 2;
+    classDef utility_stream stroke-dasharray: 5 5;
+
+    %% Source nodes
+    op_011[Natural Gas Source]:::source
+    op_012[Water Source]:::source
+
+    %% Process nodes
+    op_001[Feed Gas Pretreatment]:::process
+    op_002[Steam Generation]:::process
+    op_003[Steam Methane Reforming]:::process
+    op_004[Shift Conversion]:::process
+    op_005[Gas Cooling and Quench]:::process
+    op_006[CO₂ Removal]:::process
+    op_007[Hydrogen Purification]:::process
+    op_008[Methanol Synthesis]:::process
+    op_009[Methanol Distillation]:::process
+    op_010[Utilities and Waste Treatment]:::process
+
+    %% Connections from sources
+    op_011 --> |natural_gas_feed: Natural Gas Feed| op_001
+    op_012 --> |water_feed: Water Feed| op_002
+
+    %% Main process flow
+    op_001 --> |desulfurized_natural_gas: Desulfurized Natural Gas| op_003
+    op_001 --> |sulfur_waste: Sulfur Waste| op_010
+    op_002 --> |process_steam: Process Steam| op_003
+    op_003 --> |raw_syngas: Raw Syngas| op_004
+    op_004 --> |shifted_syngas: Shifted Syngas| op_005
+    op_005 --> |cooled_syngas: Cooled Syngas| op_006
+    op_005 --> |process_condensate: Process Condensate| op_010
+    op_006 --> |purified_syngas: Purified Syngas| op_007
+    op_006 --> |co2_stream: CO₂ Stream| op_010
+    op_007 --> |high_purity_hydrogen: High Purity Hydrogen| op_008
+    op_007 --> |psa_offgas: PSA Offgas| op_008
+    op_008 --> |crude_methanol: Crude Methanol| op_009
+    op_008 --> |unreacted_syngas: Unreacted Syngas| op_007
+    op_009 --> |purified_methanol: Purified Methanol| op_product:::sink
+    op_009 --> |distillation_overheads: Distillation Overheads| op_010
+    op_010 --> |treated_waste: Treated Waste| op_waste:::sink
+    op_010 --> |recycled_utilities: Recycled Utilities| op_002
+
+    %% Define sink nodes
+    op_product[Methanol Product]:::sink
+    op_waste[Waste Disposal]:::sink
+
+    %% Apply classes to stream types
+    linkStyle 8 stroke-width:3px; %% CO2 stream
+    linkStyle 13 stroke-width:3px; %% Purified methanol
+    linkStyle 1,6,9,14 stroke-dasharray: 2 2; %% Waste streams
+    linkStyle 16 stroke-dasharray: 5 5; %% Recycled utilities
+```
+
+This diagram shows:
+- Natural gas and water source nodes (stadium-shaped)
+- All 10 main unit operations (rectangular)
+- Sink nodes for methanol product and waste disposal (hexagonal)
+- Process streams connecting operations (solid lines)
+- Product streams highlighted with bold lines (purified methanol)
+- Waste streams shown with dotted lines
+- Utility streams shown with dashed lines
+- The recycling of unreacted syngas back to hydrogen purification
+
+The flow follows the left-to-right direction, making it easy to track the progression from feedstocks through the various unit operations to final products.

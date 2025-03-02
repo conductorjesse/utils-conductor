@@ -1,0 +1,73 @@
+Reference Class: 16,Alcohol,Methanol
+
+Step 5 - Mermaid Diagram Generation:
+```mermaid
+flowchart LR
+    %% External Source Nodes
+    raw_ng_source([Raw Natural Gas Source]) 
+    raw_water_source([Raw Water Source])
+
+    %% Process Operation Nodes
+    op_001[Feedstock Pre-treatment]
+    op_002[Steam Generation]
+    op_003[Steam Methane Reforming]
+    op_004[Shift Conversion]
+    op_005[Gas Purification]
+    op_006[Methanol Synthesis]
+    op_007[Methanol Separation]
+    op_008[Methanol Distillation]
+    op_009[Utilities and Recycle Management]
+    op_010[Waste Treatment]
+
+    %% External Sink Nodes
+    methanol_sink{{Methanol Product}}
+    co2_sink{{CO2 Product}}
+    waste_sink{{Waste Treatment}}
+
+    %% Process Streams
+    raw_ng_source -->|raw_natural_gas: Raw Natural Gas| op_001
+    raw_water_source -->|raw_water: Raw Water| op_001
+    
+    op_001 -->|purified_natural_gas: Purified Natural Gas| op_003
+    op_001 -->|treated_water: Treated Water| op_002
+    
+    op_002 -->|high_pressure_steam: High Pressure Steam| op_003
+    op_002 -->|high_pressure_steam: High Pressure Steam| op_004
+    op_002 -->|condensate_water: Condensate Water| op_010
+    
+    op_003 -->|raw_syngas: Raw Syngas| op_004
+    
+    op_004 -->|shifted_syngas: Shifted Syngas| op_005
+    
+    op_005 -->|purified_syngas: Purified Syngas| op_006
+    op_005 -->|captured_co2: Captured CO2| op_010
+    
+    op_006 -->|raw_methanol_product: Raw Methanol Product| op_007
+    
+    op_007 -->|separated_methanol: Separated Methanol| op_008
+    op_007 -->|recycled_gases: Recycled Gases| op_009
+    
+    op_008 -->|high_purity_methanol: High Purity Methanol| methanol_sink
+    op_008 -->|distillation_overheads: Distillation Overheads| op_009
+    
+    op_009 -->|recycled_gases: Recycled Gases| op_003
+    op_009 -->|distributed_utilities: Distributed Utilities| op_001
+    
+    op_010 -->|processed_co2: Processed CO2| co2_sink
+    op_010 -->|treated_effluents: Treated Effluents| waste_sink
+    
+    %% Styling
+    classDef processOp rect;
+    classDef source stadium;
+    classDef sink hexagon;
+    classDef productStream stroke-width:3px;
+    classDef wasteStream stroke-dasharray: 2 2;
+
+    class op_001,op_002,op_003,op_004,op_005,op_006,op_007,op_008,op_009,op_010 processOp;
+    class raw_ng_source,raw_water_source source;
+    class methanol_sink,co2_sink,waste_sink sink;
+    
+    linkStyle 14 stroke-width:3px; %% high_purity_methanol product stream
+    linkStyle 17 stroke-width:3px; %% processed_co2 product stream
+    linkStyle 18 stroke-dasharray: 2 2; %% treated_effluents waste stream
+```

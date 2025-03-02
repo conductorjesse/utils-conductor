@@ -1,0 +1,24 @@
+Reference Class: 18,Alcohol/Intermediate,Ethanol (Industrial)
+
+Step 5 - Mermaid Diagram Generation:
+```mermaid
+flowchart LR
+    op1[Feedstock Receiving and Storage] --> |stream_stored_feedstock| op2[Feedstock Preparation]
+    raw[Raw Material Source] --> |stream_raw_feedstock| op1
+    water[Water Supply] --> |stream_process_water| op3
+    op2 --> |stream_prepared_feedstock| op3[Liquefaction and Cooking]
+    enzymes[Enzyme Supply] --> |stream_enzymes| op4
+    op3 --> |stream_liquefied_mash| op4[Saccharification]
+    yeast[Yeast Supply] --> |stream_yeast| op5
+    op4 --> |stream_sugary_wort| op5[Fermentation]
+    op5 --> |stream_fermented_mash| op6[Distillation]
+    op5 --> |stream_co2| co2[CO2 Collection]
+    op6 --> |stream_ethanol_rich_distillate| op7[Dehydration]
+    op6 --> |stream_residual_bottoms| op9[Wastewater Treatment]
+    op7 --> |stream_anhydrous_ethanol| op8[Ethanol Storage and Handling]
+    op7 --> |stream_water_byproduct| op9
+    misc[Process Operations] --> |stream_process_effluents| op9
+    op8 --> |stream_final_ethanol_product| product[Product Distribution]
+    op9 --> |stream_treated_water| water_out[Water Discharge]
+    op9 --> |stream_sludge| waste[Waste Management]
+```

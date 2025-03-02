@@ -3,11 +3,15 @@ import re
 import time
 import datetime
 import json
+import sys
 from typing import List, Dict, Any, Tuple, Optional
 from dotenv import load_dotenv
 
+# Add the root directory to the path so imports work properly
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
+
 # Import our utilities for LLM calls
-import gpt_utils
+from src.utils.gpt_utils import call_openai, call_claude
 
 # Load environment variables
 load_dotenv()
@@ -63,26 +67,15 @@ def save_output(
     # Format timestamp in the requested format: YYYYMMDD_HHMM
     timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M")
     
-    # New naming convention: <ref ID>_<step>_<date/time>
+    # New naming convention: index#_date/time_step#
     if ref_id is not None:
-        # Determine step name or number
-        if step is not None:
-            step_identifier = f"step{step}"
-        else:
-            # For final outputs, use the output type as the step identifier
-            step_identifier = output_type.lower()
-        
         # Create filename with the new format
-        filename = f"{output_dir}/{ref_id}_{step_identifier}_{timestamp}.txt"
+        filename = f"{output_dir}/{ref_id}_{timestamp}_step{step}.txt"
     else:
         # Fallback for cases without a ref_id
         product = reference_info.split(',')[0]
         product = re.sub(r'[^\w\s]', '', product).strip().replace(' ', '_')
-        if step is not None:
-            step_identifier = f"step{step}"
-        else:
-            step_identifier = output_type.lower()
-        filename = f"{output_dir}/{product}_{step_identifier}_{timestamp}.txt"
+        filename = f"{output_dir}/{product}_{timestamp}_step{step}.txt"
     
     # Write to file - specify UTF-8 encoding to handle Unicode characters
     with open(filename, 'w', encoding='utf-8') as file:
@@ -96,6 +89,28 @@ def save_output(
         else:
             file.write(f"Process Flow {output_type}:\n")
         file.write(output)
+    
+    # Additionally save copies of step 4 and 5 outputs to their respective folders in vis outputs
+    vis_outputs_dir = "vis outputs"
+    
+    if step == 4:
+        step4_dir = f"{vis_outputs_dir}/step4"
+        os.makedirs(step4_dir, exist_ok=True)
+        step4_filename = f"{step4_dir}/{ref_id}_{timestamp}_step{step}.txt"
+        with open(step4_filename, 'w', encoding='utf-8') as file:
+            file.write(f"Reference Class: {reference_info}\n\n")
+            step_names = [config["step"] for config in PROMPT_CONFIG]
+            file.write(f"Step {step} - {step_names[step-1]}:\n")
+            file.write(output)
+    elif step == 5:
+        step5_dir = f"{vis_outputs_dir}/step5"
+        os.makedirs(step5_dir, exist_ok=True)
+        step5_filename = f"{step5_dir}/{ref_id}_{timestamp}_step{step}.txt"
+        with open(step5_filename, 'w', encoding='utf-8') as file:
+            file.write(f"Reference Class: {reference_info}\n\n")
+            step_names = [config["step"] for config in PROMPT_CONFIG]
+            file.write(f"Step {step} - {step_names[step-1]}:\n")
+            file.write(output)
     
     return filename
 
@@ -145,14 +160,14 @@ def process_reference_class(
             
             # Call the appropriate API based on provider
             if config['provider'] == 'openai':
-                response = gpt_utils.call_openai(
+                response = call_openai(
                     prompt=prompt_text,
                     model=config['model'],
                     temperature=config['temperature'],
                     previous_messages=conversation
                 )
             else:  # claude
-                response = gpt_utils.call_claude(
+                response = call_claude(
                     prompt=prompt_text,
                     model=config['model'],
                     temperature=config['temperature'],

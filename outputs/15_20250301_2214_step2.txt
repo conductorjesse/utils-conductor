@@ -1,0 +1,68 @@
+Reference Class: 15,Alcohol,Methanol
+
+Step 2 - Process Flow Description:
+### High-Level At-Scale Process Flow for Methanol Production
+
+1. **Feed Pre-treatment**
+   - **Description:** Removes impurities such as sulfur compounds from raw natural gas to prevent catalyst poisoning in downstream units.
+   - **Key Streams:** 
+     - **Input:** Raw Natural Gas
+     - **Output:** Cleaned Natural Gas
+
+2. **Steam Generation**
+   - **Description:** Produces the necessary steam by heating water, supplying it for the reforming process.
+   - **Key Streams:** 
+     - **Input:** Water
+     - **Output:** Steam
+
+3. **Steam Methane Reforming (SMR)**
+   - **Description:** Reacts cleaned natural gas with steam over a catalyst to produce synthesis gas (syngas), mainly composed of hydrogen (H₂) and carbon monoxide (CO).
+   - **Key Streams:** 
+     - **Inputs:** Cleaned Natural Gas, Steam
+     - **Output:** Syngas (H₂ and CO)
+
+4. **Water-Gas Shift (WGS) Conversion**
+   - **Description:** Converts excess CO in syngas to additional hydrogen and carbon dioxide, enhancing hydrogen yield for methanol synthesis.
+   - **Key Streams:** 
+     - **Input:** Syngas
+     - **Outputs:** Hydrogen-Rich Gas, Carbon Dioxide (CO₂)
+
+5. **CO₂ Removal**
+   - **Description:** Captures and separates CO₂ from the hydrogen-rich gas to minimize greenhouse gas emissions.
+   - **Key Streams:** 
+     - **Input:** Hydrogen-Rich Gas
+     - **Outputs:** Purified Hydrogen, Separated CO₂
+
+6. **Syngas Compression and Cooling**
+   - **Description:** Compresses and cools the purified hydrogen and remaining syngas to prepare for the methanol synthesis reactor.
+   - **Key Streams:** 
+     - **Input:** Purified Syngas
+     - **Output:** Compressed and Cooled Syngas
+
+7. **Methanol Synthesis**
+   - **Description:** Catalytically converts compressed syngas into methanol under high pressure and temperature conditions.
+   - **Key Streams:** 
+     - **Inputs:** Compressed Syngas
+     - **Outputs:** Methanol Vapor, Unreacted Syngas
+
+8. **Methanol Purification**
+   - **Description:** Distills methanol vapor to achieve the desired purity level of 99.9%, suitable for industrial and fuel applications.
+   - **Key Streams:** 
+     - **Inputs:** Methanol Vapor
+     - **Outputs:** Purified Methanol, Recycled Unreacted Syngas
+
+9. **Recycling and Energy Integration**
+   - **Description:** Recycles unreacted syngas back to the synthesis unit and integrates energy recovery systems to enhance overall energy efficiency.
+   - **Key Streams:** 
+     - **Inputs:** Recycled Syngas
+     - **Outputs:** Reduced Energy Consumption
+
+10. **Waste Treatment and Emissions Control**
+    - **Description:** Treats any residual waste streams and controls emissions to comply with environmental regulations, ensuring minimal CO₂ footprint.
+    - **Key Streams:** 
+      - **Inputs:** Waste Streams, Emissions
+      - **Outputs:** Treated Effluents, Controlled Emissions
+
+---
+
+This structured process flow outlines the major unit operations involved in industrial-scale methanol production, ensuring efficiency, compliance with environmental standards, and high product purity.

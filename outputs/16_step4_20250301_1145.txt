@@ -1,0 +1,335 @@
+Reference Class: 16,Alcohol,Methanol
+
+Step 4 - JSON Structure Generation:
+```json
+{
+  "reference_class": {
+    "ref_class_id": "methanol_smr_synthesis",
+    "ref_class_name": "Methanol Production via SMR",
+    "ref_class_description": "Industrial-scale methanol production using Steam Methane Reforming (SMR) followed by catalytic synthesis. The process converts natural gas to synthesis gas, which is then converted to high-purity methanol.",
+    "feedstocks": [
+      {
+        "feed_name": "Natural Gas",
+        "feed_description": "Primary carbon source for methanol synthesis",
+        "feed_composition": "Primarily methane (>90%) with trace amounts of ethane, propane, and other hydrocarbons",
+        "feed_specs": "Pressure: 5-10 bar, Temperature: 25°C"
+      },
+      {
+        "feed_name": "Water",
+        "feed_description": "Source for steam generation for reforming and shift reactions",
+        "feed_composition": "Purified water suitable for steam generation",
+        "feed_specs": "Conductivity < 5 μS/cm, Total dissolved solids < 10 ppm"
+      },
+      {
+        "feed_name": "Air",
+        "feed_description": "Source of oxygen for auxiliary processes and combustion",
+        "feed_composition": "21% oxygen, 78% nitrogen, 1% other gases",
+        "feed_specs": "Ambient temperature and pressure, filtered to remove particulates"
+      }
+    ],
+    "products": [
+      {
+        "product_name": "Methanol",
+        "product_description": "High-purity methanol suitable for industrial applications",
+        "product_composition": "≥99.85% methanol, ≤0.1% water, trace impurities",
+        "product_specs": "Compliant with ASTM D4806, water content ≤0.1%, acidity as acetic acid < 0.003%, appearance: clear, colorless liquid"
+      }
+    ],
+    "production_method": "Steam Methane Reforming (SMR) followed by Catalytic Synthesis",
+    "production_scale": "1,000,000 metric tons per year"
+  },
+  "unit_operations": [
+    {
+      "op_id": "op_001",
+      "op_name": "Feed Pretreatment",
+      "op_description": "Purifies natural gas by removing impurities such as sulfur compounds, water, and heavy hydrocarbons",
+      "op_type": "separation",
+      "equipment": [
+        {
+          "equipment_name": "Amine Scrubber",
+          "equipment_specs": "Vertical column with amine solution for H₂S removal"
+        },
+        {
+          "equipment_name": "Molecular Sieve Beds",
+          "equipment_specs": "Adsorption beds for water and heavy hydrocarbon removal"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Removal of sulfur compounds from natural gas",
+          "parameters": {
+            "removal_efficiency": ">99% for H₂S",
+            "adsorption_medium": "Amine solution (e.g., MEA, DEA)",
+            "process_temperature": "30-50°C"
+          },
+          "impacted_input_streams": ["raw_natural_gas"],
+          "impacted_output_streams": ["purified_natural_gas"]
+        },
+        {
+          "trans_description": "Removal of water and heavy hydrocarbons from natural gas",
+          "parameters": {
+            "water_removal": ">95% efficiency",
+            "heavy_hydrocarbon_removal": ">90% efficiency",
+            "adsorption_medium": "Molecular sieves or activated alumina"
+          },
+          "impacted_input_streams": ["raw_natural_gas"],
+          "impacted_output_streams": ["purified_natural_gas", "impurity_waste_stream"]
+        }
+      ],
+      "input_streams": ["raw_natural_gas"],
+      "output_streams": ["purified_natural_gas", "impurity_waste_stream"],
+      "energy_requirements": "Moderate energy consumption, primarily for compressors and pumps",
+      "utilities": "Cooling water, electricity for compression, regeneration steam for adsorbent beds"
+    },
+    {
+      "op_id": "op_002",
+      "op_name": "Steam Generation",
+      "op_description": "Produces steam by heating water for use in the reforming and shift conversion processes",
+      "op_type": "heat exchange",
+      "equipment": [
+        {
+          "equipment_name": "Boiler",
+          "equipment_specs": "Industrial boiler with heat recovery systems"
+        },
+        {
+          "equipment_name": "Heat Exchangers",
+          "equipment_specs": "Shell and tube heat exchangers for efficient heat transfer"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Conversion of water to high-pressure steam",
+          "parameters": {
+            "temperature": "250-300°C",
+            "pressure": "20-40 bar",
+            "steam_to_carbon_ratio": "2-3 mol steam/mol methane",
+            "heat_input": "200-300 kJ/mol methane"
+          },
+          "impacted_input_streams": ["feed_water"],
+          "impacted_output_streams": ["process_steam"]
+        }
+      ],
+      "input_streams": ["feed_water"],
+      "output_streams": ["process_steam"],
+      "energy_requirements": "High energy demand, typically 200-300 kJ/mol of methane",
+      "utilities": "Fuel gas for boilers, water treatment chemicals, feedwater pumps"
+    },
+    {
+      "op_id": "op_003",
+      "op_name": "Steam Methane Reforming",
+      "op_description": "Reacts purified natural gas with steam over a nickel-based catalyst to produce synthesis gas",
+      "op_type": "reaction",
+      "equipment": [
+        {
+          "equipment_name": "Reformer Furnace",
+          "equipment_specs": "High-temperature furnace with catalyst-filled tubes"
+        },
+        {
+          "equipment_name": "Waste Heat Boilers",
+          "equipment_specs": "Heat recovery equipment to capture excess heat"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Primary reforming reaction of methane with steam",
+          "parameters": {
+            "reaction": "CH₄ + H₂O → CO + 3H₂",
+            "enthalpy": "+206 kJ/mol (endothermic)",
+            "temperature": "700-1000°C",
+            "pressure": "15-30 bar",
+            "catalyst": "Nickel-based",
+            "conversion": "70-80% methane conversion"
+          },
+          "impacted_input_streams": ["purified_natural_gas", "process_steam"],
+          "impacted_output_streams": ["synthesis_gas"]
+        },
+        {
+          "trans_description": "Side reactions including partial oxidation and methane decomposition",
+          "parameters": {
+            "reactions": "CH₄ + ½O₂ → CO + 2H₂; CH₄ → C + 2H₂",
+            "syngas_composition": "60-65% H₂, 25-30% CO, 5-10% CO₂"
+          },
+          "impacted_input_streams": ["purified_natural_gas", "process_steam"],
+          "impacted_output_streams": ["synthesis_gas"]
+        }
+      ],
+      "input_streams": ["purified_natural_gas", "process_steam"],
+      "output_streams": ["synthesis_gas"],
+      "energy_requirements": "Very high energy consumption for endothermic reforming reaction",
+      "utilities": "Combustion fuel (often natural gas), air for combustion, cooling water for heat recovery"
+    },
+    {
+      "op_id": "op_004",
+      "op_name": "Water-Gas Shift Reactor",
+      "op_description": "Converts carbon monoxide in the synthesis gas to carbon dioxide and additional hydrogen",
+      "op_type": "reaction",
+      "equipment": [
+        {
+          "equipment_name": "High-Temperature Shift Reactor",
+          "equipment_specs": "Fixed bed reactor operating at 350-450°C with Fe-Cr catalyst"
+        },
+        {
+          "equipment_name": "Low-Temperature Shift Reactor",
+          "equipment_specs": "Fixed bed reactor operating at 200-250°C with Cu-Zn catalyst"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Water-gas shift reaction converting CO to CO₂",
+          "parameters": {
+            "reaction": "CO + H₂O → CO₂ + H₂",
+            "enthalpy": "-41 kJ/mol (exothermic)",
+            "temperature": "Two-stage: 350-450°C (HTS), 200-250°C (LTS)",
+            "pressure": "15-30 bar",
+            "conversion": "60-70% of CO converted to CO₂",
+            "resulting_composition": "~80% H₂, ~15% CO₂, ~5% CO"
+          },
+          "impacted_input_streams": ["synthesis_gas", "process_steam"],
+          "impacted_output_streams": ["shifted_gas"]
+        }
+      ],
+      "input_streams": ["synthesis_gas", "process_steam"],
+      "output_streams": ["shifted_gas"],
+      "energy_requirements": "Moderately exothermic process requiring cooling",
+      "utilities": "Cooling water, steam for temperature control, electricity for control systems"
+    },
+    {
+      "op_id": "op_005",
+      "op_name": "CO₂ Removal Unit",
+      "op_description": "Removes carbon dioxide from the shifted gas using amine scrubbing or pressure swing adsorption",
+      "op_type": "separation",
+      "equipment": [
+        {
+          "equipment_name": "Amine Absorption Column",
+          "equipment_specs": "Vertical column for CO₂ absorption using MEA solvent"
+        },
+        {
+          "equipment_name": "Regenerator",
+          "equipment_specs": "Solvent regeneration column to release captured CO₂"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Selective absorption of CO₂ from gas stream",
+          "parameters": {
+            "CO₂_removal_efficiency": ">90%",
+            "absorption_medium": "MEA (monoethanolamine) or similar amine solutions",
+            "process_temperature": "40-60°C for absorption, 120-140°C for regeneration",
+            "energy_consumption": "3-4 GJ/ton CO₂ captured"
+          },
+          "impacted_input_streams": ["shifted_gas"],
+          "impacted_output_streams": ["hydrogen_rich_gas", "separated_co2"]
+        }
+      ],
+      "input_streams": ["shifted_gas"],
+      "output_streams": ["hydrogen_rich_gas", "separated_co2"],
+      "energy_requirements": "High energy consumption for amine regeneration",
+      "utilities": "Steam for solvent regeneration, cooling water, electricity for pumps"
+    },
+    {
+      "op_id": "op_006",
+      "op_name": "Methanol Synthesis Reactor",
+      "op_description": "Catalytically converts hydrogen-rich gas and remaining carbon oxides into methanol under high pressure and temperature",
+      "op_type": "reaction",
+      "equipment": [
+        {
+          "equipment_name": "Synthesis Reactor",
+          "equipment_specs": "Fixed bed or slurry phase reactor with Cu-ZnO catalyst"
+        },
+        {
+          "equipment_name": "Heat Exchangers",
+          "equipment_specs": "For temperature control and heat recovery from exothermic reaction"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Catalytic conversion of CO and H₂ to methanol",
+          "parameters": {
+            "reaction": "CO + 2H₂ → CH₃OH",
+            "enthalpy": "-90 kJ/mol (exothermic)",
+            "temperature": "200-300°C",
+            "pressure": "50-100 bar",
+            "catalyst": "Cu-ZnO-Al₂O₃",
+            "CO_conversion": "~80% per pass"
+          },
+          "impacted_input_streams": ["hydrogen_rich_gas"],
+          "impacted_output_streams": ["crude_methanol_stream"]
+        },
+        {
+          "trans_description": "Catalytic conversion of CO₂ and H₂ to methanol",
+          "parameters": {
+            "reaction": "CO₂ + 3H₂ → CH₃OH + H₂O",
+            "enthalpy": "-49 kJ/mol (exothermic)",
+            "CO₂_conversion": "~70% per pass",
+            "selectivity": "90-95% to methanol"
+          },
+          "impacted_input_streams": ["hydrogen_rich_gas"],
+          "impacted_output_streams": ["crude_methanol_stream"]
+        }
+      ],
+      "input_streams": ["hydrogen_rich_gas"],
+      "output_streams": ["crude_methanol_stream"],
+      "energy_requirements": "Moderately exothermic process requiring temperature control",
+      "utilities": "Cooling water, electricity for compression, process control"
+    },
+    {
+      "op_id": "op_007",
+      "op_name": "Methanol Separation",
+      "op_description": "Separates crude methanol from water and other byproducts through initial distillation",
+      "op_type": "separation",
+      "equipment": [
+        {
+          "equipment_name": "Flash Drum",
+          "equipment_specs": "For separation of unreacted gases from liquid products"
+        },
+        {
+          "equipment_name": "Distillation Column",
+          "equipment_specs": "For separation of water and light ends from methanol"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Separation of unreacted gases from liquid products",
+          "parameters": {
+            "temperature": "40-60°C",
+            "pressure": "5-10 bar",
+            "phase_separation": "Gaseous phase (unreacted gases) from liquid phase (crude methanol/water)"
+          },
+          "impacted_input_streams": ["crude_methanol_stream"],
+          "impacted_output_streams": ["unreacted_gas_stream", "liquid_crude_methanol"]
+        },
+        {
+          "trans_description": "Initial distillation to separate water from methanol",
+          "parameters": {
+            "water_removal_efficiency": ">95%",
+            "methanol_recovery": "90-95%",
+            "operating_temperature": "64-100°C (column temperature range)",
+            "operating_pressure": "1-3 bar"
+          },
+          "impacted_input_streams": ["liquid_crude_methanol"],
+          "impacted_output_streams": ["partially_purified_methanol", "wastewater_stream"]
+        }
+      ],
+      "input_streams": ["crude_methanol_stream"],
+      "output_streams": ["partially_purified_methanol", "unreacted_gas_stream", "wastewater_stream"],
+      "energy_requirements": "High energy consumption for distillation",
+      "utilities": "Steam for reboilers, cooling water for condensers, electricity for pumps"
+    },
+    {
+      "op_id": "op_008",
+      "op_name": "Product Distillation",
+      "op_description": "Performs final distillation to ensure methanol meets high-purity product specifications",
+      "op_type": "separation",
+      "equipment": [
+        {
+          "equipment_name": "Refining Column",
+          "equipment_specs": "Multi-tray distillation column for high-purity separation"
+        },
+        {
+          "equipment_name": "Condenser and Reboiler",
+          "equipment_specs": "For reflux and heating requirements of the column"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description":

@@ -1,0 +1,317 @@
+Reference Class: 17,Alcohol/Intermediate,Ethanol (Industrial)
+
+Step 4 - JSON Structure Generation:
+```json
+{
+  "reference_class": {
+    "ref_class_id": "industrial_ethanol_production",
+    "ref_class_name": "Industrial Ethanol Production Process",
+    "ref_class_description": "Production of industrial-grade ethanol (≥99% purity) through fermentation of sugar-based feedstocks, followed by distillation and dehydration, suitable for use as a solvent, chemical intermediate, and fuel additive.",
+    "feedstocks": [
+      {
+        "feed_name": "Corn",
+        "feed_description": "Starchy cereal grain used as primary feedstock",
+        "feed_composition": "Approximately 70% starch, 10% protein, 4% fat, 16% other components",
+        "feed_specs": "Clean, dry corn with moisture content <15%"
+      },
+      {
+        "feed_name": "Water",
+        "feed_description": "Process water for hydrolysis and fermentation",
+        "feed_composition": "Clean water, treated to remove contaminants",
+        "feed_specs": "pH 6-8, low mineral content, free from biological contaminants"
+      },
+      {
+        "feed_name": "Enzymes",
+        "feed_description": "Biological catalysts for starch hydrolysis",
+        "feed_composition": "Alpha-amylase for liquefaction, glucoamylase for saccharification",
+        "feed_specs": "Active enzymatic preparations suitable for industrial use"
+      },
+      {
+        "feed_name": "Yeast",
+        "feed_description": "Microorganism for fermentation",
+        "feed_composition": "Saccharomyces cerevisiae (baker's yeast) or specialized ethanol-producing strains",
+        "feed_specs": "Active, viable culture with high ethanol tolerance"
+      }
+    ],
+    "products": [
+      {
+        "product_name": "Industrial Ethanol",
+        "product_description": "High-purity ethanol for industrial applications",
+        "product_composition": "≥99% ethanol, <1% water and other impurities",
+        "product_specs": "Clear, colorless liquid; boiling point 78.3°C; density 0.789 g/cm³; suitable for use as solvent, chemical intermediate, and fuel additive"
+      },
+      {
+        "product_name": "Carbon Dioxide",
+        "product_description": "Gas by-product from fermentation",
+        "product_composition": ">99% carbon dioxide",
+        "product_specs": "Colorless gas, can be captured for industrial uses"
+      },
+      {
+        "product_name": "Distillers' Grains",
+        "product_description": "Solid by-product from fermentation and distillation",
+        "product_composition": "Protein, fiber, and unfermented components of corn",
+        "product_specs": "Suitable for animal feed after drying"
+      }
+    ],
+    "production_method": "Fermentation of corn-based feedstock followed by distillation and dehydration",
+    "production_scale": "500,000 liters (394,500 kg) of ethanol per year"
+  },
+  "unit_operations": [
+    {
+      "op_id": "op_001",
+      "op_name": "Feedstock Receiving and Storage",
+      "op_description": "Raw feedstocks are delivered, inspected for quality, and stored until processing",
+      "op_type": "material handling",
+      "equipment": [
+        {
+          "equipment_name": "Receiving Area",
+          "equipment_specs": "Scales for weighing incoming materials, quality testing equipment"
+        },
+        {
+          "equipment_name": "Storage Silos",
+          "equipment_specs": "Capacity for storing approximately 50,000 kg of corn, temperature and humidity controlled"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Storage and minimal moisture content adjustment",
+          "parameters": {
+            "storage_time": "1-4 weeks",
+            "storage_temperature": "10-25°C",
+            "moisture_control": "Maintained below 15% to prevent spoilage"
+          },
+          "impacted_input_streams": ["raw_corn_input"],
+          "impacted_output_streams": ["stored_corn_output"]
+        }
+      ],
+      "input_streams": ["raw_corn_input"],
+      "output_streams": ["stored_corn_output"],
+      "energy_requirements": "Minimal energy for mechanical handling, approximately 25,000 kWh/year",
+      "utilities": "Electricity for conveyors and monitoring systems"
+    },
+    {
+      "op_id": "op_002",
+      "op_name": "Feedstock Preparation",
+      "op_description": "Stored feedstocks are cleaned and milled to increase surface area for enzyme action",
+      "op_type": "size reduction",
+      "equipment": [
+        {
+          "equipment_name": "Cleaning System",
+          "equipment_specs": "Screens, magnets, and air classification to remove foreign materials"
+        },
+        {
+          "equipment_name": "Hammer Mill",
+          "equipment_specs": "High-speed impact mill, capable of processing 100 kg/hr"
+        },
+        {
+          "equipment_name": "Conveying System",
+          "equipment_specs": "Enclosed conveyors to transfer material between process steps"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Mechanical size reduction and cleaning",
+          "parameters": {
+            "input_particle_size": "whole corn kernels, ~8 mm diameter",
+            "output_particle_size": "ground meal, <2 mm diameter",
+            "mass_retention": "88.5% after cleaning and milling",
+            "throughput": "70 kg/hr"
+          },
+          "impacted_input_streams": ["stored_corn_output"],
+          "impacted_output_streams": ["milled_corn_stream"]
+        }
+      ],
+      "input_streams": ["stored_corn_output"],
+      "output_streams": ["milled_corn_stream"],
+      "energy_requirements": "Significant electricity requirement for milling, approximately 250,000 kWh/year (0.5 kWh/kg of feedstock)",
+      "utilities": "Electricity, compressed air for pneumatic conveying and cleaning"
+    },
+    {
+      "op_id": "op_003",
+      "op_name": "Liquefaction and Saccharification",
+      "op_description": "Enzymatic hydrolysis converts starches into fermentable sugars through a two-step process",
+      "op_type": "biochemical conversion",
+      "equipment": [
+        {
+          "equipment_name": "Slurry Tank",
+          "equipment_specs": "Jacketed vessel with agitator, 5000 L capacity"
+        },
+        {
+          "equipment_name": "Liquefaction Reactor",
+          "equipment_specs": "Temperature-controlled reactor with agitator, 80-100°C operation"
+        },
+        {
+          "equipment_name": "Saccharification Tank",
+          "equipment_specs": "Insulated vessel with agitator, 50-60°C operation, 10000 L capacity"
+        },
+        {
+          "equipment_name": "Heat Exchanger",
+          "equipment_specs": "Plate or shell-and-tube design for temperature adjustment between stages"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Liquefaction: Gelatinization of starch using alpha-amylase",
+          "parameters": {
+            "reaction_temperature": "85-95°C",
+            "pH": "5.8-6.2",
+            "residence_time": "1.5-2 hours",
+            "enzyme_dosage": "0.5-0.7 kg/ton of corn"
+          },
+          "impacted_input_streams": ["milled_corn_stream", "process_water_input", "alpha_amylase_enzyme_input"],
+          "impacted_output_streams": ["liquefied_mash_stream"]
+        },
+        {
+          "trans_description": "Saccharification: Conversion of liquefied starch to glucose using glucoamylase",
+          "parameters": {
+            "reaction_temperature": "60-65°C",
+            "pH": "4.2-4.5",
+            "residence_time": "24-48 hours",
+            "enzyme_dosage": "1.0-1.3 kg/ton of corn",
+            "conversion_efficiency": "95% of starch to glucose"
+          },
+          "impacted_input_streams": ["liquefied_mash_stream", "glucoamylase_enzyme_input"],
+          "impacted_output_streams": ["fermentable_sugar_stream"]
+        }
+      ],
+      "input_streams": ["milled_corn_stream", "process_water_input", "alpha_amylase_enzyme_input", "glucoamylase_enzyme_input"],
+      "output_streams": ["fermentable_sugar_stream"],
+      "energy_requirements": "High energy requirement for heating, approximately 1.5 × 10⁶ MJ/year (3 MJ/kg of feedstock)",
+      "utilities": "Steam for heating, cooling water for temperature control, electricity for agitation"
+    },
+    {
+      "op_id": "op_004",
+      "op_name": "Fermentation",
+      "op_description": "Fermentable sugars are biologically converted into ethanol and CO2 by yeast",
+      "op_type": "biochemical reaction",
+      "equipment": [
+        {
+          "equipment_name": "Yeast Propagation Tank",
+          "equipment_specs": "Sterile vessel for growing yeast culture, 500 L capacity"
+        },
+        {
+          "equipment_name": "Fermentation Tanks",
+          "equipment_specs": "Temperature-controlled vessels with agitation, 20000 L capacity, typically operated in batch mode"
+        },
+        {
+          "equipment_name": "CO2 Collection System",
+          "equipment_specs": "Gas handling equipment for CO2 release or recovery"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Alcoholic fermentation of glucose to ethanol",
+          "parameters": {
+            "reaction": "C6H12O6 → 2C2H5OH + 2CO2",
+            "temperature": "30-32°C",
+            "pH": "4.5-5.0",
+            "fermentation_time": "48-72 hours",
+            "yeast_dosage": "0.2-0.5 kg/m³",
+            "conversion_efficiency": "90-95% of sugars",
+            "theoretical_yield": "51.1% w/w ethanol from glucose",
+            "actual_yield": "80% of theoretical (approximately 0.41 kg ethanol/kg glucose)"
+          },
+          "impacted_input_streams": ["fermentable_sugar_stream", "yeast_input"],
+          "impacted_output_streams": ["fermentation_broth_stream", "co2_stream"]
+        }
+      ],
+      "input_streams": ["fermentable_sugar_stream", "yeast_input"],
+      "output_streams": ["fermentation_broth_stream", "co2_stream"],
+      "energy_requirements": "Moderate energy consumption for temperature control and agitation, approximately 500,000 kWh/year",
+      "utilities": "Cooling water, electricity for agitation, steam for sterilization of equipment"
+    },
+    {
+      "op_id": "op_005",
+      "op_name": "Distillation",
+      "op_description": "Separation of ethanol from water and solids based on boiling point differences",
+      "op_type": "thermal separation",
+      "equipment": [
+        {
+          "equipment_name": "Beer Column",
+          "equipment_specs": "Continuous distillation column, 20-25 plates, operating at 1 atm"
+        },
+        {
+          "equipment_name": "Rectifier Column",
+          "equipment_specs": "Continuous distillation column, 40-50 plates, for concentration of ethanol to near-azeotropic composition"
+        },
+        {
+          "equipment_name": "Reboilers",
+          "equipment_specs": "Heat exchangers at column bottoms for vapor generation"
+        },
+        {
+          "equipment_name": "Condensers",
+          "equipment_specs": "Heat exchangers at column tops for vapor condensation"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Separation of ethanol from fermentation broth",
+          "parameters": {
+            "feed_composition": "8-12% ethanol by volume",
+            "distillate_composition": "95% ethanol by volume (near-azeotropic)",
+            "bottoms_composition": "<0.1% ethanol by volume",
+            "reflux_ratio": "3-5",
+            "operating_pressure": "1 atm",
+            "column_temperature_range": "78-100°C",
+            "ethanol_recovery": "95% of input ethanol"
+          },
+          "impacted_input_streams": ["fermentation_broth_stream"],
+          "impacted_output_streams": ["ethanol_distillate_stream", "distillers_solubles_stream"]
+        }
+      ],
+      "input_streams": ["fermentation_broth_stream"],
+      "output_streams": ["ethanol_distillate_stream", "distillers_solubles_stream"],
+      "energy_requirements": "Highly energy-intensive due to heating requirements, approximately 950,000 MJ/year (10 MJ/kg of ethanol)",
+      "utilities": "Steam for reboilers, cooling water for condensers, electricity for pumps"
+    },
+    {
+      "op_id": "op_006",
+      "op_name": "Dehydration",
+      "op_description": "Further purification of ethanol to achieve ≥99% purity by breaking ethanol-water azeotrope",
+      "op_type": "molecular separation",
+      "equipment": [
+        {
+          "equipment_name": "Molecular Sieve Units",
+          "equipment_specs": "Pressure vessels containing zeolite molecular sieves with 3Å pore size, operated in parallel for continuous processing"
+        },
+        {
+          "equipment_name": "Regeneration System",
+          "equipment_specs": "Equipment for regenerating molecular sieves using vacuum or purge gas"
+        }
+      ],
+      "transformations": [
+        {
+          "trans_description": "Selective adsorption of water to break ethanol-water azeotrope",
+          "parameters": {
+            "feed_composition": "95% ethanol by volume",
+            "product_composition": "≥99% ethanol by volume",
+            "operating_temperature": "115-120°C",
+            "operating_pressure": "1.5-2 bar",
+            "cycle_time": "10-15 minutes",
+            "ethanol_recovery": "99.5% of input ethanol"
+          },
+          "impacted_input_streams": ["ethanol_distillate_stream"],
+          "impacted_output_streams": ["dehydrated_ethanol_stream", "water_byproduct_stream"]
+        }
+      ],
+      "input_streams": ["ethanol_distillate_stream"],
+      "output_streams": ["dehydrated_ethanol_stream", "water_byproduct_stream"],
+      "energy_requirements": "Moderate to high energy consumption, approximately 190,000 MJ/year (2 MJ/kg of ethanol)",
+      "utilities": "Steam for heating, electricity for operating valves and controls, cooling water"
+    },
+    {
+      "op_id": "op_007",
+      "op_name": "Product Storage",
+      "op_description": "Dehydrated ethanol is stored in large storage tanks until distribution",
+      "op_type": "storage",
+      "equipment": [
+        {
+          "equipment_name": "Storage Tanks",
+          "equipment_specs": "Stainless steel or carbon steel tanks with epoxy lining, floating roofs, capacity for 1-2 months of production"
+        },
+        {
+          "equipment_name": "Loading Facilities",
+          "equipment_specs": "Pumps, metering systems, and loading arms for truck or railcar loading"
+        }
+      ],
+      

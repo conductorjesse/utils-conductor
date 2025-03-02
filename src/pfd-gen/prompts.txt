@@ -44,6 +44,7 @@ Focus on:
 
 Output an ordered list of unit operations and their transformations, along with the respective components being transformed. 
 
+
 Prompt 4 ---
 
 Take all of this information and capture this information into a JSON, as a directed acyclic graph. 
@@ -122,7 +123,7 @@ utilities: Brief text describing utilities (e.g., "Cooling water at 15°C, Steam
 Catalog all of the stream_IDs throughout all of the unit operations and capture them in this section
 
 ## For each stream:
-stream_id: the unique identifier assigned by the unit operation
+stream_id: the unique identifier (snake_case of stream name)
 stream_name: Use descriptive names (e.g., "crude feed", "product gas")
 stream_description: Brief description of the stream's purpose or properties
 components: List up to 5 main components only. If more exist, prioritize the most significant ones by concentration or importance
@@ -132,6 +133,7 @@ components: List up to 5 main components only. If more exist, prioritize the mos
 # Important Considerations
 Maintain connectivity between unit operations through stream references
 Ensure each unit operation has at least one input and one output stream
+Add source or sink nodes if there is no terminating or originating node for a stream.
 Keep descriptions concise but informative
 Use standard terminology from chemical engineering where possible
 For the transformations section, focus on capturing the essence of what changes rather than forcing information into a rigid structure
@@ -195,16 +197,22 @@ json format:
       "components": ["comp_1", "comp_2", ...]
     }
   ]
-}
 
 Prompt 5 ---
 
-Produce a simple Mermaid diagram.
+Create a flowchart Mermaid diagram using the JSON structure, following these guidelines:
 
-Create a flowchart LR diagram that includes:
-Unit operations as nodes labeled with its names
-Streams as edges labled with its names
-Draw edges between nodes
+1. Use a left-to-right flow direction: flowchart LR
+2. Create nodes for each unit operation using its op_id and op_name: op_001[Brine Preparation]
+3. Create edges between nodes using stream_id and stream_name:
+   op_001 --> |stream_001: Purified Brine| op_002
+4. Use consistent styling:
+   - Process operations: rectangular nodes
+   - External sources: stadium-shaped nodes
+   - External sinks: hexagonal nodes
+   - Process streams: solid lines
+   - Utility streams: dashed lines
+   - Product streams: bold lines
+   - Waste streams: dotted lines
 
-Only return a Mermaid output. 
-
+Ensure every node and edge in the diagram corresponds exactly to elements in the JSON structure, using the same IDs and names.
